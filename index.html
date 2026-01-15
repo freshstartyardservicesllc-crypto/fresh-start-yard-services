@@ -82,23 +82,19 @@
       gap:10px;
       min-width: 220px;
     }
-    .logo{
-      width:42px; height:42px;
+
+    /* NEW: real logo image styling */
+    .logo-img{
+      width:42px;
+      height:42px;
       border-radius:14px;
-      background:
-        radial-gradient(circle at 30% 30%, rgba(255,255,255,.18), transparent 55%),
-        linear-gradient(135deg, rgba(47,226,123,.95), rgba(31,184,104,.65));
-      box-shadow: 0 12px 30px rgba(47,226,123,.20);
-      position:relative;
-      overflow:hidden;
+      object-fit:contain;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.10);
+      padding:4px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
     }
-    .logo:before{
-      content:"";
-      position:absolute;
-      inset:-40%;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.28), transparent 55%);
-      transform: rotate(25deg);
-    }
+
     .brand h1{ font-size:15px; margin:0; letter-spacing:.2px; line-height:1.1; }
     .brand span{ display:block; font-size:12px; color: var(--muted2); margin-top:2px; }
 
@@ -473,7 +469,8 @@
   <div class="container">
     <div class="nav">
       <a class="brand" href="#top" aria-label="Fresh Start Yard Services LLC Home">
-        <div class="logo" aria-hidden="true"></div>
+        <!-- UPDATED: use your real logo file in the repo root -->
+        <img class="logo-img" src="logo.png" alt="Fresh Start Yard Services logo" />
         <div>
           <h1>Fresh Start Yard Services LLC</h1>
           <span>Cincinnati, OH • Free Estimates</span>

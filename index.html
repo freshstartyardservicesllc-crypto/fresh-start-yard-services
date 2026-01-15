@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Fresh Start Yard Services LLC | Landscaping & Yard Cleanup (Cincinnati, OH)</title>
+  <meta name="description" content="Fresh Start Yard Services LLC provides reliable yard care, cleanups, mulch, trimming, and landscaping in Cincinnati, OH and surrounding areas. Free estimates." />
+  <meta name="theme-color" content="#0b0f0d" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fresh Start Yard Services LLC" />
+  <meta property="og:description" content="Reliable yard care. Clean results. Fast turnarounds. Serving Cincinnati, OH and surrounding areas. Free estimates." />
+  <meta property="og:type" content="website" />
+
+  <!-- LocalBusiness JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Fresh Start Yard Services LLC",
+    "areaServed":"Cincinnati, OH and surrounding areas",
+    "telephone":"+15135492498",
+    "email":"freshstartyardservicesllc@gmail.com",
+    "url":""
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg: #0b0f0d;
+      --surface: rgba(255,255,255,.04);
+      --card: rgba(255,255,255,.05);
+      --stroke: rgba(255,255,255,.12);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --muted2: rgba(255,255,255,.60);
+      --green: #2fe27b;
+      --green2: #1fb868;
+      --shadow: 0 20px 60px rgba(0,0,0,.35);
+      --radius: 18px;
+      --radius2: 22px;
+      --max: 1120px;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1100px 800px at 20% 0%, rgba(47,226,123,.18), transparent 60%),
+        radial-gradient(900px 700px at 90% 10%, rgba(31,184,104,.14), transparent 55%),
+        radial-gradient(1000px 800px at 50% 100%, rgba(255,255,255,.06), transparent 60%),
+        linear-gradient(180deg, var(--bg), #070a08 60%, #050705);
+      line-height:1.55;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .container{ width:min(var(--max), calc(100% - 40px)); margin-inline:auto; }
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(14px);
+      background: rgba(7,10,8,.55);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width: 220px;
+    }
+    .logo{
+      width:42px; height:42px;
+      border-radius:14px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.18), transparent 55%),
+        linear-gradient(135deg, rgba(47,226,123,.95), rgba(31,184,104,.65));
+      box-shadow: 0 12px 30px rgba(47,226,123,.20);
+      position:relative;
+      overflow:hidden;
+    }
+    .logo:before{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.28), transparent 55%);
+      transform: rotate(25deg);
+    }
+    .brand h1{ font-size:15px; margin:0; letter-spacing:.2px; line-height:1.1; }
+    .brand span{ display:block; font-size:12px; color: var(--muted2); margin-top:2px; }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:16px;
+      padding:0;
+      margin:0;
+      align-items:center;
+    }
+    nav a{
+      color: var(--muted);
+      font-size:13px;
+      padding:8px 10px;
+      border-radius:10px;
+      border:1px solid transparent;
+    }
+    nav a:hover{
+      color: var(--text);
+      background: rgba(255,255,255,.04);
+      border-color: rgba(255,255,255,.08);
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:flex-end;
+      min-width:260px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:11px 14px;
+      border-radius:14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      font-weight:700;
+      font-size:13px;
+      transition: transform .08s ease, background .15s ease, border-color .15s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{ background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.16); }
+    .btn:active{ transform: translateY(1px); }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(47,226,123,.95), rgba(31,184,104,.75));
+      border-color: rgba(47,226,123,.35);
+      color:#06110b;
+      box-shadow: 0 14px 30px rgba(47,226,123,.18);
+    }
+    .btn.primary:hover{ filter: brightness(1.02); }
+    .pill{
+      font-size:12px;
+      padding:7px 10px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:999px;
+      color: var(--muted);
+      background: rgba(255,255,255,.04);
+    }
+    .hamburger{ display:none; }
+
+    /* Hero */
+    section{ padding: 38px 0; }
+    .hero{ padding: 56px 0 18px; }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:22px;
+      align-items: stretch;
+    }
+    .hero-card{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.10);
+      background:
+        radial-gradient(900px 520px at 20% 30%, rgba(47,226,123,.12), transparent 60%),
+        radial-gradient(900px 520px at 95% 40%, rgba(31,184,104,.10), transparent 58%),
+        rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+      padding: 26px;
+      position: relative;
+      overflow:hidden;
+    }
+    .hero-card:after{
+      content:"";
+      position:absolute;
+      inset:-20%;
+      background: radial-gradient(circle at 40% 40%, rgba(255,255,255,.06), transparent 55%);
+      transform: rotate(18deg);
+      pointer-events:none;
+    }
+    .hero h2{
+      font-size: clamp(30px, 3.6vw, 48px);
+      letter-spacing: -0.8px;
+      margin: 10px 0 10px;
+      line-height: 1.05;
+    }
+    .hero p{
+      color: var(--muted);
+      margin: 0 0 18px;
+      font-size: 15px;
+      max-width: 62ch;
+    }
+    .hero-ctas{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:6px;
+      position: relative;
+      z-index: 1;
+    }
+    .trustbar{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-side{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+    .hero-side h3{
+      margin: 0 0 10px;
+      font-size: 14px;
+      letter-spacing: .3px;
+      color: rgba(255,255,255,.85);
+      text-transform: uppercase;
+    }
+    .quick{ display:grid; gap:10px; margin-top:10px; }
+    .quick a{
+      display:flex;
+      justify-content: space-between;
+      gap:10px;
+      align-items:center;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+    }
+    .quick a:hover{ background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.14); }
+    .quick b{ font-size:13px; }
+    .quick small{ color: var(--muted2); }
+
+    /* Section headings */
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:16px;
+      margin-bottom:16px;
+    }
+    .section-head h3{ margin:0; font-size:20px; letter-spacing:-0.2px; }
+    .section-head p{ margin:0; color: var(--muted); font-size:13px; max-width:68ch; }
+
+    /* Grid + cards */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+    }
+    .card{
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      padding: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.22);
+    }
+    .card h4{ margin:0 0 6px; font-size:15px; }
+    .card p{ margin:0; color: var(--muted); font-size:13px; }
+
+    /* Services */
+    .service{ grid-column: span 4; position:relative; overflow:hidden; }
+    .service:before{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background: radial-gradient(circle at 30% 20%, rgba(47,226,123,.10), transparent 55%);
+      transform: rotate(18deg);
+      pointer-events:none;
+    }
+    .service .meta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-top:12px;
+      gap:10px;
+      position: relative;
+      z-index: 1;
+    }
+    .tag{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      color: var(--muted2);
+      background: rgba(255,255,255,.03);
+    }
+
+    /* How it works */
+    .step{ grid-column: span 4; }
+    .step b{
+      display:inline-flex;
+      width:34px; height:34px;
+      align-items:center; justify-content:center;
+      border-radius:12px;
+      background: rgba(47,226,123,.14);
+      border: 1px solid rgba(47,226,123,.25);
+      color: rgba(255,255,255,.90);
+      margin-bottom:10px;
+      font-weight:900;
+    }
+
+    /* Gallery placeholders */
+    .gallery{ grid-column: span 3; padding:0; overflow:hidden; aspect-ratio: 4/3; }
+    .ph{
+      width:100%;
+      height:100%;
+      background:
+        radial-gradient(650px 260px at 20% 20%, rgba(47,226,123,.14), transparent 60%),
+        radial-gradient(650px 260px at 80% 80%, rgba(31,184,104,.12), transparent 60%),
+        linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      padding:12px;
+      gap:10px;
+    }
+    .ph span{
+      font-size:12px;
+      color: rgba(255,255,255,.85);
+      padding:6px 10px;
+      border-radius:999px;
+      background: rgba(0,0,0,.25);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Reviews */
+    .review{ grid-column: span 4; }
+    .stars{ letter-spacing:1px; font-size:13px; color: rgba(255,255,255,.88); }
+    .who{ margin-top:10px; color: var(--muted2); font-size:12px; }
+
+    /* Pricing */
+    .pricing{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .pricing ul{ margin:10px 0 0; padding-left:18px; color: var(--muted); font-size:13px; }
+    .note{ color: var(--muted2); font-size:12px; margin-top:10px; }
+
+    /* Contact */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      align-items:start;
+    }
+    form{ display:grid; gap:10px; }
+    label{ font-size:12px; color: var(--muted2); }
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+      color: var(--text);
+      outline:none;
+    }
+    textarea{ min-height:110px; resize:vertical; }
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(47,226,123,.40);
+      box-shadow: 0 0 0 3px rgba(47,226,123,.10);
+    }
+    .two{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; }
+    .form-actions{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .success{
+      display:none;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid rgba(47,226,123,.35);
+      background: rgba(47,226,123,.10);
+      color: rgba(255,255,255,.92);
+      font-size:13px;
+      margin-bottom: 10px;
+    }
+
+    /* FAQ */
+    details{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      border-radius:16px;
+      padding:12px 14px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight:800;
+      font-size:13px;
+      color: rgba(255,255,255,.88);
+      list-style:none;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    details p{ margin:10px 0 0; color: var(--muted); font-size:13px; }
+
+    /* Footer */
+    footer{
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 26px 0 70px;
+      background: rgba(0,0,0,.18);
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap:14px;
+      align-items:start;
+    }
+    .footer-grid p, .footer-grid a, .footer-grid div{
+      color: var(--muted);
+      font-size:13px;
+    }
+    .footer-grid b{ color: rgba(255,255,255,.86); }
+    .foot-links{ display:grid; gap:6px; }
+    .mini{ margin-top:10px; color: rgba(255,255,255,.45); font-size:12px; }
+
+    /* Floating mobile call button */
+    .float-call{
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 60;
+      display:none;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .footer-grid{ grid-template-columns: 1fr; }
+      .actions{ min-width:auto; }
+    }
+    @media (max-width: 860px){
+      nav ul{ display:none; }
+      .hamburger{ display:inline-flex; }
+      .service{ grid-column: span 6; }
+      .step{ grid-column: span 12; }
+      .review{ grid-column: span 12; }
+      .gallery{ grid-column: span 6; }
+      .contact-grid{ grid-template-columns: 1fr; }
+      .pricing{ grid-template-columns: 1fr; }
+      .float-call{ display:block; }
+    }
+    @media (max-width: 520px){
+      .service{ grid-column: span 12; }
+      .gallery{ grid-column: span 12; }
+      .two{ grid-template-columns: 1fr; }
+      .actions .btn{ display:none; }
+      .actions .btn.primary{ display:inline-flex; }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="Fresh Start Yard Services LLC Home">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Fresh Start Yard Services LLC</h1>
+          <span>Cincinnati, OH • Free Estimates</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <a class="btn hamburger" href="#contact" aria-label="Jump to contact">Menu</a>
+        <a class="btn" href="mailto:freshstartyardservicesllc@gmail.com">Email</a>
+        <a class="btn primary" href="tel:+15135492498">Call Now</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <div class="pill">Reliable yard care • Clean results • Fast turnarounds</div>
+          <h2>Landscaping & Yard Cleanup You Can Count On.</h2>
+          <p>
+            Fresh Start Yard Services LLC helps homeowners and small commercial properties keep the outside looking sharp.
+            Clear communication, consistent workmanship, and respect for your property—every time.
+          </p>
+
+          <div class="hero-ctas">
+            <a class="btn primary" href="tel:+15135492498">Call Now: (513) 549-2498</a>
+            <a class="btn" href="#contact">Request a Quote</a>
+          </div>
+
+          <div class="trustbar" aria-label="Trust highlights">
+            <span class="pill">Fast scheduling</span>
+            <span class="pill">Clear scope & pricing</span>
+            <span class="pill">Cleanup after every job</span>
+            <span class="pill">Cincinnati & surrounding areas</span>
+          </div>
+        </div>
+
+        <aside class="hero-side" aria-label="Quick contact">
+          <h3>Quick Contact</h3>
+          <div class="quick">
+            <a href="tel:+15135492498">
+              <div>
+                <b>Call Now</b><br/>
+                <small>+1 (513) 549-2498</small>
+              </div>
+              <small>tap to call</small>
+            </a>
+            <a href="mailto:freshstartyardservicesllc@gmail.com">
+              <div>
+                <b>Email</b><br/>
+                <small>freshstartyardservicesllc@gmail.com</small>
+              </div>
+              <small>tap to email</small>
+            </a>
+            <a href="#contact">
+              <div>
+                <b>Free Estimate</b><br/>
+                <small>Tell us what you need</small>
+              </div>
+              <small>get quote</small>
+            </a>
+          </div>
+
+          <div class="card" style="margin-top:14px;">
+            <h4 style="margin:0 0 6px;">Service Area</h4>
+            <p style="margin:0;">
+              Cincinnati, OH and surrounding areas.<br/>
+              <span style="color:rgba(255,255,255,.55); font-size:12px;">(Editable—add specific cities/neighborhoods anytime.)</span>
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h3>Services</h3>
+          <p>Quality outdoor work with a clean finish. Seasonal availability and site conditions may affect scheduling and scope.</p>
+        </div>
+        <a class="btn" href="#contact">Request a Quote</a>
+      </div>
+
+      <div class="grid" role="list">
+        <div class="card service" role="listitem">
+          <h4>Lawn Mowing (Residential & Small Commercial)</h4>
+          <p>Consistent cuts, clean lines, and dependable scheduling that keeps your property looking maintained.</p>
+          <div class="meta"><span class="tag">Recurring or one-time</span><a class="btn" href="#contact">Quote</a></div>
+        </div>
+        <div class="card service" role="listitem">
+          <h4>Trimming & Edging</h4>
+          <p>Crisp edges and detail work that makes the whole yard look professionally finished.</p>
+          <div class="meta"><span class="tag">High-visibility results</span><a class="btn" href="#contact">Quote</a></div>
+        </div>
+        <div class="card service" role="listitem">
+          <h4>Mulch Installation</h4>
+          <p>Bed refresh, weed reduction, and improved curb appeal with clean, even mulch placement.</p>
+          <div class="meta"><span class="tag">Install & cleanup</span><a class="btn" href="#contact">Quote</a></div>
+        </div>
+
+        <div class="card service" role="listitem">
+          <h4>Weed Removal & Bed Cleanouts</h4>
+          <p>Remove overgrowth, redefine beds, and leave the space tidy and ready for a refresh.</p>
+          <div class="meta"><span class="tag">Overgrowth reset</span><a class="btn" href="#contact">Quote</a></div>
+        </div>
+        <div class="card service" role="listitem">
+          <h4>Yard Cleanups (Spring/Fall + One-Time)</h4>
+          <p>Leaves, sticks, debris, and general yard mess—cleared and hauled for a cleaner property.</p>
+          <div class="meta"><span class="tag">Seasonal favorite</span><a class="btn" href="#contact">Quote</a></div>
+        </div>
+        <div class="card service" role="listitem">
+          <h4>Shrub Trimming & Pruning</h4>
+          <p>Shape shrubs for a healthier look, better structure, and improved curb appeal.</p>
+          <div class="meta"><span class="tag">Clean shaping</span><a class="btn" href="#contact">Quote</a></div>
+        </div>
+
+        <div class="card service" role="listitem">
+          <h4>Leaf Cleanup & Haul-Away</h4>
+          <p>Bagging, blowing, and removal—so your yard stays neat through heavy leaf seasons.</p>
+          <div class="meta"><span class="tag">Haul included (as scoped)</span><a class="btn" href="#contact">Quote</a></div>
+        </div>
+        <div class="card service" role="listitem">
+          <h4>Debris Removal (Yard Debris Only)</h4>
+          <p>We remove and dispose of yard debris as part of a cleanup or defined scope.</p>
+          <div class="meta"><span class="tag">Yard debris only</span><a class="btn" href="#contact">Quote</a></div>
+        </div>
+
+        <div class="card service" role="listitem">
+          <h4>Small Landscape Installs</h4>
+          <p>Bed refreshes, plants, and simple upgrades that improve the look and layout of your property.</p>
+          <div class="meta"><span class="tag">Refresh & install</span><a class="btn" href="#contact">Quote</a></div>
+        </div>
+
+        <div class="card service" role="listitem">
+          <h4>Pressure Washing Moss Off of Pavers (Add-On)</h4>
+          <p>Optional add-on for pavers. Scope depends on surface conditions and access to water.</p>
+          <div class="meta"><span class="tag">Optional add-on</span><a class="btn" href="#contact">Quote</a></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:14px;">
+        <h4 style="margin:0 0 6px;">Popular Bundles</h4>
+        <p style="margin:0; color:rgba(255,255,255,.75); font-size:13px;">
+          <b>Basic Weekly Cut</b> • <b>Cleanup + Mulch Refresh</b> • <b>Overgrowth Reset</b><br/>
+          Tell us what your property needs and we’ll recommend the best bundle for results and value.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h3>How It Works</h3>
+          <p>Simple steps from request to completion.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card step">
+          <b>1</b>
+          <h4>Request a Quote</h4>
+          <p>Call, email, or submit the form with the service you need and details that help us estimate.</p>
+        </div>
+        <div class="card step">
+          <b>2</b>
+          <h4>Property Review + Clear Estimate</h4>
+          <p>We confirm scope, timing, and expectations. Pricing depends on yard size, overgrowth, access, and haul-away needs.</p>
+        </div>
+        <div class="card step">
+          <b>3</b>
+          <h4>Scheduled Service + Cleanup</h4>
+          <p>We complete the job with a clean finish and leave your property tidy when we’re done.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h3>Gallery</h3>
+          <p>Replace these placeholders with your real before/after photos for maximum trust and conversions.</p>
+        </div>
+        <a class="btn" href="#contact">Book an Estimate</a>
+      </div>
+
+      <div class="grid" aria-label="Photo placeholders">
+        <div class="card gallery"><div class="ph"><span>Mowing</span><span>Before/After</span></div></div>
+        <div class="card gallery"><div class="ph"><span>Mulch</span><span>Before/After</span></div></div>
+        <div class="card gallery"><div class="ph"><span>Cleanups</span><span>Before/After</span></div></div>
+        <div class="card gallery"><div class="ph"><span>Trimming</span><span>Before/After</span></div></div>
+        <div class="card gallery"><div class="ph"><span>Pavers</span><span>Before/After</span></div></div>
+        <div class="card gallery"><div class="ph"><span>Bed Work</span><span>Before/After</span></div></div>
+        <div class="card gallery"><div class="ph"><span>Leaf Cleanup</span><span>Before/After</span></div></div>
+        <div class="card gallery"><div class="ph"><span>Install</span><span>Before/After</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h3>Reviews</h3>
+          <p>Add real customer reviews as soon as you can—this section increases bookings.</p>
+        </div>
+        <span class="pill">★★★★★ Placeholder examples</span>
+      </div>
+
+      <div class="grid">
+        <div class="card review">
+          <div class="stars">★★★★★</div>
+          <h4 style="margin-top:10px;">“Fast scheduling and the yard looked brand new.”</h4>
+          <p>Showed up on time, explained everything clearly, and cleaned up after. We’ll be booking again.</p>
+          <div class="who">— Customer Name (replace)</div>
+        </div>
+        <div class="card review">
+          <div class="stars">★★★★★</div>
+          <h4 style="margin-top:10px;">“Clean edges, neat finish, and professional.”</h4>
+          <p>Exactly what we wanted—trim, edge, and a clean overall look without a mess left behind.</p>
+          <div class="who">— Customer Name (replace)</div>
+        </div>
+        <div class="card review">
+          <div class="stars">★★★★★</div>
+          <h4 style="margin-top:10px;">“Great cleanup work—no shortcuts.”</h4>
+          <p>Handled overgrowth and debris quickly. Communicated well and delivered what was promised.</p>
+          <div class="who">— Customer Name (replace)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h3>Pricing & Free Estimates</h3>
+          <p>We keep pricing clear and scope-based. We don’t guess one-size-fits-all numbers because every yard is different.</p>
+        </div>
+        <a class="btn primary" href="tel:+15135492498">Call for Estimate</a>
+      </div>
+
+      <div class="pricing">
+        <div class="card">
+          <h4>How We Price Jobs</h4>
+          <p>Pricing depends on real conditions and the work required. Typical factors include:</p>
+          <ul>
+            <li>Yard size and terrain (flat vs slope)</li>
+            <li>Overgrowth level and time required</li>
+            <li>Bed condition, weeds, edging needs</li>
+            <li>Debris volume and haul-away scope</li>
+            <li>Service frequency (one-time vs recurring)</li>
+            <li>Access constraints (gates, tight areas)</li>
+          </ul>
+          <div class="note">Note: Estimates are provided after reviewing property conditions.</div>
+        </div>
+
+        <div class="card">
+          <h4>Common Requests</h4>
+          <p>These services are frequently bundled for better results:</p>
+          <ul>
+            <li>Weekly/biweekly mowing + trim/edge</li>
+            <li>Cleanup + weed removal + bed refresh</li>
+            <li>Mulch install after a full bed cleanout</li>
+            <li>Leaf cleanup + haul-away</li>
+          </ul>
+          <div class="note">Ask about a bundle recommendation based on your yard’s current condition.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h3>FAQ</h3>
+          <p>Quick answers to the most common questions.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card" style="grid-column: span 12;">
+          <div style="display:grid; gap:10px;">
+            <details>
+              <summary>Do you offer free estimates?</summary>
+              <p>Yes. We provide estimates after reviewing property conditions and confirming scope.</p>
+            </details>
+            <details>
+              <summary>Do you do one-time cleanups?</summary>
+              <p>Yes. We handle one-time yard cleanups and seasonal spring/fall cleanups.</p>
+            </details>
+            <details>
+              <summary>Do you haul debris away?</summary>
+              <p>We can haul yard debris as part of a defined scope. Let us know the volume and what needs removed.</p>
+            </details>
+            <details>
+              <summary>How soon can you schedule?</summary>
+              <p>Scheduling depends on weather and workload. Call or submit the form and we’ll give you the earliest options.</p>
+            </details>
+            <details>
+              <summary>Do you service commercial properties?</summary>
+              <p>We can service small commercial properties. Share property size and what services you need.</p>
+            </details>
+            <details>
+              <summary>What payment methods do you accept?</summary>
+              <p>This is editable. Add your accepted methods here once you decide (cash, card, Cash App, etc.).</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h3>Contact</h3>
+          <p>Call, email, or request a quote below. The more detail you share, the faster we can estimate.</p>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card">
+          <h4 style="margin:0 0 10px;">Request a Quote</h4>
+
+          <div class="success" id="successBox">
+            Thanks—your request is ready. If your device didn’t open email automatically, call <b>(513) 549-2498</b> or email <b>freshstartyardservicesllc@gmail.com</b>.
+          </div>
+
+          <form id="quoteForm">
+            <div class="two">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" placeholder="(###) ###-####" required />
+              </div>
+            </div>
+
+            <div class="two">
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" />
+              </div>
+              <div>
+                <label for="zip">ZIP (optional)</label>
+                <input id="zip" name="zip" placeholder="ZIP code" />
+              </div>
+            </div>
+
+            <div class="two">
+              <div>
+                <label for="service">Service Needed</label>
+                <select id="service" name="service" required>
+                  <option value="" selected disabled>Select a service</option>
+                  <option>Lawn mowing</option>
+                  <option>Trimming & edging</option>
+                  <option>Mulch installation</option>
+                  <option>Weed removal / bed cleanout</option>
+                  <option>Yard cleanup</option>
+                  <option>Shrub trimming</option>
+                  <option>Leaf cleanup / haul-away</option>
+                  <option>Debris removal (yard debris)</option>
+                  <option>Small landscape install</option>
+                  <option>Pressure washing moss off pavers</option>
+                  <option>Bundle recommendation</option>
+                </select>
+              </div>
+              <div>
+                <label for="size">Property Size</label>
+                <select id="size" name="size" required>
+                  <option value="" selected disabled>Select size</option>
+                  <option>Small</option>
+                  <option>Medium</option>
+                  <option>Large</option>
+                  <option>Not sure</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="urgency">Urgency</label>
+              <select id="urgency" name="urgency" required>
+                <option value="" selected disabled>Select timeframe</option>
+                <option>ASAP</option>
+                <option>This week</option>
+                <option>This month</option>
+                <option>Just pricing / planning</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us what's needed (overgrowth, debris, gate access, photos available, etc.)"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Send Request</button>
+              <a class="btn" href="tel:+15135492498">Call Instead</a>
+              <a class="btn" href="mailto:freshstartyardservicesllc@gmail.com">Email Instead</a>
+            </div>
+
+            <div class="note">
+              Tip: Add photos to your email after submission for the fastest estimate.
+            </div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h4 style="margin:0 0 10px;">Direct Contact</h4>
+          <p style="margin:0 0 12px; color:rgba(255,255,255,.75);">
+            Prefer to talk? Call now or email us with a brief description of the job.
+          </p>
+
+          <div class="quick">
+            <a href="tel:+15135492498">
+              <div>
+                <b>Phone</b><br/>
+                <small>+1 (513) 549-2498</small>
+              </div>
+              <small>tap to call</small>
+            </a>
+            <a href="mailto:freshstartyardservicesllc@gmail.com">
+              <div>
+                <b>Email</b><br/>
+                <small>freshstartyardservicesllc@gmail.com</small>
+              </div>
+              <small>tap to email</small>
+            </a>
+          </div>
+
+          <div class="card" style="margin-top:14px;">
+            <h4 style="margin:0 0 6px;">Business Hours (Editable)</h4>
+            <p style="margin:0;">
+              Mon–Sat: 8:00 AM – 6:00 PM<br/>
+              Sun: Closed
+            </p>
+            <div class="note">Adjust hours as needed.</div>
+          </div>
+
+          <div class="card" style="margin-top:14px;">
+            <h4 style="margin:0 0 6px;">Service Area</h4>
+            <p style="margin:0;">Cincinnati, OH and surrounding areas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <b>Fresh Start Yard Services LLC</b>
+        <p style="margin:8px 0 0;">
+          Reliable yard care, clean results, fast turnarounds.<br/>
+          Serving Cincinnati, OH and surrounding areas.
+        </p>
+        <div class="mini">Estimates provided after reviewing property conditions.</div>
+      </div>
+
+      <div class="foot-links">
+        <b>Contact</b>
+        <a href="tel:+15135492498">Phone: +1 (513) 549-2498</a>
+        <a href="mailto:freshstartyardservicesllc@gmail.com">freshstartyardservicesllc@gmail.com</a>
+        <div class="mini">Tap to call/email on mobile.</div>
+      </div>
+
+      <div class="foot-links">
+        <b>Quick Links</b>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Request a Quote</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="btn primary float-call" href="tel:+15135492498" aria-label="Call Fresh Start Yard Services LLC">
+  Call Now
+</a>
+
+<script>
+  // Quote form: opens the user's email client with a pre-filled message (no paid backend needed)
+  const form = document.getElementById('quoteForm');
+  const successBox = document.getElementById('successBox');
+
+  function enc(v){ return encodeURIComponent(v || ""); }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    const subject = `Quote Request - ${data.service || "Yard Service"} (${data.urgency || "Timing"})`;
+    const body =
+`Fresh Start Yard Services LLC - Quote Request
+
+Name: ${data.name || ""}
+Phone: ${data.phone || ""}
+Email: ${data.email || ""}
+ZIP: ${data.zip || ""}
+
+Service Needed: ${data.service || ""}
+Property Size: ${data.size || ""}
+Urgency: ${data.urgency || ""}
+
+Details:
+${data.message || ""}
+
+(If you have photos, please attach them to this email for the fastest estimate.)
+`;
+
+    const mailto = `mailto:freshstartyardservicesllc@gmail.com?subject=${enc(subject)}&body=${enc(body)}`;
+    window.location.href = mailto;
+
+    successBox.style.display = "block";
+    successBox.scrollIntoView({ behavior: "smooth", block: "start" });
+    form.reset();
+  });
+</script>
+</body>
+</html>

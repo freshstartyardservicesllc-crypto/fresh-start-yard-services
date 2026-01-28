@@ -16,8 +16,8 @@
       --stroke:rgba(255,255,255,.12);
       --card:rgba(255,255,255,.04);
       --green:#2fe27b;
-      --shadow:0 20px 60px rgba(0,0,0,.35);
-      --radius:18px;
+      --shadow:0 18px 55px rgba(0,0,0,.35);
+      --r:18px;
       --max:980px;
     }
     *{box-sizing:border-box}
@@ -32,7 +32,6 @@
       line-height:1.55;
     }
     a{color:inherit;text-decoration:none}
-    .wrap{width:min(var(--max), calc(100% - 40px)); margin:0 auto; padding:22px 0 70px}
     .topbar{
       position:sticky; top:0; z-index:40;
       backdrop-filter:blur(12px);
@@ -46,15 +45,18 @@
       padding:14px 0; gap:12px;
     }
     .brand{display:flex; align-items:center; gap:10px;}
-    .logo{
-      width:42px;height:42px;border-radius:14px;object-fit:contain;
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.10);
-      padding:4px;
+    .logo-wrap{
+      width:44px;height:44px;border-radius:14px;
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(255,255,255,.18);
+      display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
       box-shadow:0 12px 30px rgba(0,0,0,.25);
     }
+    .logo{width:100%;height:100%;object-fit:contain;padding:4px;}
     .brand b{font-size:14px}
     .brand small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
+
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       padding:11px 14px; border-radius:14px;
@@ -68,19 +70,24 @@
       color:#06110b;
       box-shadow:0 14px 30px rgba(47,226,123,.18);
     }
+
+    .wrap{width:min(var(--max), calc(100% - 40px)); margin:0 auto; padding:22px 0 70px}
     .card{
       background:var(--card);
       border:1px solid rgba(255,255,255,.10);
-      border-radius:var(--radius);
+      border-radius:var(--r);
       box-shadow:0 12px 30px rgba(0,0,0,.22);
       padding:16px;
     }
-    h1{margin:0 0 8px; font-size:24px; letter-spacing:-.3px}
+    h1{margin:0 0 8px; font-size:24px}
     p{margin:0; color:var(--muted); font-size:13px}
+    .muted-note{margin-top:10px; color:var(--muted2); font-size:12px}
+
     .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:14px; margin-top:14px}
     .col12{grid-column:span 12}
     .col6{grid-column:span 6}
     .col4{grid-column:span 4}
+
     label{font-size:12px;color:var(--muted2);display:block;margin-bottom:6px}
     input, textarea, select{
       width:100%;
@@ -96,6 +103,7 @@
       border-color:rgba(47,226,123,.40);
       box-shadow:0 0 0 3px rgba(47,226,123,.10);
     }
+
     .checks{display:grid; gap:8px; margin-top:8px}
     .check{
       display:flex; gap:10px; align-items:flex-start;
@@ -105,7 +113,7 @@
     }
     .check input{width:18px; height:18px; margin-top:2px}
     .section-title{margin:0 0 8px; font-size:15px}
-    .muted-note{margin-top:10px; color:var(--muted2); font-size:12px}
+
     .success{
       display:none;
       padding:12px;
@@ -125,7 +133,9 @@
   <div class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="./index.html#top">
-        <img class="logo" src="logo.png.PNG" alt="Fresh Start Yard Services logo"/>
+        <div class="logo-wrap">
+          <img class="logo" src="logo.png" alt="Fresh Start Yard Services logo"/>
+        </div>
         <div>
           <b>Fresh Start Yard Services LLC</b>
           <small>Universal Service Agreement</small>
@@ -142,10 +152,10 @@
   <div class="wrap">
     <div class="card">
       <h1>Universal Service Agreement</h1>
-      <p>Fill this out, type your signature, and submit. Your device will open an email to our company with all details included.</p>
+      <p>Fill this out, type your signature, and submit. Your device will open an email to our company with all details included (then you press Send).</p>
       <div class="muted-note">
         Company Email: <b>freshstartyardservicesllc@gmail.com</b> • Phone: <b>(513) 549-2498</b><br/>
-        Cash App Deposits: <b>$freshstartyardservicesllc</b>
+        Cash App Deposits: <b>$FSYardServicesLLC</b>
       </div>
     </div>
 
@@ -242,22 +252,10 @@
 
           <h2 class="section-title" style="margin-top:18px;">5) Agreement (Policies)</h2>
           <div class="checks">
-            <label class="check">
-              <input type="checkbox" id="agreeWeather" required />
-              <span><b>Weather / Rain Delay:</b> Work may be rescheduled for rain, saturated ground, or unsafe conditions.</span>
-            </label>
-            <label class="check">
-              <input type="checkbox" id="agreeAccess" required />
-              <span><b>Access:</b> I will provide access (gates unlocked, pets secured) and disclose hazards (sprinklers, hidden debris).</span>
-            </label>
-            <label class="check">
-              <input type="checkbox" id="agreeChange" required />
-              <span><b>Change Orders:</b> Any work outside scope must be approved (text/email is ok) and may increase price.</span>
-            </label>
-            <label class="check">
-              <input type="checkbox" id="agreeCancel" required />
-              <span><b>Cancellations:</b> Late cancellations/reschedules may forfeit deposit or incur a dispatch fee based on schedule impact.</span>
-            </label>
+            <label class="check"><input type="checkbox" required /> <span><b>Weather / Rain Delay:</b> Work may be rescheduled for rain, saturated ground, or unsafe conditions.</span></label>
+            <label class="check"><input type="checkbox" required /> <span><b>Access:</b> I will provide access (gates unlocked, pets secured) and disclose hazards (sprinklers, hidden debris).</span></label>
+            <label class="check"><input type="checkbox" required /> <span><b>Change Orders:</b> Any work outside scope must be approved (text/email is ok) and may increase price.</span></label>
+            <label class="check"><input type="checkbox" required /> <span><b>Cancellations:</b> Late cancellations/reschedules may forfeit deposit or incur a dispatch fee based on schedule impact.</span></label>
           </div>
 
           <h2 class="section-title" style="margin-top:18px;">6) Signature</h2>
@@ -278,7 +276,7 @@
 
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
             <button class="btn primary" type="submit">Submit Contract</button>
-            <a class="btn" href="https://cash.app/$freshstartyardservicesllc" target="_blank" rel="noopener">Pay Deposit</a>
+            <a class="btn" href="https://cash.app/$FSYardServicesLLC" target="_blank" rel="noopener">Pay Deposit</a>
             <a class="btn" href="./index.html#contact">Back to Contact</a>
           </div>
         </form>
@@ -287,11 +285,9 @@
   </div>
 
   <script>
-    // Contract form -> prefilled email to company (static-site friendly)
     const TO_EMAIL = "freshstartyardservicesllc@gmail.com";
     const form = document.getElementById('contractForm');
     const successBox = document.getElementById('successBox');
-
     function enc(v){ return encodeURIComponent(v || ""); }
 
     form.addEventListener('submit', (e) => {
@@ -299,8 +295,6 @@
 
       const fd = new FormData(form);
       const data = Object.fromEntries(fd.entries());
-
-      // Get all checked services
       const services = Array.from(document.querySelectorAll('input[name="svc"]:checked')).map(x => x.value);
       const svcList = services.length ? services.join(", ") : "(none selected)";
 
@@ -327,17 +321,11 @@ PRICING & DEPOSIT
 Total Price (if quoted): ${data.totalPrice || ""}
 Deposit Choice: ${data.depositChoice || ""}
 Deposit Paid (amount): ${data.depositPaid || ""}
-Cash App: $freshstartyardservicesllc
+Cash App: $FSYardServicesLLC
 
 SCHEDULING
 Preferred Dates: ${data.preferredDates || ""}
 Preferred Time Window: ${data.serviceWindow || ""}
-
-POLICY ACKNOWLEDGEMENTS
-Weather/Rain Delay: Agreed
-Access: Agreed
-Change Orders: Agreed
-Cancellations: Agreed
 
 SIGNATURE
 Typed Signature: ${data.sigName || ""}
@@ -347,7 +335,6 @@ Date: ${data.sigDate || ""}
 `;
 
       window.location.href = `mailto:${TO_EMAIL}?subject=${enc(subject)}&body=${enc(body)}`;
-
       successBox.style.display = "block";
       successBox.scrollIntoView({ behavior: "smooth", block: "start" });
       form.reset();

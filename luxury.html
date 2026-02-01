@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Luxury Builds | Fresh Start Yard Services LLC</title>
+  <meta name="description" content="Luxury landscape builds and special requests: fire pits, pergolas, retaining walls, steps, and custom outdoor upgrades."/>
+  <meta name="theme-color" content="#0b0f0d"/>
+  <style>
+    :root{
+      --bg:#0b0f0d;
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.72);
+      --muted2:rgba(255,255,255,.60);
+      --card:rgba(255,255,255,.04);
+      --stroke:rgba(255,255,255,.12);
+      --green:#2fe27b;
+      --shadow:0 18px 55px rgba(0,0,0,.35);
+      --r:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1100px 800px at 20% 0%, rgba(47,226,123,.18), transparent 60%),
+        radial-gradient(900px 700px at 90% 10%, rgba(31,184,104,.14), transparent 55%),
+        linear-gradient(180deg, var(--bg), #070a08 60%, #050705);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .topbar{
+      position:sticky; top:0; z-index:40;
+      backdrop-filter:blur(12px);
+      background:rgba(7,10,8,.60);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .topbar-inner{
+      width:min(var(--max), calc(100% - 40px));
+      margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0; gap:12px;
+    }
+    .brand{display:flex; align-items:center; gap:10px;}
+    .logo-wrap{
+      width:44px;height:44px;border-radius:14px;
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(255,255,255,.18);
+      display:flex;align-items:center;justify-content:center;
+      overflow:hidden;
+      box-shadow:0 12px 30px rgba(0,0,0,.25);
+    }
+    .logo{width:100%;height:100%;object-fit:contain;padding:4px;}
+    .brand b{font-size:14px}
+    .brand small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
+
+    .wrap{width:min(var(--max), calc(100% - 40px)); margin:0 auto; padding:22px 0 70px}
+    .card{
+      background:var(--card);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:var(--r);
+      box-shadow:0 12px 30px rgba(0,0,0,.22);
+      padding:16px;
+    }
+    h1{margin:0 0 8px; font-size:26px}
+    p{margin:0; color:var(--muted); font-size:13px}
+    .muted-note{margin-top:10px; color:var(--muted2); font-size:12px}
+
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:14px; margin-top:14px}
+    .col12{grid-column:span 12}
+    .col6{grid-column:span 6}
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:11px 14px; border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      color:var(--text); font-weight:800; font-size:13px;
+    }
+    .btn.primary{
+      background:linear-gradient(135deg, rgba(47,226,123,.95), rgba(31,184,104,.75));
+      border-color:rgba(47,226,123,.35);
+      color:#06110b;
+      box-shadow:0 14px 30px rgba(47,226,123,.18);
+    }
+
+    .item{
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      border-radius:18px;
+      padding:14px;
+    }
+    .item h3{margin:0 0 6px; font-size:15px}
+    .item p{margin:0; color:var(--muted); font-size:13px}
+    .mini{color:rgba(255,255,255,.55); font-size:12px; margin-top:8px}
+
+    @media (max-width:900px){
+      .col6{grid-column:span 12}
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="./index.html#top">
+      <div class="logo-wrap">
+        <img class="logo" src="logo.png" alt="Fresh Start Yard Services logo"/>
+      </div>
+      <div>
+        <b>Fresh Start Yard Services LLC</b>
+        <small>Luxury Builds & Special Requests</small>
+      </div>
+    </a>
+    <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+      <a class="btn" href="./pricing.html">Pricing</a>
+      <a class="btn" href="./contract.html">Contract</a>
+      <a class="btn primary" href="./index.html#contact">Request Quote</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="card">
+    <h1>Luxury Builds (Special Requests)</h1>
+    <p>
+      These are custom upgrades that typically require an on-site consultation.
+      Pricing depends on material selection, measurements, grading, and build complexity.
+    </p>
+    <div class="muted-note">
+      Submit a quote request or contract with “Luxury Build” selected and we’ll schedule a consult.
+    </div>
+    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+      <a class="btn primary" href="./contract.html">Start a Luxury Request</a>
+      <a class="btn" href="./pricing.html">View Service Menu</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="item col6">
+      <h3>Fire Pits (Built-In)</h3>
+      <p>Custom fire pits with proper base prep, level work, stone/brick options, and seating layout.</p>
+      <div class="mini">Minimum starting labor: <b>$650+</b> (materials vary)</div>
+    </div>
+
+    <div class="item col6">
+      <h3>Pergolas</h3>
+      <p>Wood or metal pergolas, anchored correctly, with layout planning and finish options.</p>
+      <div class="mini">Minimum starting labor: <b>$1,500+</b> (materials vary)</div>
+    </div>
+
+    <div class="item col6">
+      <h3>Retaining Walls</h3>
+      <p>Block/stone retaining walls, properly compacted base, drainage, and stepped design if needed.</p>
+      <div class="mini">Minimum starting labor: <b>$2,000+</b> (site + materials vary)</div>
+    </div>
+
+    <div class="item col6">
+      <h3>In-Ground Steps / Hardscape Steps</h3>
+      <p>Steps set into slope/grade for safe access with clean edges and stable base prep.</p>
+      <div class="mini">Minimum starting labor: <b>$900+</b></div>
+    </div>
+
+    <div class="item col6">
+      <h3>Paver Projects</h3>
+      <p>Walkways, small patios, edging borders, and repairs with proper base and sand bedding.</p>
+      <div class="mini">Minimum starting labor: <b>$1,200+</b></div>
+    </div>
+
+    <div class="item col6">
+      <h3>Drainage & Grade Fixes (Basic)</h3>
+      <p>Redirect water flow, add basic slope corrections, and improve standing water zones.</p>
+      <div class="mini">Minimum starting labor: <b>$450+</b></div>
+    </div>
+
+    <div class="item col12">
+      <h3>Custom / Ultra Requests</h3>
+      <p>Tell us what you want built. If it’s outdoors and yard-related, we’ll tell you what’s realistic, what it needs, and how pricing works.</p>
+      <div class="mini">Submit details on the contract page or request a quote with photos.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

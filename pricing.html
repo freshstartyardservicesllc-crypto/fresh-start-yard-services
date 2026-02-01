@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Pricing & Service Menu | Fresh Start Yard Services LLC</title>
+  <meta name="description" content="Fresh Start Yard Services LLC pricing and service menu with size tiers and quality options for residential and commercial."/>
+  <meta name="theme-color" content="#0b0f0d"/>
+
+  <style>
+    :root{
+      --bg:#0b0f0d;
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.72);
+      --muted2:rgba(255,255,255,.60);
+      --stroke:rgba(255,255,255,.12);
+      --card:rgba(255,255,255,.04);
+      --card2:rgba(255,255,255,.03);
+      --green:#2fe27b;
+      --green2:#1fb868;
+      --shadow:0 18px 55px rgba(0,0,0,.35);
+      --r:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1100px 800px at 20% 0%, rgba(47,226,123,.18), transparent 60%),
+        radial-gradient(900px 700px at 90% 10%, rgba(31,184,104,.14), transparent 55%),
+        linear-gradient(180deg, var(--bg), #070a08 60%, #050705);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max), calc(100% - 40px)); margin:0 auto; padding:22px 0 70px}
+    .topbar{
+      position:sticky; top:0; z-index:40;
+      backdrop-filter:blur(12px);
+      background:rgba(7,10,8,.60);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .topbar-inner{
+      width:min(var(--max), calc(100% - 40px));
+      margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0; gap:12px;
+    }
+    .brand{display:flex; align-items:center; gap:10px;}
+    .logo-wrap{
+      width:44px;height:44px;border-radius:14px;
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(255,255,255,.18);
+      display:flex;align-items:center;justify-content:center;
+      overflow:hidden;
+      box-shadow:0 12px 30px rgba(0,0,0,.25);
+    }
+    .logo{width:100%;height:100%;object-fit:contain;padding:4px;}
+    .brand b{font-size:14px}
+    .brand small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:11px 14px; border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      color:var(--text); font-weight:800; font-size:13px;
+    }
+    .btn.primary{
+      background:linear-gradient(135deg, rgba(47,226,123,.95), rgba(31,184,104,.75));
+      border-color:rgba(47,226,123,.35);
+      color:#06110b;
+      box-shadow:0 14px 30px rgba(47,226,123,.18);
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:var(--r);
+      box-shadow:0 12px 30px rgba(0,0,0,.22);
+      padding:16px;
+    }
+    h1{margin:0 0 8px; font-size:26px; letter-spacing:-.2px}
+    h2{margin:18px 0 10px; font-size:18px}
+    p{margin:0; color:var(--muted); font-size:13px}
+    .muted-note{margin-top:10px; color:var(--muted2); font-size:12px}
+
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:14px; margin-top:14px}
+    .col12{grid-column:span 12}
+    .col6{grid-column:span 6}
+    .col4{grid-column:span 4}
+
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; padding:7px 10px; border:1px solid rgba(255,255,255,.12);
+      border-radius:999px; color:var(--muted);
+      background:rgba(255,255,255,.04);
+      margin:6px 6px 0 0;
+    }
+    table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      overflow:hidden;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+    }
+    th, td{
+      text-align:left;
+      padding:12px 12px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      vertical-align:top;
+      font-size:13px;
+      color:rgba(255,255,255,.84);
+    }
+    th{font-size:12px; color:rgba(255,255,255,.70); letter-spacing:.2px; text-transform:uppercase;}
+    tr:last-child td{border-bottom:none}
+    .badge{
+      display:inline-block;
+      padding:5px 9px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      font-size:12px;
+      color:rgba(255,255,255,.78);
+      margin-top:6px;
+    }
+    .mini{color:rgba(255,255,255,.55); font-size:12px; margin-top:6px}
+
+    .service{
+      background:var(--card2);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:18px;
+      padding:14px;
+    }
+    .service h3{margin:0 0 6px; font-size:15px}
+    .service p{margin:0; color:var(--muted); font-size:13px}
+    .row{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .line{height:1px; background:rgba(255,255,255,.08); margin:12px 0}
+
+    @media (max-width:900px){
+      .col6,.col4{grid-column:span 12}
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="./index.html#top">
+      <div class="logo-wrap">
+        <img class="logo" src="logo.png" alt="Fresh Start Yard Services logo"/>
+      </div>
+      <div>
+        <b>Fresh Start Yard Services LLC</b>
+        <small>Pricing & Service Menu</small>
+      </div>
+    </a>
+    <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+      <a class="btn" href="./luxury.html">Luxury Builds</a>
+      <a class="btn" href="./contract.html">Contract</a>
+      <a class="btn primary" href="./index.html#contact">Request Quote</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="card">
+    <h1>Pricing & Service Menu</h1>
+    <p>
+      Below are <b>starting minimum prices</b> for Residential and Commercial. Final price depends on
+      overgrowth, access, debris volume, slope, obstacles, and add-ons.
+    </p>
+    <div class="muted-note">
+      Tip: Use this page to pick your <b>Size</b> + <b>Quality</b>, then submit the contract or quote request.
+    </div>
+    <div class="row" aria-label="Highlights">
+      <span class="pill">Residential + Commercial</span>
+      <span class="pill">X-Small → XL</span>
+      <span class="pill">Regular / Premium / Ultra</span>
+      <span class="pill">“Starting at” prices</span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card col12">
+      <h2>Size Tiers (How We Classify Your Property)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Size Tier</th>
+            <th>Typical Fit</th>
+            <th>What changes as size increases</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>X-Small</b><div class="mini">Tiny front/back or small townhouse</div></td>
+            <td>Quick service, minimal obstacles</td>
+            <td>Shortest time, lightest debris, lowest fuel/haul</td>
+          </tr>
+          <tr>
+            <td><b>Small</b><div class="mini">Standard small yard</div></td>
+            <td>Simple mowing + detail</td>
+            <td>Moderate time, moderate trimming/edges</td>
+          </tr>
+          <tr>
+            <td><b>Medium</b><div class="mini">Most suburban homes</div></td>
+            <td>More edging + multiple zones</td>
+            <td>More trimming, longer mow time, more bags</td>
+          </tr>
+          <tr>
+            <td><b>Medium-Large</b><div class="mini">Corner lots / heavier trim</div></td>
+            <td>Additional perimeter and edging</td>
+            <td>More labor, possible multi-visit for cleanup</td>
+          </tr>
+          <tr>
+            <td><b>Large</b><div class="mini">Big yards / light acreage feel</div></td>
+            <td>Longer mowing + more detail areas</td>
+            <td>More crew time, more hauling, bigger equipment time</td>
+          </tr>
+          <tr>
+            <td><b>Extra-Large</b><div class="mini">Acreage-style lawns or heavy zones</div></td>
+            <td>Multi-zone work</td>
+            <td>Highest labor/fuel/haul, may require split scheduling</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="muted-note">
+        We confirm size during estimate. If your property is between sizes, we price to the next tier up.
+      </div>
+    </div>
+
+    <div class="card col12">
+      <h2>Quality Levels (What “Regular / Premium / Ultra” Means)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Best For</th>
+            <th>What You Get</th>
+            <th>What’s Different</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Regular</b></td>
+            <td>Budget, maintenance, simple jobs</td>
+            <td>Core service + basic cleanup</td>
+            <td>Focus on function and speed</td>
+          </tr>
+          <tr>
+            <td><b>Premium</b></td>
+            <td>Curb appeal, cleaner edges</td>
+            <td>More detail + cleaner finish</td>
+            <td>Extra attention to borders, blow-off, and presentation</td>
+          </tr>
+          <tr>
+            <td><b>Ultra</b></td>
+            <td>“Show-ready” look</td>
+            <td>Highest detail, deeper cleanup</td>
+            <td>Most time spent on precision + final polish</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="muted-note">
+        Quality level affects labor time. Ultra is for “I want it perfect” jobs.
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card col12">
+      <h2>Service Menu (Starting Minimum Prices)</h2>
+      <p>Use this as your “starting point.” Submit a quote request for exact pricing.</p>
+      <div class="line"></div>
+
+      <!-- SERVICE BLOCKS -->
+      <div class="grid">
+
+        <div class="service col6">
+          <h3>Lawn Mowing (Residential)</h3>
+          <p>Consistent cut + basic blow-off. Add trimming/edging for full polish.</p>
+          <div class="row">
+            <span class="badge">Starting at: <b>$45</b> (X-Small)</span>
+            <span class="badge">Small: <b>$55</b></span>
+            <span class="badge">Medium: <b>$70</b></span>
+            <span class="badge">M-Large: <b>$85</b></span>
+            <span class="badge">Large: <b>$110</b></span>
+            <span class="badge">XL: <b>$140</b></span>
+          </div>
+          <div class="mini">Quality add-on: Premium +$10 • Ultra +$20</div>
+        </div>
+
+        <div class="service col6">
+          <h3>Lawn Mowing (Commercial)</h3>
+          <p>Open areas, consistent scheduling, and professional site appearance.</p>
+          <div class="row">
+            <span class="badge">Starting at: <b>$75</b> (X-Small)</span>
+            <span class="badge">Small: <b>$95</b></span>
+            <span class="badge">Medium: <b>$125</b></span>
+            <span class="badge">M-Large: <b>$160</b></span>
+            <span class="badge">Large: <b>$220</b></span>
+            <span class="badge">XL: <b>$300+</b></span>
+          </div>
+          <div class="mini">Commercial often priced by sqft + obstacles + frequency.</div>
+        </div>
+
+        <div class="service col6">
+          <h3>Trimming & Edging (Residential)</h3>
+          <p>Trim around beds/fences + crisp edges. This is what makes it look “professional.”</p>
+          <div class="row">
+            <span class="badge">Starting at: <b>$35</b> (X-Small)</span>
+            <span class="badge">Small: <b>$45</b></span>
+            <span class="badge">Medium: <b>$60</b></span>
+            <span class="badge">M-Large: <b>$80</b></span>
+            <span class="badge">Large: <b>$105</b></span>
+            <span class="badge">XL: <b>$140</b></span>
+          </div>
+          <div class="mini">Premium includes sharper edge detail. Ultra includes deeper line cleanup.</div>
+        </div>
+
+        <div class="service col6">
+          <h3>Mulch Installation (Beds)</h3>
+          <p>Bed cleanup + mulch install + clean edges. Mulch priced by depth & bed size.</p>
+          <div class="row">
+            <span class="badge">Starting labor min: <b>$150</b></span>
+            <span class="badge">Premium: <b>$220</b></span>
+            <span class="badge">Ultra: <b>$300</b></span>
+          </div>
+          <div class="mini">Mulch/material cost is additional unless included in quote.</div>
+        </div>
+
+        <div class="service col6">
+          <h3>Weed Removal / Bed Cleanout</h3>
+          <p>Hand pull and/or cut-back, reset beds, prep for mulch or fresh edging.</p>
+          <div class="row">
+            <span class="badge">Starting min: <b>$120</b> (X-Small)</span>
+            <span class="badge">Small: <b>$160</b></span>
+            <span class="badge">Medium: <b>$220</b></span>
+            <span class="badge">Large+: <b>$300+</b></span>
+          </div>
+          <div class="mini">Ultra includes deeper root removal + cleaner finish.</div>
+        </div>
+
+        <div class="service col6">
+          <h3>Yard Cleanup (Spring/Fall / One-Time)</h3>
+          <p>Leaves, sticks, debris, cutback (light), bagging, and haul-away (as scoped).</p>
+          <div class="row">
+            <span class="badge">Starting min: <b>$150</b> (X-Small)</span>
+            <span class="badge">Small: <b>$200</b></span>
+            <span class="badge">Medium: <b>$275</b></span>
+            <span class="badge">Large: <b>$375</b></span>
+            <span class="badge">XL: <b>$500+</b></span>
+          </div>
+          <div class="mini">Heavy overgrowth or major debris increases cost.</div>
+        </div>
+
+        <div class="service col6">
+          <h3>Shrub Trimming / Pruning</h3>
+          <p>Shape shrubs for a cleaner look and healthier structure.</p>
+          <div class="row">
+            <span class="badge">Starting min: <b>$95</b> (light)</span>
+            <span class="badge">Medium: <b>$160</b></span>
+            <span class="badge">Heavy: <b>$250+</b></span>
+          </div>
+          <div class="mini">Premium = cleaner shaping. Ultra = detailed symmetry and cleanup.</div>
+        </div>
+
+        <div class="service col6">
+          <h3>Leaf Cleanup & Haul-Away</h3>
+          <p>Blow, bag, and remove leaves. Yard condition and volume matters most.</p>
+          <div class="row">
+            <span class="badge">Starting min: <b>$120</b> (X-Small)</span>
+            <span class="badge">Small: <b>$170</b></span>
+            <span class="badge">Medium: <b>$240</b></span>
+            <span class="badge">Large+: <b>$350+</b></span>
+          </div>
+          <div class="mini">Heavy wet leaves or multiple dumps increases cost.</div>
+        </div>
+
+      </div>
+
+      <div class="line"></div>
+      <div class="row">
+        <a class="btn primary" href="./contract.html">Fill Out Contract</a>
+        <a class="btn" href="./index.html#contact">Request Quote</a>
+        <a class="btn" href="./luxury.html">Luxury Builds</a>
+      </div>
+
+      <div class="muted-note">
+        These are baseline minimums. We confirm pricing after property details and scope approval.
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

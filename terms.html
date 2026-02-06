@@ -4,58 +4,432 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Terms & Conditions | Fresh Start Yard Services LLC</title>
-  <meta name="theme-color" content="#0b0f0d"/>
+  <meta name="description" content="Terms & Conditions for Fresh Start Yard Services LLC (Cincinnati, Dayton, Middletown). Service policies, deposits, scheduling, and dispute resolution." />
+  <meta name="theme-color" content="#0b0f0d" />
+
   <style>
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0b0f0d;color:rgba(255,255,255,.92);line-height:1.6}
-    a{color:#2fe27b;text-decoration:none}
-    .wrap{max-width:900px;margin:0 auto;padding:24px}
-    .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px}
-    h1{margin:0 0 10px}
-    h2{margin:18px 0 8px;font-size:18px}
-    p,li{color:rgba(255,255,255,.78);font-size:14px}
-    .muted{color:rgba(255,255,255,.60);font-size:12px}
-    .btn{display:inline-block;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);color:rgba(255,255,255,.92)}
+    :root{
+      --bg:#0b0f0d;
+      --panel:rgba(255,255,255,.05);
+      --card:rgba(255,255,255,.04);
+      --stroke:rgba(255,255,255,.12);
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.72);
+      --muted2:rgba(255,255,255,.60);
+      --green:#2fe27b;
+      --shadow:0 18px 55px rgba(0,0,0,.35);
+      --r:18px;
+      --r2:22px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Helvetica Neue",Helvetica,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1100px 800px at 20% 0%, rgba(47,226,123,.18), transparent 60%),
+        radial-gradient(900px 700px at 90% 10%, rgba(31,184,104,.14), transparent 55%),
+        radial-gradient(1000px 800px at 50% 100%, rgba(255,255,255,.06), transparent 60%),
+        linear-gradient(180deg, var(--bg), #070a08 60%, #050705);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(var(--max), calc(100% - 40px)); margin-inline:auto}
+
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:blur(14px);
+      background:rgba(7,10,8,.55);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0; gap:14px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; min-width:240px;}
+    .logo-wrap{
+      width:44px; height:44px; border-radius:14px;
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(255,255,255,.18);
+      display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
+      box-shadow:0 12px 30px rgba(0,0,0,.25);
+    }
+    .logo-img{width:100%; height:100%; object-fit:contain; padding:4px;}
+    .brand h1{font-size:15px; margin:0; letter-spacing:.2px; line-height:1.1;}
+    .brand span{display:block; font-size:12px; color:var(--muted2); margin-top:2px;}
+
+    nav ul{list-style:none; display:flex; gap:16px; padding:0; margin:0; align-items:center;}
+    nav a{
+      color:var(--muted); font-size:13px; padding:8px 10px;
+      border-radius:10px; border:1px solid transparent;
+    }
+    nav a:hover{color:var(--text); background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.08);}
+
+    .actions{display:flex; gap:10px; align-items:center; justify-content:flex-end; min-width:260px;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:11px 14px; border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      color:var(--text); font-weight:800; font-size:13px;
+      transition:transform .08s ease, background .15s ease, border-color .15s ease;
+      user-select:none; white-space:nowrap;
+    }
+    .btn:hover{background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.16);}
+    .btn:active{transform:translateY(1px);}
+    .btn.primary{
+      background:linear-gradient(135deg, rgba(47,226,123,.95), rgba(31,184,104,.75));
+      border-color:rgba(47,226,123,.35);
+      color:#06110b;
+      box-shadow:0 14px 30px rgba(47,226,123,.18);
+    }
+    .pill{
+      font-size:12px; padding:7px 10px; border:1px solid rgba(255,255,255,.12);
+      border-radius:999px; color:var(--muted);
+      background:rgba(255,255,255,.04);
+    }
+
+    main{padding:30px 0 70px;}
+    .hero{
+      border-radius:var(--r2);
+      border:1px solid rgba(255,255,255,.10);
+      background:
+        radial-gradient(900px 520px at 20% 30%, rgba(47,226,123,.12), transparent 60%),
+        radial-gradient(900px 520px at 95% 40%, rgba(31,184,104,.10), transparent 58%),
+        rgba(255,255,255,.04);
+      box-shadow:var(--shadow);
+      padding:22px;
+      overflow:hidden;
+    }
+    .hero h2{
+      margin:10px 0 8px;
+      font-size:clamp(26px, 3.2vw, 40px);
+      letter-spacing:-.6px;
+      line-height:1.1;
+    }
+    .hero p{margin:0; color:var(--muted); font-size:14px; max-width:80ch;}
+    .hero-ctas{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;}
+
+    .grid{display:grid; grid-template-columns:repeat(12, 1fr); gap:14px; margin-top:14px;}
+    .card{
+      border-radius:var(--r);
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+      padding:16px;
+      box-shadow:0 12px 30px rgba(0,0,0,.22);
+    }
+    .card h3{margin:0 0 8px; font-size:16px;}
+    .card p{margin:0; color:var(--muted); font-size:13px;}
+    .col8{grid-column:span 8;}
+    .col4{grid-column:span 4;}
+    .col12{grid-column:span 12;}
+
+    .toc a{
+      display:flex; justify-content:space-between; align-items:center; gap:10px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      margin-top:10px;
+    }
+    .toc a:hover{background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.14);}
+    .toc b{font-size:13px;}
+    .toc small{color:var(--muted2);}
+
+    .section{
+      padding:14px 0 4px;
+      border-top:1px solid rgba(255,255,255,.08);
+      margin-top:14px;
+    }
+    .section:first-child{border-top:none; margin-top:0;}
+    .section h4{margin:0 0 8px; font-size:15px;}
+    .section ul{margin:0; padding-left:18px; color:var(--muted); font-size:13px;}
+    .section li{margin:6px 0;}
+
+    .callouts{
+      display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;
+    }
+
+    footer{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding:26px 0 70px;
+      background:rgba(0,0,0,.18);
+    }
+    .footer-grid{display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:14px;}
+    .footer-grid p, .footer-grid a, .footer-grid div{color:var(--muted); font-size:13px;}
+    .footer-grid b{color:rgba(255,255,255,.86);}
+    .foot-links{display:grid; gap:6px;}
+    .mini{margin-top:10px; color:rgba(255,255,255,.45); font-size:12px;}
+    .float-call{position:fixed; right:16px; bottom:16px; z-index:60; display:none;}
+
+    @media (max-width:980px){
+      .footer-grid{grid-template-columns:1fr;}
+      .actions{min-width:auto;}
+      .col8,.col4{grid-column:span 12;}
+    }
+    @media (max-width:860px){
+      nav ul{display:none;}
+      .float-call{display:block;}
+    }
+    @media (max-width:520px){
+      .actions .btn{display:none;}
+      .actions .btn.primary{display:inline-flex;}
+    }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <a class="btn" href="./index.html#top">← Back to Website</a>
-    <div class="card" style="margin-top:14px;">
-      <h1>Terms & Conditions</h1>
-      <p class="muted">Fresh Start Yard Services LLC • Cincinnati, OH</p>
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="./index.html#top" aria-label="Fresh Start Yard Services LLC Home">
+        <div class="logo-wrap">
+          <img class="logo-img" src="logo.png" alt="Fresh Start Yard Services logo" />
+        </div>
+        <div>
+          <h1>Fresh Start Yard Services LLC</h1>
+          <span>Terms & Conditions</span>
+        </div>
+      </a>
 
-      <h2>Scheduling & Weather</h2>
-      <ul>
-        <li>Work may be delayed/rescheduled due to rain, unsafe conditions, saturated ground, or extreme weather.</li>
-        <li>Weather delays are not considered cancellations.</li>
-      </ul>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="./index.html#services">Home</a></li>
+          <li><a href="./pricing.html">Pricing</a></li>
+          <li><a href="./luxury.html">Luxury Builds</a></li>
+          <li><a href="./contract.html">Contract</a></li>
+          <li><a href="#policies">Policies</a></li>
+        </ul>
+      </nav>
 
-      <h2>Deposits</h2>
-      <ul>
-        <li>Some jobs require a deposit to reserve your service window.</li>
-        <li>Deposits are applied to the job total unless otherwise stated.</li>
-        <li>Cash App: <b>$FSYardServicesLLC</b></li>
-      </ul>
-
-      <h2>Access & Property Conditions</h2>
-      <ul>
-        <li>Client must provide access (gates unlocked, pets secured).</li>
-        <li>Client should disclose hazards (sprinklers, hidden debris, brittle edging).</li>
-      </ul>
-
-      <h2>Change Orders</h2>
-      <ul>
-        <li>Work outside the agreed scope must be approved (text/email is ok) and may increase price.</li>
-      </ul>
-
-      <h2>Contact</h2>
-      <p>
-        Phone: <a href="tel:+15135492498">(513) 549-2498</a><br/>
-        Email: <a href="mailto:freshstartyardservicesllc@gmail.com">freshstartyardservicesllc@gmail.com</a>
-      </p>
-
-      <p class="muted">If you want a longer “legal-grade” terms page later, I can expand this.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:freshstartyardservicesllc@gmail.com">Email</a>
+        <a class="btn primary" href="tel:+15135492498">Call Now</a>
+      </div>
     </div>
   </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="hero">
+      <div class="callouts">
+        <span class="pill">Cincinnati • Dayton • Middletown</span>
+        <span class="pill">Residential & Commercial</span>
+        <span class="pill">Deposits & Scheduling</span>
+        <span class="pill">Arbitration</span>
+      </div>
+      <h2>Terms & Conditions</h2>
+      <p>
+        These Terms & Conditions (“Terms”) apply to services provided by <b>Fresh Start Yard Services LLC</b> (“Company”, “we”, “us”)
+        to the customer (“Client”, “you”) for yard services, landscaping, exterior cleaning, and related work.
+        By booking service, paying a deposit, authorizing work, or submitting the online Service Agreement, you accept these Terms.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn primary" href="./contract.html">Open Service Agreement</a>
+        <a class="btn" href="./pricing.html">View Pricing</a>
+        <a class="btn" href="./index.html#deposit">Pay Deposit</a>
+      </div>
+      <div class="mini" style="margin-top:10px;">
+        Version: <b>FSYS-TERMS-v2.0</b> • Last updated: <b>02/06/2026</b> • Contact: <b>freshstartyardservicesllc@gmail.com</b> • Phone: <b>(513) 549-2498</b>
+      </div>
+    </div>
+
+    <div class="grid" id="policies">
+      <div class="card col4">
+        <h3>Quick Index</h3>
+        <p>Tap a section to jump.</p>
+        <div class="toc">
+          <a href="#scope"><div><b>1) Scope & Change Orders</b><br/><small>What is included</small></div><small>›</small></a>
+          <a href="#pricing"><div><b>2) Pricing, Estimates, Materials</b><br/><small>Labor vs materials</small></div><small>›</small></a>
+          <a href="#deposits"><div><b>3) Deposits & Payments</b><br/><small>Due dates</small></div><small>›</small></a>
+          <a href="#scheduling"><div><b>4) Scheduling & Weather</b><br/><small>Delays and reschedules</small></div><small>›</small></a>
+          <a href="#access"><div><b>5) Access, Utilities & Safety</b><br/><small>Client responsibilities</small></div><small>›</small></a>
+          <a href="#completion"><div><b>6) Completion Standards</b><br/><small>Acceptance & punch list</small></div><small>›</small></a>
+          <a href="#damage"><div><b>7) Property Conditions & Damage</b><br/><small>Limits and disclosures</small></div><small>›</small></a>
+          <a href="#warranty"><div><b>8) Warranty / No Guarantee</b><br/><small>Plants & seeding</small></div><small>›</small></a>
+          <a href="#media"><div><b>9) Photos & Documentation</b><br/><small>Before/after proof</small></div><small>›</small></a>
+          <a href="#commercial"><div><b>10) Commercial / HOA Terms</b><br/><small>PM workflow</small></div><small>›</small></a>
+          <a href="#disputes"><div><b>11) Disputes & Arbitration</b><br/><small>Ohio venue rule</small></div><small>›</small></a>
+          <a href="#legal"><div><b>12) Legal / General</b><br/><small>Entire agreement</small></div><small>›</small></a>
+        </div>
+      </div>
+
+      <div class="card col8">
+        <h3>Policy Details</h3>
+        <p>Clear, professional expectations to protect both Client and Company.</p>
+
+        <div class="section" id="scope">
+          <h4>1) Scope of Work & Change Orders</h4>
+          <ul>
+            <li><b>Scope is defined</b> by the written estimate, invoice, text/email confirmation, and/or the submitted Service Agreement.</li>
+            <li><b>Change orders</b> are any additions outside scope (extra areas, extra hauling, deeper cutbacks, additional beds, stain treatment, etc.). Change orders require Client approval (text/email approval is acceptable) and may increase price and/or time.</li>
+            <li><b>Minimum job charge:</b> Company may apply a minimum service charge to cover mobilization, equipment, and disposal even for small tasks.</li>
+          </ul>
+        </div>
+
+        <div class="section" id="pricing">
+          <h4>2) Pricing, Estimates, Labor vs Materials</h4>
+          <ul>
+            <li><b>Pricing format:</b> We may quote per job, per square foot, per linear foot, per yard, or time & materials depending on scope.</li>
+            <li><b>Estimates:</b> Estimates are based on visible conditions. Hidden debris, excess overgrowth, heavy stains, access issues, or undisclosed hazards may require a revised quote.</li>
+            <li><b>Materials:</b> When Company supplies materials (mulch, rock, edging, seed, etc.), materials may be included in one bundled price or listed separately. Availability/price changes may affect the final amount.</li>
+            <li><b>Labor vs materials disclosure:</b> On request, we can provide a high-level split (labor/materials/disposal). For most residential jobs, a single all-in price is used to keep it simple and avoid confusion.</li>
+          </ul>
+        </div>
+
+        <div class="section" id="deposits">
+          <h4>3) Deposits, Payments, and Non-Payment</h4>
+          <ul>
+            <li><b>Deposits reserve scheduling.</b> A deposit is required to hold a service window once a quote is accepted (unless waived in writing).</li>
+            <li><b>Deposit guidelines:</b> $50 (jobs &lt; $250), $100 ($250–$499), $150 ($500–$999), 30% ($1,000+), unless otherwise agreed.</li>
+            <li><b>Balance due:</b> Remaining balance is due at completion of work unless the invoice states otherwise.</li>
+            <li><b>Late / non-payment:</b> Company may pause service, withhold additional work, and/or pursue lawful collection remedies for unpaid balances. Client is responsible for fees allowed by law for collection and enforcement.</li>
+            <li><b>Cash App deposits:</b> Deposits can be paid to <b>$FSYardServicesLLC</b>. Client should text <b>Name + Address + Amount</b> to (513) 549-2498 so payment matches quickly.</li>
+          </ul>
+        </div>
+
+        <div class="section" id="scheduling">
+          <h4>4) Scheduling, Weather, and Delays</h4>
+          <ul>
+            <li><b>Weather delays:</b> Rain, saturated ground, snow/ice, high winds, or unsafe conditions may require rescheduling to protect property and safety.</li>
+            <li><b>Service windows:</b> We schedule in service windows (not exact minutes). We will communicate arrival updates as practical.</li>
+            <li><b>Seasonal constraints:</b> Some work is seasonal (seeding success, pruning timing, epoxy humidity/temperature limits, etc.). We may recommend alternate timing for best results.</li>
+          </ul>
+        </div>
+
+        <div class="section" id="access">
+          <h4>5) Access, Utilities, and Safety</h4>
+          <ul>
+            <li><b>Access:</b> Client must provide access (gates unlocked, codes provided, vehicles moved as needed) and secure pets.</li>
+            <li><b>Utilities & hazards:</b> Client must disclose sprinklers, shallow utilities, hidden cables, landscape lighting wires, pet waste, brittle edging, unstable pavers, and similar hazards.</li>
+            <li><b>Safety zone:</b> Client agrees to keep children and pets away from work areas. Company is not responsible for injury caused by entering active work zones.</li>
+            <li><b>Municipal marking:</b> For digging/edging/planting/retaining work, Client may be required to coordinate utility marking before work begins if requested.</li>
+          </ul>
+        </div>
+
+        <div class="section" id="completion">
+          <h4>6) Completion Standards, Acceptance, and Punch List</h4>
+          <ul>
+            <li><b>Standard:</b> Work is completed in a professional, workmanlike manner consistent with the agreed scope and industry practice.</li>
+            <li><b>Client walkthrough:</b> If Client is available, we encourage a quick walkthrough at completion. If not available, before/after photos may serve as proof of completion.</li>
+            <li><b>Punch list:</b> Client must report any issues within <b>48 hours</b> of completion so we can review and address in good faith.</li>
+          </ul>
+        </div>
+
+        <div class="section" id="damage">
+          <h4>7) Property Conditions, Pre-existing Damage, and Limitations</h4>
+          <ul>
+            <li><b>Pre-existing conditions:</b> Company is not responsible for pre-existing damage, deterioration, rot, unstable concrete, brittle siding, or hidden structural issues.</li>
+            <li><b>Hidden objects:</b> We are not responsible for damage to hidden items (buried rocks/bricks, thin irrigation lines, unmarked wiring, etc.).</li>
+            <li><b>Normal work effects:</b> Landscaping may involve temporary soil disturbance, minor turf compression, and debris movement consistent with the work.</li>
+            <li><b>Pressure washing caution:</b> Washing can reveal existing surface defects; Company is not responsible for damage due to existing cracks, spalling, poor sealing, or degraded surfaces.</li>
+            <li><b>Epoxy caution:</b> Moisture, vapor transmission, and slab condition can affect results. We may require prep steps (grinding, patching, moisture barrier) as needed.</li>
+          </ul>
+        </div>
+
+        <div class="section" id="warranty">
+          <h4>8) Warranty / No Guarantee (Plants, Seeding, Results)</h4>
+          <ul>
+            <li><b>No guarantee of biological results:</b> Plant survival and seed germination depend on weather, soil, pests, watering, and site conditions outside Company control.</li>
+            <li><b>Client watering responsibility:</b> For seeding/overseeding, Client must follow watering instructions to achieve best results. Lack of watering is the most common failure point.</li>
+            <li><b>Workmanship issues:</b> If a workmanship issue is reported within 48 hours, Company will review and correct if appropriate within the scope.</li>
+          </ul>
+        </div>
+
+        <div class="section" id="media">
+          <h4>9) Photos, Documentation, and Marketing Use</h4>
+          <ul>
+            <li><b>Documentation:</b> Client authorizes before/after photos for proof of work, quality control, and estimating.</li>
+            <li><b>Privacy:</b> Company will not post client-identifying details (full address, faces, license plates) without permission.</li>
+            <li><b>Marketing:</b> If Client prefers no public posting, Client may request “no marketing photos” in writing before work begins.</li>
+          </ul>
+        </div>
+
+        <div class="section" id="commercial">
+          <h4>10) Commercial / HOA / Property Manager Terms</h4>
+          <ul>
+            <li><b>Authority:</b> The signer represents they have authority to approve work and payment for the property.</li>
+            <li><b>Access & approvals:</b> Client ensures access, permits (if required), and HOA/PM approvals are obtained before scheduling.</li>
+            <li><b>COI requests:</b> COI requests must be submitted in advance with the proper certificate holder information.</li>
+            <li><b>After-hours work:</b> If required, after-hours scheduling may carry an additional fee due to labor/availability constraints.</li>
+          </ul>
+        </div>
+
+        <div class="section" id="disputes">
+          <h4>11) Disputes, Arbitration, and Ohio Venue</h4>
+          <ul>
+            <li><b>Good-faith first:</b> Parties agree to attempt to resolve disputes directly within 10 days of written notice (text/email acceptable).</li>
+            <li><b>Binding arbitration:</b> If unresolved, disputes will be settled by binding arbitration under Ohio law (unless prohibited by law for a particular claim).</li>
+            <li><b>Fees:</b> Each party pays its own attorney fees unless an arbitrator awards otherwise. Arbitration fees may be allocated by the arbitrator.</li>
+            <li><b>Venue rule:</b> Any court action permitted (example: enforcing an arbitration award) will be filed in the Ohio county where the service address is located, including:
+              <b>Hamilton County (Cincinnati)</b>, <b>Montgomery County (Dayton)</b>, or <b>Butler County (Middletown)</b> as applicable.
+            </li>
+          </ul>
+        </div>
+
+        <div class="section" id="legal">
+          <h4>12) General Legal Terms</h4>
+          <ul>
+            <li><b>Entire agreement:</b> These Terms + the quote/estimate + the submitted Service Agreement (and any written change orders) make up the entire agreement.</li>
+            <li><b>Severability:</b> If one part is unenforceable, the rest remains in effect.</li>
+            <li><b>No waiver:</b> If Company doesn’t enforce a provision once, it doesn’t waive the right to enforce it later.</li>
+            <li><b>Updates:</b> We may update Terms from time to time. The version effective at the time of booking applies unless otherwise required by law.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card col12">
+        <h3>Need help fast?</h3>
+        <p>Call/text for scheduling or questions about scope, deposits, and timing.</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+          <a class="btn primary" href="tel:+15135492498">Call (513) 549-2498</a>
+          <a class="btn" href="mailto:freshstartyardservicesllc@gmail.com">Email</a>
+          <a class="btn" href="./contract.html">Open Service Agreement</a>
+          <a class="btn" href="https://cash.app/$FSYardServicesLLC" target="_blank" rel="noopener">Pay Deposit</a>
+        </div>
+        <div class="mini">Cash App: <b>$FSYardServicesLLC</b> • Service Area: Cincinnati • Dayton • Middletown</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <b>Fresh Start Yard Services LLC</b>
+        <p style="margin:8px 0 0;">
+          Reliable yard care, clean results, fast turnarounds.<br/>
+          Serving Cincinnati, Dayton, Middletown and surrounding areas.
+        </p>
+        <div class="mini">Contact: freshstartyardservicesllc@gmail.com • (513) 549-2498</div>
+      </div>
+
+      <div class="foot-links">
+        <b>Pages</b>
+        <a href="./index.html#top">Home</a>
+        <a href="./pricing.html">Pricing</a>
+        <a href="./luxury.html">Luxury Builds</a>
+        <a href="./contract.html">Service Agreement</a>
+      </div>
+
+      <div class="foot-links">
+        <b>Deposits</b>
+        <a href="./index.html#deposit">Deposit Options</a>
+        <a href="https://cash.app/$FSYardServicesLLC" target="_blank" rel="noopener">Cash App: $FSYardServicesLLC</a>
+        <div class="mini">After paying, text Name + Address + Amount to (513) 549-2498.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="btn primary float-call" href="tel:+15135492498" aria-label="Call Fresh Start Yard Services LLC">
+  Call Now
+</a>
+
 </body>
 </html>

@@ -1,597 +1,562 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Pricing & Service Menu | Fresh Start Yard Services LLC</title>
   <meta name="description" content="Fresh Start Yard Services LLC pricing menu for Cincinnati, Dayton, and Middletown: lawn care, cleanups, mulch, weeds, pressure washing, gutters, edging, rock installs, seeding, and epoxy."/>
-  <meta name="theme-color" content="#0b0f0d"/>
+  <meta name="theme-color" content="#1a472a"/>
+
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#0b0f0d;
-      --text:rgba(255,255,255,.92);
-      --muted:rgba(255,255,255,.72);
-      --muted2:rgba(255,255,255,.60);
-      --stroke:rgba(255,255,255,.12);
-      --card:rgba(255,255,255,.04);
-      --card2:rgba(255,255,255,.03);
-      --green:#2fe27b;
-      --green2:#1fb868;
-      --shadow:0 18px 55px rgba(0,0,0,.35);
-      --r:18px;
-      --max:1100px;
+      --color-forest:#1a472a;
+      --color-sage:#4a7c59;
+      --color-cream:#faf9f6;
     }
-    *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(1100px 800px at 20% 0%, rgba(47,226,123,.18), transparent 60%),
-        radial-gradient(900px 700px at 90% 10%, rgba(31,184,104,.14), transparent 55%),
-        linear-gradient(180deg, var(--bg), #070a08 60%, #050705);
-      line-height:1.55;
+    .font-display{font-family:'Playfair Display', serif;}
+    .font-body{font-family:'Source Sans 3', sans-serif;}
+    .btn-primary{
+      background:linear-gradient(135deg, var(--color-forest) 0%, var(--color-sage) 100%);
+      transition:all .25s ease;
     }
-    a{color:inherit;text-decoration:none}
-    .wrap{width:min(var(--max), calc(100% - 40px)); margin:0 auto; padding:22px 0 70px}
-
-    .topbar{
-      position:sticky; top:0; z-index:40;
-      backdrop-filter:blur(12px);
-      background:rgba(7,10,8,.60);
-      border-bottom:1px solid rgba(255,255,255,.08);
+    .btn-primary:hover{
+      transform:translateY(-1px);
+      box-shadow:0 10px 40px -10px rgba(26,71,42,.5);
     }
-    .topbar-inner{
-      width:min(var(--max), calc(100% - 40px));
-      margin:0 auto;
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0; gap:12px;
+    .pattern-bg{
+      background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a472a' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
-    .brand{display:flex; align-items:center; gap:10px;}
-    .logo-wrap{
-      width:44px;height:44px;border-radius:14px;
-      background:rgba(255,255,255,.92);
-      border:1px solid rgba(255,255,255,.18);
-      display:flex;align-items:center;justify-content:center;
-      overflow:hidden;
-      box-shadow:0 12px 30px rgba(0,0,0,.25);
-    }
-    .logo{width:100%;height:100%;object-fit:contain;padding:4px;}
-    .brand b{font-size:14px}
-    .brand small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
-
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:11px 14px; border-radius:14px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.05);
-      color:var(--text); font-weight:800; font-size:13px;
-      white-space:nowrap;
-    }
-    .btn.primary{
-      background:linear-gradient(135deg, rgba(47,226,123,.95), rgba(31,184,104,.75));
-      border-color:rgba(47,226,123,.35);
-      color:#06110b;
-      box-shadow:0 14px 30px rgba(47,226,123,.18);
-    }
-
-    .card{
-      background:var(--card);
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:var(--r);
-      box-shadow:0 12px 30px rgba(0,0,0,.22);
-      padding:16px;
-    }
-    h1{margin:0 0 8px; font-size:26px; letter-spacing:-.2px}
-    h2{margin:18px 0 10px; font-size:18px}
-    p{margin:0; color:var(--muted); font-size:13px}
-
-    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:14px; margin-top:14px}
-    .col12{grid-column:span 12}
-    .col6{grid-column:span 6}
-
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      font-size:12px; padding:7px 10px; border:1px solid rgba(255,255,255,.12);
-      border-radius:999px; color:var(--muted);
-      background:rgba(255,255,255,.04);
-      margin:6px 6px 0 0;
-    }
-
-    .line{height:1px; background:rgba(255,255,255,.08); margin:12px 0}
-
-    table{
-      width:100%;
-      border-collapse:separate;
-      border-spacing:0;
-      overflow:hidden;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(255,255,255,.03);
-    }
-    th, td{
-      text-align:left;
-      padding:12px 12px;
-      border-bottom:1px solid rgba(255,255,255,.08);
-      vertical-align:top;
-      font-size:13px;
-      color:rgba(255,255,255,.84);
-    }
-    th{font-size:12px; color:rgba(255,255,255,.70); letter-spacing:.2px; text-transform:uppercase;}
-    tr:last-child td{border-bottom:none}
-
-    .section-title{display:flex; align-items:flex-end; justify-content:space-between; gap:10px; flex-wrap:wrap;}
-    .section-title p{max-width:80ch}
-
-    .service{
-      background:var(--card2);
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:18px;
-      padding:14px;
-    }
-    .service h3{margin:0 0 6px; font-size:15px}
-    .service p{margin:0; color:var(--muted); font-size:13px}
-    .row{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
-    .badge{
-      display:inline-block;
-      padding:5px 9px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(255,255,255,.03);
-      font-size:12px;
-      color:rgba(255,255,255,.78);
-    }
-    .mini{color:rgba(255,255,255,.55); font-size:12px; margin-top:8px}
-
-    .note{
-      color:var(--muted2);
-      font-size:12px;
-      margin-top:10px;
-    }
-
-    .anchor{display:block; position:relative; top:-92px; visibility:hidden;}
-
-    @media (max-width:900px){
-      .col6{grid-column:span 12}
-    }
+    .anchor { scroll-margin-top: 96px; }
   </style>
 </head>
 
-<body>
+<body class="h-full font-body text-gray-800 bg-white">
 
-<div class="topbar">
-  <div class="topbar-inner">
-    <a class="brand" href="./index.html#top">
-      <div class="logo-wrap">
-        <img class="logo" src="logo.png" alt="Fresh Start Yard Services logo"/>
+  <!-- Top Bar -->
+  <div class="bg-[#1a472a] text-white py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center text-sm gap-3">
+      <div class="flex items-center gap-6 flex-wrap">
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          Cincinnati • Dayton • Middletown
+        </span>
+        <span class="hidden sm:flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Mon–Sat: 7AM – 7PM
+        </span>
       </div>
-      <div>
-        <b>Fresh Start Yard Services LLC</b>
-        <small>Pricing & Service Menu</small>
-      </div>
-    </a>
-
-    <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
-      <a class="btn" href="./services.html">Service Details</a>
-      <a class="btn" href="./luxury.html">Luxury Builds</a>
-      <a class="btn" href="./contract.html">Contract</a>
-      <a class="btn primary" href="./index.html#contact">Request Quote</a>
-    </div>
-  </div>
-</div>
-
-<div class="wrap">
-
-  <!-- HEADER -->
-  <div class="card">
-    <h1>Pricing & Service Menu</h1>
-    <p>
-      Serving <b>Cincinnati</b>, <b>Dayton</b>, and <b>Middletown</b>. These are <b>starting minimum prices</b>.
-      Final pricing depends on property size, overgrowth, access, debris volume, slope/obstacles, travel zone, and add-ons.
-      <b>Materials</b> (mulch/rock/plants/seed/epoxy systems) are priced separately unless stated.
-    </p>
-
-    <div class="row" aria-label="Highlights">
-      <span class="pill">Good / Better / Best quality options</span>
-      <span class="pill">Residential + Commercial</span>
-      <span class="pill">Minimums protect scheduling</span>
-      <span class="pill">Clear add-ons</span>
-    </div>
-
-    <div class="line"></div>
-
-    <div class="row">
-      <a class="btn primary" href="./contract.html">Review & Sign Contract</a>
-      <a class="btn" href="./services.html">Read Service Details</a>
-      <a class="btn" href="./index.html#deposit">Pay Deposit</a>
-    </div>
-
-    <div class="note">
-      <b>Travel Zones:</b> Cincinnati base pricing • Middletown may include a small travel minimum • Dayton may include a small travel minimum.
-      (We confirm before scheduling.)
+      <a href="tel:+15135492498" class="flex items-center gap-2 font-semibold hover:text-[#8fbc8f] transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
+        (513) 549-2498
+      </a>
     </div>
   </div>
 
-  <!-- SIZE TIERS -->
-  <div class="grid">
-    <div class="card col12">
-      <div class="section-title">
-        <h2>Residential Size Tiers</h2>
-        <p>We confirm size during estimate. If your property is between sizes, we price to the next tier up.</p>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Tier</th>
-            <th>Typical fit</th>
-            <th>What changes as size increases</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><b>X-Small</b></td>
-            <td>Tiny front/back, townhouse, minimal borders</td>
-            <td>Shortest time, light trimming, minimal debris</td>
-          </tr>
-          <tr>
-            <td><b>Small</b></td>
-            <td>Standard small yard</td>
-            <td>Moderate trim/edge time, moderate cleanup</td>
-          </tr>
-          <tr>
-            <td><b>Medium</b></td>
-            <td>Most suburban homes</td>
-            <td>More zones, longer borders, more detail work</td>
-          </tr>
-          <tr>
-            <td><b>Medium-Large</b></td>
-            <td>Corner lots / heavier trim areas</td>
-            <td>More labor, potential split tasks depending on scope</td>
-          </tr>
-          <tr>
-            <td><b>Large</b></td>
-            <td>Big yards / lots of edges and beds</td>
-            <td>More crew time, more hauling, more obstacles</td>
-          </tr>
-          <tr>
-            <td><b>Extra-Large</b></td>
-            <td>Acreage feel / long borders</td>
-            <td>Highest labor/fuel/haul; may require split scheduling</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <!-- Nav -->
+  <nav class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="./index.html#top" class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden border border-gray-200 shadow-sm">
+            <img src="./logo.png" alt="Fresh Start Yard Services LLC logo" class="w-full h-full object-contain p-1"/>
+          </div>
+          <div>
+            <span class="font-display text-xl text-[#1a472a] font-bold block leading-tight">Fresh Start</span>
+            <span class="text-xs text-[#4a7c59] font-medium tracking-wide">YARD SERVICES LLC</span>
+          </div>
+        </a>
 
-    <!-- QUALITY LEVELS -->
-    <div class="card col12">
-      <div class="section-title">
-        <h2>Quality Levels</h2>
-        <p>Pick the finish you want. Premium and Ultra are upsells for customers who want stronger curb appeal.</p>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="./services.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Service Details</a>
+          <a href="./luxury.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Luxury Builds</a>
+          <a href="./contract.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Contract</a>
+          <a href="./index.html#contact" class="btn-primary text-white px-6 py-3 rounded-full font-semibold">Request Quote</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-[#1a472a]" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Level</th>
-            <th>What it means</th>
-            <th>Best for</th>
-            <th>Typical add-on</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><b>Regular (Good)</b></td>
-            <td>Standard service + basic cleanup</td>
-            <td>Maintenance, budget-conscious jobs</td>
-            <td>Base price</td>
-          </tr>
-          <tr>
-            <td><b>Premium (Better)</b></td>
-            <td>More detail + cleaner edges + better finish</td>
-            <td>Curb appeal upgrades</td>
-            <td>+10–20% (varies by service)</td>
-          </tr>
-          <tr>
-            <td><b>Ultra (Best)</b></td>
-            <td>Deepest cleanup/detail + most time on polish</td>
-            <td>“Show-ready” look</td>
-            <td>+20–35% (varies by service)</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="note">
-        Premium/Ultra pricing is based on extra time and detail. We confirm exact amount on the quote.
+
+      <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t mt-4">
+        <div class="flex flex-col gap-3">
+          <a href="./services.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Service Details</a>
+          <a href="./luxury.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Luxury Builds</a>
+          <a href="./contract.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Contract</a>
+          <a href="./index.html#contact" class="btn-primary text-white px-6 py-3 rounded-full font-semibold text-center mt-2">Request Quote</a>
+        </div>
       </div>
     </div>
-  </div>
+  </nav>
 
-  <!-- CORE SERVICES -->
-  <div class="grid">
-    <div class="card col12">
-      <div class="section-title">
-        <h2>Core Yard Services (Starting Minimums)</h2>
-        <p>These match the services shown on your home page. Tap “Service Details” for full explanations and time spans.</p>
-      </div>
+  <!-- Header -->
+  <section class="pattern-bg py-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7">
+        <span class="inline-block bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-semibold mb-4">
+          PRICING & SERVICE MENU
+        </span>
+        <h1 class="font-display text-3xl md:text-4xl font-bold text-[#1a472a] mb-3">Pricing & Service Menu</h1>
 
-      <div class="grid">
+        <p class="text-gray-600">
+          Serving <b>Cincinnati</b>, <b>Dayton</b>, and <b>Middletown</b>. These are <b>starting minimum prices</b>.
+          Final pricing depends on property size, overgrowth, access, debris volume, slope/obstacles, travel zone, and add-ons.
+          <b>Materials</b> (mulch/rock/plants/seed/epoxy systems) are priced separately unless stated.
+        </p>
 
-        <div class="service col6">
-          <span id="mowing" class="anchor"></span>
-          <h3>Lawn Mowing (Residential)</h3>
-          <p>Standard mow with clean finish. Add trimming/edging for a sharper look.</p>
-          <div class="row">
-            <span class="badge">X-Small: <b>$45+</b></span>
-            <span class="badge">Small: <b>$55+</b></span>
-            <span class="badge">Medium: <b>$70+</b></span>
-            <span class="badge">Med-Large: <b>$85+</b></span>
-            <span class="badge">Large: <b>$110+</b></span>
-            <span class="badge">XL: <b>$140+</b></span>
-          </div>
-          <div class="mini">Premium: +$10–$20 • Ultra: +$20–$35 • Bagging/Disposal add-on if needed.</div>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="inline-flex items-center gap-2 bg-[#faf9f6] border border-gray-200 text-gray-700 px-3 py-2 rounded-full text-sm font-semibold">
+            Good / Better / Best quality options
+          </span>
+          <span class="inline-flex items-center gap-2 bg-[#faf9f6] border border-gray-200 text-gray-700 px-3 py-2 rounded-full text-sm font-semibold">
+            Residential + Commercial
+          </span>
+          <span class="inline-flex items-center gap-2 bg-[#faf9f6] border border-gray-200 text-gray-700 px-3 py-2 rounded-full text-sm font-semibold">
+            Minimums protect scheduling
+          </span>
+          <span class="inline-flex items-center gap-2 bg-[#faf9f6] border border-gray-200 text-gray-700 px-3 py-2 rounded-full text-sm font-semibold">
+            Clear add-ons
+          </span>
         </div>
 
-        <div class="service col6">
-          <h3>Lawn Mowing (Commercial - Small Properties)</h3>
-          <p>Consistency + professional appearance. Often priced by size + frequency.</p>
-          <div class="row">
-            <span class="badge">Small: <b>$95+</b></span>
-            <span class="badge">Medium: <b>$125+</b></span>
-            <span class="badge">Large: <b>$220+</b></span>
-            <span class="badge">XL: <b>$300+</b></span>
-          </div>
-          <div class="mini">Commercial quotes may bundle mowing + trim + edges on a schedule.</div>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold" href="./contract.html">Review & Sign Contract</a>
+          <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./services.html">Read Service Details</a>
+          <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./index.html#deposit">Pay Deposit</a>
         </div>
 
-        <div class="service col6">
-          <h3>Trimming & Edging</h3>
-          <p>Detail work that makes it look professional—especially borders and hard edges.</p>
-          <div class="row">
-            <span class="badge">X-Small: <b>$35+</b></span>
-            <span class="badge">Small: <b>$45+</b></span>
-            <span class="badge">Medium: <b>$60+</b></span>
-            <span class="badge">Med-Large: <b>$80+</b></span>
-            <span class="badge">Large: <b>$105+</b></span>
-            <span class="badge">XL: <b>$140+</b></span>
-          </div>
-          <div class="mini">Premium: sharper edges + cleaner borders • Ultra: deepest line cleanup and polish.</div>
+        <div class="mt-4 text-sm text-gray-600">
+          <b>Travel Zones:</b> Cincinnati base pricing • Middletown may include a small travel minimum • Dayton may include a small travel minimum.
+          (We confirm before scheduling.)
         </div>
-
-        <div class="service col6">
-          <h3>Yard Cleanup (Spring/Fall / One-Time)</h3>
-          <p>Leaves, sticks, debris, and general yard mess cleared (haul-away as scoped).</p>
-          <div class="row">
-            <span class="badge">X-Small: <b>$180+</b></span>
-            <span class="badge">Small: <b>$220+</b></span>
-            <span class="badge">Medium: <b>$275+</b></span>
-            <span class="badge">Large: <b>$375+</b></span>
-            <span class="badge">XL: <b>$500+</b></span>
-          </div>
-          <div class="mini">Most variable service: overgrowth + disposal volume drives price.</div>
-        </div>
-
-        <div class="service col6">
-          <h3>Weed Removal / Bed Cleanout</h3>
-          <p>Reset beds by removing weeds/overgrowth; ready for mulch or rock.</p>
-          <div class="row">
-            <span class="badge">X-Small: <b>$120+</b></span>
-            <span class="badge">Small: <b>$160+</b></span>
-            <span class="badge">Medium: <b>$220+</b></span>
-            <span class="badge">Large+: <b>$300+</b></span>
-          </div>
-          <div class="mini">Haul-away add-on: +$50–$200 depending on volume.</div>
-        </div>
-
-        <div class="service col6">
-          <h3>Mulch Installation (Labor)</h3>
-          <p>Bed refresh + spreading mulch evenly (bed prep optional).</p>
-          <div class="row">
-            <span class="badge">Labor minimum: <b>$150+</b></span>
-            <span class="badge">Premium finish: <b>$220+</b></span>
-            <span class="badge">Ultra finish: <b>$300+</b></span>
-          </div>
-          <div class="mini">Materials (mulch + delivery) priced separately unless included.</div>
-        </div>
-
-        <div class="service col6">
-          <h3>Shrub Trimming / Pruning</h3>
-          <p>Clean shaping for curb appeal and healthier structure.</p>
-          <div class="row">
-            <span class="badge">Light: <b>$95+</b></span>
-            <span class="badge">Medium: <b>$160+</b></span>
-            <span class="badge">Heavy: <b>$250+</b></span>
-          </div>
-          <div class="mini">Pricing depends on shrub count/size and cleanup/haul-away needed.</div>
-        </div>
-
-        <div class="service col6">
-          <h3>Leaf Cleanup & Haul-Away</h3>
-          <p>Blow, bag, and remove leaves (volume-based).</p>
-          <div class="row">
-            <span class="badge">X-Small: <b>$160+</b></span>
-            <span class="badge">Small: <b>$170+</b></span>
-            <span class="badge">Medium: <b>$240+</b></span>
-            <span class="badge">Large+: <b>$350+</b></span>
-          </div>
-          <div class="mini">Wet leaves or multiple loads increases total.</div>
-        </div>
-
-        <div class="service col6">
-          <h3>Debris Removal (Yard Debris Only)</h3>
-          <p>Removal and disposal of yard debris as a defined scope.</p>
-          <div class="row">
-            <span class="badge">Small pile: <b>$120+</b></span>
-            <span class="badge">Medium: <b>$200+</b></span>
-            <span class="badge">Trailer load: <b>$300+</b></span>
-          </div>
-          <div class="mini">Depends on weight, volume, access, and disposal requirements.</div>
-        </div>
-
-        <div class="service col6">
-          <h3>Small Landscape Installs</h3>
-          <p>Simple upgrades like small bed refreshes and plant installs.</p>
-          <div class="row">
-            <span class="badge">Starting labor: <b>$250+</b></span>
-            <span class="badge">Premium: <b>$350+</b></span>
-            <span class="badge">Ultra: <b>$450+</b></span>
-          </div>
-          <div class="mini">Materials (plants/soil/mulch/rock) priced separately unless included.</div>
-        </div>
-
-      </div>
-
-      <div class="line"></div>
-      <div class="row">
-        <a class="btn primary" href="./contract.html">Fill Out Contract</a>
-        <a class="btn" href="./services.html">Service Details</a>
-        <a class="btn" href="./luxury.html">Luxury Builds</a>
-      </div>
-      <div class="note">
-        Minimum service call may apply on small jobs. We confirm by text/call before scheduling.
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- NEW SERVICES -->
-  <div class="grid">
-    <div class="card col12">
-      <div class="section-title">
-        <h2>New Services (Starting Menu)</h2>
-        <p>These fit your Cincinnati–Dayton–Middletown market and keep pricing simple, upsell-friendly, and profitable.</p>
-      </div>
+  <!-- Content -->
+  <main class="py-10 bg-white">
+    <div class="max-w-5xl mx-auto px-4 space-y-10">
 
-      <div class="grid">
-
-        <div class="service col6">
-          <span id="gutters" class="anchor"></span>
-          <h3>Gutter Cleaning</h3>
-          <p>Clear gutters to prevent overflow and water damage.</p>
-          <div class="row">
-            <span class="badge">1-Story: <b>$150+</b></span>
-            <span class="badge">2-Story: <b>$250+</b></span>
-            <span class="badge">Downspout flush: <b>+$25+</b></span>
-          </div>
-          <div class="mini">Heavy debris / guards / steep roof: +$50–$150.</div>
+      <!-- Residential Size Tiers -->
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+          <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a]">Residential Size Tiers</h2>
+          <p class="text-gray-600 max-w-2xl">We confirm size during estimate. If your property is between sizes, we price to the next tier up.</p>
         </div>
 
-        <div class="service col6">
-          <span id="pressure" class="anchor"></span>
-          <h3>Pressure Washing (Concrete / Pavers)</h3>
-          <p>Driveways, patios, walkways, steps, and pavers.</p>
-          <div class="row">
-            <span class="badge">Concrete (small): <b>$199+</b></span>
-            <span class="badge">Concrete (standard): <b>$299+</b></span>
-            <span class="badge">Patio / pavers: <b>$249+</b></span>
-          </div>
-          <div class="mini">Moss/algae focus: +$75 • Heavy stains/oil/rust: +$50–$150.</div>
+        <div class="mt-6 overflow-x-auto">
+          <table class="min-w-full text-left text-sm border border-gray-200 rounded-2xl overflow-hidden">
+            <thead class="bg-[#faf9f6] text-gray-700">
+              <tr>
+                <th class="px-4 py-3 font-bold uppercase text-xs tracking-wide">Tier</th>
+                <th class="px-4 py-3 font-bold uppercase text-xs tracking-wide">Typical fit</th>
+                <th class="px-4 py-3 font-bold uppercase text-xs tracking-wide">What changes as size increases</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="px-4 py-3"><b>X-Small</b></td>
+                <td class="px-4 py-3">Tiny front/back, townhouse, minimal borders</td>
+                <td class="px-4 py-3">Shortest time, light trimming, minimal debris</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3"><b>Small</b></td>
+                <td class="px-4 py-3">Standard small yard</td>
+                <td class="px-4 py-3">Moderate trim/edge time, moderate cleanup</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3"><b>Medium</b></td>
+                <td class="px-4 py-3">Most suburban homes</td>
+                <td class="px-4 py-3">More zones, longer borders, more detail work</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3"><b>Medium-Large</b></td>
+                <td class="px-4 py-3">Corner lots / heavier trim areas</td>
+                <td class="px-4 py-3">More labor, potential split tasks depending on scope</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3"><b>Large</b></td>
+                <td class="px-4 py-3">Big yards / lots of edges and beds</td>
+                <td class="px-4 py-3">More crew time, more hauling, more obstacles</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3"><b>Extra-Large</b></td>
+                <td class="px-4 py-3">Acreage feel / long borders</td>
+                <td class="px-4 py-3">Highest labor/fuel/haul; may require split scheduling</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Quality Levels -->
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+          <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a]">Quality Levels</h2>
+          <p class="text-gray-600 max-w-2xl">Pick the finish you want. Premium and Ultra are upsells for customers who want stronger curb appeal.</p>
         </div>
 
-        <div class="service col6">
-          <span id="edging" class="anchor"></span>
-          <h3>Landscape Edging Install (Plastic/Metal)</h3>
-          <p>Defines beds cleanly and keeps mulch/rock in place.</p>
-          <div class="row">
-            <span class="badge"><b>$4.50/lf+</b></span>
-            <span class="badge">Minimum: <b>$180+</b></span>
-            <span class="badge">Curves/corners: <b>+$1–$3/lf</b></span>
-          </div>
-          <div class="mini">Bed redefine + edging bundle: $250+ (labor).</div>
+        <div class="mt-6 overflow-x-auto">
+          <table class="min-w-full text-left text-sm border border-gray-200 rounded-2xl overflow-hidden">
+            <thead class="bg-[#faf9f6] text-gray-700">
+              <tr>
+                <th class="px-4 py-3 font-bold uppercase text-xs tracking-wide">Level</th>
+                <th class="px-4 py-3 font-bold uppercase text-xs tracking-wide">What it means</th>
+                <th class="px-4 py-3 font-bold uppercase text-xs tracking-wide">Best for</th>
+                <th class="px-4 py-3 font-bold uppercase text-xs tracking-wide">Typical add-on</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="px-4 py-3"><b>Regular (Good)</b></td>
+                <td class="px-4 py-3">Standard service + basic cleanup</td>
+                <td class="px-4 py-3">Maintenance, budget-conscious jobs</td>
+                <td class="px-4 py-3">Base price</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3"><b>Premium (Better)</b></td>
+                <td class="px-4 py-3">More detail + cleaner edges + better finish</td>
+                <td class="px-4 py-3">Curb appeal upgrades</td>
+                <td class="px-4 py-3">+10–20% (varies by service)</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3"><b>Ultra (Best)</b></td>
+                <td class="px-4 py-3">Deepest cleanup/detail + most time on polish</td>
+                <td class="px-4 py-3">“Show-ready” look</td>
+                <td class="px-4 py-3">+20–35% (varies by service)</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <div class="service col6">
-          <span id="rock" class="anchor"></span>
-          <h3>River Rock / Decorative Rock Install</h3>
-          <p>Fabric + rock install for clean, low-maintenance beds.</p>
-          <div class="row">
-            <span class="badge">Simple: <b>$3.50–$6.00/sq ft</b></span>
-            <span class="badge">Complex: <b>$7–$12/sq ft</b></span>
-            <span class="badge">Minimum: <b>$350+</b></span>
-          </div>
-          <div class="mini">Haul-away old mulch/weeds: +$50–$200. Materials vary by rock type and delivery.</div>
+        <div class="mt-3 text-sm text-gray-600">
+          Premium/Ultra pricing is based on extra time and detail. We confirm exact amount on the quote.
+        </div>
+      </section>
+
+      <!-- Core Yard Services -->
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+          <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a]">Core Yard Services (Starting Minimums)</h2>
+          <p class="text-gray-600 max-w-2xl">These match the services shown on your home page. Tap “Service Details” for full explanations and time spans.</p>
         </div>
 
-        <div class="service col6">
-          <span id="seeding" class="anchor"></span>
-          <h3>Lawn Patch Repair / Overseeding</h3>
-          <p>Fix thin/bare spots and improve turf density (watering matters).</p>
-          <div class="row">
-            <span class="badge">Small patch (≤25 sq ft): <b>$95+</b></span>
-            <span class="badge">Medium zone (25–100 sq ft): <b>$175+</b></span>
-            <span class="badge">Overseed minimum: <b>$250+</b></span>
+        <div class="mt-6 grid md:grid-cols-2 gap-5">
+          <!-- Lawn Mowing Residential -->
+          <div class="anchor bg-[#faf9f6] border border-gray-200 rounded-2xl p-5" id="mowing">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Lawn Mowing (Residential)</h3>
+            <p class="text-gray-600 mt-1">Standard mow with clean finish. Add trimming/edging for a sharper look.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>X-Small:</b> $45+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Small:</b> $55+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Medium:</b> $70+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Med-Large:</b> $85+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Large:</b> $110+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>XL:</b> $140+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Premium: +$10–$20 • Ultra: +$20–$35 • Bagging/Disposal add-on if needed.</div>
           </div>
-          <div class="mini">Topsoil touch-up: +$75+. Seasonal timing + watering affects results.</div>
+
+          <!-- Lawn Mowing Commercial -->
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Lawn Mowing (Commercial - Small Properties)</h3>
+            <p class="text-gray-600 mt-1">Consistency + professional appearance. Often priced by size + frequency.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Small:</b> $95+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Medium:</b> $125+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Large:</b> $220+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>XL:</b> $300+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Commercial quotes may bundle mowing + trim + edges on a schedule.</div>
+          </div>
+
+          <!-- Trimming & Edging -->
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Trimming & Edging</h3>
+            <p class="text-gray-600 mt-1">Detail work that makes it look professional—especially borders and hard edges.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>X-Small:</b> $35+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Small:</b> $45+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Medium:</b> $60+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Med-Large:</b> $80+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Large:</b> $105+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>XL:</b> $140+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Premium: sharper edges + cleaner borders • Ultra: deepest line cleanup and polish.</div>
+          </div>
+
+          <!-- Yard Cleanup -->
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Yard Cleanup (Spring/Fall / One-Time)</h3>
+            <p class="text-gray-600 mt-1">Leaves, sticks, debris, and general yard mess cleared (haul-away as scoped).</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>X-Small:</b> $180+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Small:</b> $220+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Medium:</b> $275+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Large:</b> $375+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>XL:</b> $500+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Most variable service: overgrowth + disposal volume drives price.</div>
+          </div>
+
+          <!-- Weed Removal -->
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Weed Removal / Bed Cleanout</h3>
+            <p class="text-gray-600 mt-1">Reset beds by removing weeds/overgrowth; ready for mulch or rock.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>X-Small:</b> $120+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Small:</b> $160+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Medium:</b> $220+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Large+:</b> $300+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Haul-away add-on: +$50–$200 depending on volume.</div>
+          </div>
+
+          <!-- Mulch Labor -->
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Mulch Installation (Labor)</h3>
+            <p class="text-gray-600 mt-1">Bed refresh + spreading mulch evenly (bed prep optional).</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Labor minimum:</b> $150+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Premium finish:</b> $220+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Ultra finish:</b> $300+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Materials (mulch + delivery) priced separately unless included.</div>
+          </div>
+
+          <!-- Shrub Trimming -->
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Shrub Trimming / Pruning</h3>
+            <p class="text-gray-600 mt-1">Clean shaping for curb appeal and healthier structure.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Light:</b> $95+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Medium:</b> $160+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Heavy:</b> $250+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Pricing depends on shrub count/size and cleanup/haul-away needed.</div>
+          </div>
+
+          <!-- Leaf Cleanup -->
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Leaf Cleanup & Haul-Away</h3>
+            <p class="text-gray-600 mt-1">Blow, bag, and remove leaves (volume-based).</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>X-Small:</b> $160+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Small:</b> $170+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Medium:</b> $240+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Large+:</b> $350+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Wet leaves or multiple loads increases total.</div>
+          </div>
+
+          <!-- Debris Removal -->
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Debris Removal (Yard Debris Only)</h3>
+            <p class="text-gray-600 mt-1">Removal and disposal of yard debris as a defined scope.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Small pile:</b> $120+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Medium:</b> $200+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Trailer load:</b> $300+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Depends on weight, volume, access, and disposal requirements.</div>
+          </div>
+
+          <!-- Small Installs -->
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Small Landscape Installs</h3>
+            <p class="text-gray-600 mt-1">Simple upgrades like small bed refreshes and plant installs.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Starting labor:</b> $250+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Premium:</b> $350+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Ultra:</b> $450+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Materials (plants/soil/mulch/rock) priced separately unless included.</div>
+          </div>
         </div>
 
-        <div class="service col6">
-          <span id="epoxy" class="anchor"></span>
-          <h3>Epoxy Flooring (New Division)</h3>
-          <p>Garage/basement decorative epoxy systems (prep matters most).</p>
-          <div class="row">
-            <span class="badge">Solid color: <b>$6–$9/sq ft</b></span>
-            <span class="badge">Flake system: <b>$7–$12/sq ft</b></span>
-            <span class="badge">Metallic: <b>$10–$18/sq ft</b></span>
-          </div>
-          <div class="mini">Cloud epoxy: $12–$22/sq ft • 3D river floors: Custom quote (Luxury tier).</div>
+        <div class="mt-6 border-t border-gray-200 pt-5 flex flex-wrap gap-2">
+          <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold" href="./contract.html">Fill Out Contract</a>
+          <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./services.html">Service Details</a>
+          <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./luxury.html">Luxury Builds</a>
         </div>
 
-      </div>
+        <div class="mt-3 text-sm text-gray-600">
+          Minimum service call may apply on small jobs. We confirm by text/call before scheduling.
+        </div>
+      </section>
 
-      <div class="line"></div>
-      <div class="row">
-        <a class="btn" href="./services.html">Read Detailed Descriptions</a>
-        <a class="btn primary" href="./contract.html">Start a Job Request</a>
-      </div>
+      <!-- New Services -->
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+          <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a]">New Services (Starting Menu)</h2>
+          <p class="text-gray-600 max-w-2xl">These fit your Cincinnati–Dayton–Middletown market and keep pricing simple, upsell-friendly, and profitable.</p>
+        </div>
 
-      <div class="note">
-        To keep pricing fair: small jobs have minimums; bigger jobs price by size/linear feet/square feet.
-        You only pay for what your job actually requires.
+        <div class="mt-6 grid md:grid-cols-2 gap-5">
+
+          <div class="anchor bg-[#faf9f6] border border-gray-200 rounded-2xl p-5" id="gutters">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Gutter Cleaning</h3>
+            <p class="text-gray-600 mt-1">Clear gutters to prevent overflow and water damage.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>1-Story:</b> $150+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>2-Story:</b> $250+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Downspout flush:</b> +$25+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Heavy debris / guards / steep roof: +$50–$150.</div>
+          </div>
+
+          <div class="anchor bg-[#faf9f6] border border-gray-200 rounded-2xl p-5" id="pressure">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Pressure Washing (Concrete / Pavers)</h3>
+            <p class="text-gray-600 mt-1">Driveways, patios, walkways, steps, and pavers.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Concrete (small):</b> $199+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Concrete (standard):</b> $299+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Patio / pavers:</b> $249+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Moss/algae focus: +$75 • Heavy stains/oil/rust: +$50–$150.</div>
+          </div>
+
+          <div class="anchor bg-[#faf9f6] border border-gray-200 rounded-2xl p-5" id="edging">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Landscape Edging Install (Plastic/Metal)</h3>
+            <p class="text-gray-600 mt-1">Defines beds cleanly and keeps mulch/rock in place.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>$4.50/lf+</b></span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Minimum:</b> $180+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Curves/corners:</b> +$1–$3/lf</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Bed redefine + edging bundle: $250+ (labor).</div>
+          </div>
+
+          <div class="anchor bg-[#faf9f6] border border-gray-200 rounded-2xl p-5" id="rock">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">River Rock / Decorative Rock Install</h3>
+            <p class="text-gray-600 mt-1">Fabric + rock install for clean, low-maintenance beds.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Simple:</b> $3.50–$6.00/sq ft</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Complex:</b> $7–$12/sq ft</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Minimum:</b> $350+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Haul-away old mulch/weeds: +$50–$200. Materials vary by rock type and delivery.</div>
+          </div>
+
+          <div class="anchor bg-[#faf9f6] border border-gray-200 rounded-2xl p-5" id="seeding">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Lawn Patch Repair / Overseeding</h3>
+            <p class="text-gray-600 mt-1">Fix thin/bare spots and improve turf density (watering matters).</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Small patch (≤25 sq ft):</b> $95+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Medium zone (25–100 sq ft):</b> $175+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Overseed minimum:</b> $250+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Topsoil touch-up: +$75+. Seasonal timing + watering affects results.</div>
+          </div>
+
+          <div class="anchor bg-[#faf9f6] border border-gray-200 rounded-2xl p-5" id="epoxy">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Epoxy Flooring (New Division)</h3>
+            <p class="text-gray-600 mt-1">Garage/basement decorative epoxy systems (prep matters most).</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Solid color:</b> $6–$9/sq ft</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Flake system:</b> $7–$12/sq ft</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Metallic:</b> $10–$18/sq ft</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Cloud epoxy: $12–$22/sq ft • 3D river floors: Custom quote (Luxury tier).</div>
+          </div>
+
+        </div>
+
+        <div class="mt-6 border-t border-gray-200 pt-5 flex flex-wrap gap-2">
+          <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./services.html">Read Detailed Descriptions</a>
+          <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold" href="./contract.html">Start a Job Request</a>
+        </div>
+
+        <div class="mt-3 text-sm text-gray-600">
+          To keep pricing fair: small jobs have minimums; bigger jobs price by size/linear feet/square feet.
+          You only pay for what your job actually requires.
+        </div>
+      </section>
+
+      <!-- Bundles -->
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+          <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a]">Bundles (Popular)</h2>
+          <p class="text-gray-600 max-w-2xl">Bundles save time and usually cost less than booking services separately.</p>
+        </div>
+
+        <div class="mt-6 grid md:grid-cols-2 gap-5">
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Maintenance Bundle</h3>
+            <p class="text-gray-600 mt-1">Mow + trim + edge (ideal weekly/biweekly).</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Residential starting:</b> $95+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Small commercial starting:</b> $150+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Premium/Ultra available for extra detail.</div>
+          </div>
+
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-display text-xl font-bold text-[#1a472a]">Refresh Bundle</h3>
+            <p class="text-gray-600 mt-1">Bed cleanout + mulch labor (materials separate).</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Starting:</b> $320+</span>
+              <span class="bg-white border border-gray-200 rounded-full px-3 py-2"><b>Heavy/large beds:</b> $520+</span>
+            </div>
+            <div class="mt-3 text-sm text-gray-600">Best curb appeal upgrade in 1 visit.</div>
+          </div>
+        </div>
+
+        <div class="mt-6 border-t border-gray-200 pt-5 flex flex-wrap gap-2">
+          <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./index.html#contact">Request Quote</a>
+          <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold" href="./contract.html">Book With Deposit</a>
+        </div>
+
+        <div class="mt-3 text-sm text-gray-600">
+          Deposit amounts are shown on the home page. Cash App: <b>$FSYardServicesLLC</b>.
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#1a472a] text-white py-10">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-wrap justify-between items-center gap-4">
+        <div class="text-white/80 text-sm">
+          Fresh Start Yard Services LLC • (513) 549-2498 • freshstartyardservicesllc@gmail.com • Cash App: <b>$FSYardServicesLLC</b>
+        </div>
+        <div class="flex gap-4 text-sm">
+          <a class="text-white/80 hover:text-white" href="./services.html">Service Details</a>
+          <a class="text-white/80 hover:text-white" href="./luxury.html">Luxury</a>
+          <a class="text-white/80 hover:text-white" href="./contract.html">Contract</a>
+          <a class="text-white/80 hover:text-white" href="./terms.html">Terms</a>
+        </div>
       </div>
     </div>
-  </div>
+  </footer>
 
-  <!-- BUNDLES -->
-  <div class="grid">
-    <div class="card col12">
-      <div class="section-title">
-        <h2>Bundles (Popular)</h2>
-        <p>Bundles save time and usually cost less than booking services separately.</p>
-      </div>
-
-      <div class="grid">
-        <div class="service col6">
-          <h3>Maintenance Bundle</h3>
-          <p>Mow + trim + edge (ideal weekly/biweekly).</p>
-          <div class="row">
-            <span class="badge">Residential starting: <b>$95+</b></span>
-            <span class="badge">Small commercial starting: <b>$150+</b></span>
-          </div>
-          <div class="mini">Premium/Ultra available for extra detail.</div>
-        </div>
-
-        <div class="service col6">
-          <h3>Refresh Bundle</h3>
-          <p>Bed cleanout + mulch labor (materials separate).</p>
-          <div class="row">
-            <span class="badge">Starting: <b>$320+</b></span>
-            <span class="badge">Heavy/large beds: <b>$520+</b></span>
-          </div>
-          <div class="mini">Best curb appeal upgrade in 1 visit.</div>
-        </div>
-      </div>
-
-      <div class="line"></div>
-      <div class="row">
-        <a class="btn" href="./index.html#contact">Request Quote</a>
-        <a class="btn primary" href="./contract.html">Book With Deposit</a>
-      </div>
-
-      <div class="note">
-        Deposit amounts are shown on the home page. Cash App: <b>$FSYardServicesLLC</b>.
-      </div>
-    </div>
-  </div>
-
-</div>
-
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+    }
+  </script>
 </body>
 </html>

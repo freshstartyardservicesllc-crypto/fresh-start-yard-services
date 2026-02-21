@@ -1,523 +1,403 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Service Details | Fresh Start Yard Services LLC (Cincinnati, Dayton, Middletown)</title>
   <meta name="description" content="Detailed service descriptions, typical time ranges, what’s included, and what affects pricing for Fresh Start Yard Services LLC. Serving Cincinnati, Dayton, and Middletown." />
-  <meta name="theme-color" content="#0b0f0d" />
+  <meta name="theme-color" content="#1a472a" />
+
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#0b0f0d;
-      --panel:rgba(255,255,255,.05);
-      --panel2:rgba(255,255,255,.04);
-      --stroke:rgba(255,255,255,.12);
-      --text:rgba(255,255,255,.92);
-      --muted:rgba(255,255,255,.72);
-      --muted2:rgba(255,255,255,.60);
-      --green:#2fe27b;
-      --green2:#1fb868;
-      --shadow:0 18px 55px rgba(0,0,0,.35);
-      --r:18px;
-      --r2:22px;
-      --max:1120px;
+      --color-forest:#1a472a;
+      --color-sage:#4a7c59;
+      --color-cream:#faf9f6;
     }
-    *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Helvetica Neue",Helvetica,sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(1100px 800px at 20% 0%, rgba(47,226,123,.18), transparent 60%),
-        radial-gradient(900px 700px at 90% 10%, rgba(31,184,104,.14), transparent 55%),
-        radial-gradient(1000px 800px at 50% 100%, rgba(255,255,255,.06), transparent 60%),
-        linear-gradient(180deg, var(--bg), #070a08 60%, #050705);
-      line-height:1.55;
+    .font-display{font-family:'Playfair Display', serif;}
+    .font-body{font-family:'Source Sans 3', sans-serif;}
+    .btn-primary{
+      background:linear-gradient(135deg, var(--color-forest) 0%, var(--color-sage) 100%);
+      transition:all .25s ease;
     }
-    a{color:inherit;text-decoration:none}
-    .container{width:min(var(--max), calc(100% - 40px)); margin-inline:auto}
-
-    header{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter:blur(14px);
-      background:rgba(7,10,8,.55);
-      border-bottom:1px solid rgba(255,255,255,.08);
+    .btn-primary:hover{
+      transform:translateY(-1px);
+      box-shadow:0 10px 40px -10px rgba(26,71,42,.5);
     }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0; gap:14px;
+    .pattern-bg{
+      background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a472a' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
-    .brand{display:flex; align-items:center; gap:10px; min-width:240px;}
-    .logo-wrap{
-      width:44px; height:44px; border-radius:14px;
-      background:rgba(255,255,255,.92);
-      border:1px solid rgba(255,255,255,.18);
-      display:flex; align-items:center; justify-content:center;
-      overflow:hidden;
-      box-shadow:0 12px 30px rgba(0,0,0,.25);
-    }
-    .logo-img{
-      width:100%; height:100%;
-      object-fit:contain;
-      padding:4px;
-    }
-    .brand h1{font-size:15px; margin:0; letter-spacing:.2px; line-height:1.1;}
-    .brand span{display:block; font-size:12px; color:var(--muted2); margin-top:2px;}
-
-    .actions{display:flex; gap:10px; align-items:center; justify-content:flex-end; flex-wrap:wrap;}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:11px 14px; border-radius:14px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.05);
-      color:var(--text); font-weight:800; font-size:13px;
-      transition:transform .08s ease, background .15s ease, border-color .15s ease;
-      user-select:none; white-space:nowrap;
-    }
-    .btn:hover{background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.16);}
-    .btn:active{transform:translateY(1px);}
-    .btn.primary{
-      background:linear-gradient(135deg, rgba(47,226,123,.95), rgba(31,184,104,.75));
-      border-color:rgba(47,226,123,.35);
-      color:#06110b;
-      box-shadow:0 14px 30px rgba(47,226,123,.18);
-    }
-
-    section{padding:26px 0;}
-    .hero{padding:34px 0 10px;}
-    .hero-card{
-      border-radius:var(--r2); border:1px solid rgba(255,255,255,.10);
-      background:
-        radial-gradient(900px 520px at 20% 30%, rgba(47,226,123,.12), transparent 60%),
-        radial-gradient(900px 520px at 95% 40%, rgba(31,184,104,.10), transparent 58%),
-        rgba(255,255,255,.04);
-      box-shadow:var(--shadow);
-      padding:22px;
-    }
-    .hero h2{
-      font-size:clamp(24px, 3.2vw, 38px);
-      letter-spacing:-.6px; margin:0 0 10px; line-height:1.08;
-    }
-    .hero p{color:var(--muted); margin:0; font-size:14px; max-width:90ch;}
-
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      font-size:12px; padding:7px 10px; border:1px solid rgba(255,255,255,.12);
-      border-radius:999px; color:var(--muted);
-      background:rgba(255,255,255,.04);
-      margin:10px 8px 0 0;
-    }
-
-    .section-head{display:flex; justify-content:space-between; align-items:flex-end; gap:16px; margin-bottom:14px; flex-wrap:wrap;}
-    .section-head h3{margin:0; font-size:20px; letter-spacing:-.2px;}
-    .section-head p{margin:0; color:var(--muted); font-size:13px; max-width:80ch;}
-
-    .grid{display:grid; grid-template-columns:repeat(12, 1fr); gap:14px;}
-    .card{
-      border-radius:var(--r); border:1px solid rgba(255,255,255,.10);
-      background:rgba(255,255,255,.04);
-      padding:16px;
-      box-shadow:0 12px 30px rgba(0,0,0,.22);
-    }
-    .svc{grid-column:span 6;}
-    .card h4{margin:0 0 8px; font-size:16px;}
-    .card p{margin:0; color:var(--muted); font-size:13px;}
-    .meta{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;}
-    .tag{
-      font-size:12px; padding:6px 10px; border-radius:999px;
-      border:1px solid rgba(255,255,255,.10);
-      color:var(--muted2);
-      background:rgba(255,255,255,.03);
-    }
-    ul{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:13px;}
-    li{margin:6px 0;}
-    .small{color:rgba(255,255,255,.55); font-size:12px; margin-top:10px;}
-
-    .anchor{display:block; position:relative; top:-92px; visibility:hidden;}
-
-    footer{
-      border-top:1px solid rgba(255,255,255,.08);
-      padding:24px 0 60px;
-      background:rgba(0,0,0,.18);
-      margin-top:10px;
-    }
-
-    @media (max-width:960px){
-      .svc{grid-column:span 12;}
-      .brand{min-width:auto}
-    }
+    .anchor{scroll-margin-top:96px;}
   </style>
 </head>
 
-<body>
-<header>
-  <div class="container">
-    <div class="nav">
-      <a class="brand" href="./index.html#top" aria-label="Fresh Start Yard Services LLC Home">
-        <div class="logo-wrap">
-          <img class="logo-img" src="logo.png" alt="Fresh Start Yard Services logo" />
-        </div>
-        <div>
-          <h1>Fresh Start Yard Services LLC</h1>
-          <span>Cincinnati • Dayton • Middletown</span>
-        </div>
+<body class="h-full font-body text-gray-800 bg-white">
+
+  <!-- Top Bar -->
+  <div class="bg-[#1a472a] text-white py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center text-sm gap-3">
+      <div class="flex items-center gap-6 flex-wrap">
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          Cincinnati • Dayton • Middletown
+        </span>
+        <span class="hidden sm:flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Mon–Sat: 7AM – 7PM
+        </span>
+      </div>
+
+      <a href="tel:+15135492498" class="flex items-center gap-2 font-semibold hover:text-[#8fbc8f] transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
+        (513) 549-2498
       </a>
-
-      <div class="actions">
-        <a class="btn" href="./pricing.html">Pricing</a>
-        <a class="btn" href="./luxury.html">Luxury Builds</a>
-        <a class="btn" href="./contract.html">Contract</a>
-        <a class="btn primary" href="./index.html#contact">Request Quote</a>
-      </div>
     </div>
   </div>
-</header>
 
-<main id="top">
-  <section class="hero">
-    <div class="container">
-      <div class="hero-card">
-        <h2>Service Details: What’s Included, Time Ranges, and What Affects Pricing</h2>
-        <p>
-          This page explains each service in plain language so customers know what to expect. Your “Starting at” prices cover
-          <b>labor + standard tools</b> for typical conditions. Final pricing varies by size, overgrowth, access, debris volume,
-          slope/obstacles, travel zone (Cincinnati/Dayton/Middletown), and add-ons.
-          <b>Materials</b> (mulch/rock/plants/seed/epoxy systems) are priced separately unless stated.
+  <!-- Nav -->
+  <nav class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="./index.html#top" class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden border border-gray-200 shadow-sm">
+            <img src="./logo.png" alt="Fresh Start Yard Services LLC logo" class="w-full h-full object-contain p-1"/>
+          </div>
+          <div>
+            <span class="font-display text-xl text-[#1a472a] font-bold block leading-tight">Fresh Start</span>
+            <span class="text-xs text-[#4a7c59] font-medium tracking-wide">YARD SERVICES LLC</span>
+          </div>
+        </a>
+
+        <div class="hidden md:flex items-center gap-6">
+          <a href="./pricing.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Pricing</a>
+          <a href="./luxury.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Luxury Builds</a>
+          <a href="./contract.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Contract</a>
+          <a href="./terms.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Terms</a>
+          <a href="./index.html#contact" class="btn-primary text-white px-6 py-3 rounded-full font-semibold">Request Quote</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-[#1a472a]" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t mt-4">
+        <div class="flex flex-col gap-3">
+          <a href="./pricing.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Pricing</a>
+          <a href="./luxury.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Luxury Builds</a>
+          <a href="./contract.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Contract</a>
+          <a href="./terms.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Terms</a>
+          <a href="./index.html#contact" class="btn-primary text-white px-6 py-3 rounded-full font-semibold text-center mt-2">Request Quote</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="pattern-bg py-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7">
+        <span class="inline-block bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-semibold mb-4">
+          SERVICE DETAILS
+        </span>
+        <h1 class="font-display text-3xl md:text-4xl font-bold text-[#1a472a] mb-3">Service Details</h1>
+
+        <p class="text-gray-600">
+          This page explains what’s included, typical time ranges, and what affects pricing for Fresh Start Yard Services LLC.
+          For starting minimums and tiers, see the Pricing page.
         </p>
-        <div>
-          <span class="pill">Regular = Good (standard)</span>
-          <span class="pill">Premium = Better (more detail)</span>
-          <span class="pill">Ultra = Best (deepest finish)</span>
+
+        <div class="mt-6 flex flex-wrap gap-2">
+          <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold" href="./pricing.html">View Pricing</a>
+          <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./contract.html">Start a Request</a>
+          <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./luxury.html">Luxury Builds</a>
+        </div>
+
+        <!-- Quick index -->
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#mowing">Lawn Mowing</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#trim">Trimming & Edging</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#cleanup">Yard Cleanups</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#beds">Beds / Weeds / Mulch</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#wash">Pressure Washing</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#gutters">Gutter Cleaning</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#edging">Landscape Edging Install</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#rock">Rock Install</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#seed">Patch Repair / Overseeding</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#epoxy">Epoxy Flooring</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#commercial">Commercial / HOA</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#luxury">Luxury Builds</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- QUICK LINKS -->
-  <section>
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <h3>Jump to a Service</h3>
-          <p>Tap any service to jump to its full description. (These anchors match your Pricing page “Details” links.)</p>
+  <main class="py-10 bg-white">
+    <div class="max-w-5xl mx-auto px-4 space-y-8">
+
+      <!-- What affects pricing -->
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7">
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-3">What Affects Pricing</h2>
+        <p class="text-gray-600">
+          Your final quote is based on real job conditions. These are the biggest drivers:
+        </p>
+        <ul class="mt-4 grid md:grid-cols-2 gap-3 text-gray-700">
+          <li class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4">• Property size tier (X-Small → XL)</li>
+          <li class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4">• Overgrowth level + time required</li>
+          <li class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4">• Access: gates, slopes, obstacles, parking distance</li>
+          <li class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4">• Debris volume + disposal/haul-away needs</li>
+          <li class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4">• Quality tier (Regular / Premium / Ultra)</li>
+          <li class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4">• Materials (mulch/rock/plants/seed/epoxy) + delivery</li>
+        </ul>
+        <div class="mt-4 text-sm text-gray-600">
+          Want an exact quote fast? Submit the contract or quote request with photos.
         </div>
-      </div>
+      </section>
 
-      <div class="grid">
-        <a class="card svc" href="#mowing"><h4>Lawn Mowing</h4><p>Residential + small commercial.</p></a>
-        <a class="card svc" href="#trimming"><h4>Trimming & Edging</h4><p>Sharper borders and detail work.</p></a>
-        <a class="card svc" href="#cleanup"><h4>Yard Cleanups</h4><p>Spring/Fall + one-time resets.</p></a>
-        <a class="card svc" href="#weeds"><h4>Weed Removal / Bed Cleanouts</h4><p>Overgrowth reset for beds.</p></a>
-        <a class="card svc" href="#mulch"><h4>Mulch Installation</h4><p>Labor + install (materials vary).</p></a>
-        <a class="card svc" href="#shrubs"><h4>Shrub Trimming / Pruning</h4><p>Clean shape + haul away optional.</p></a>
-        <a class="card svc" href="#leaves"><h4>Leaf Cleanup & Haul-Away</h4><p>Volume-based leaf removal.</p></a>
-        <a class="card svc" href="#debris"><h4>Debris Removal</h4><p>Yard debris only (defined scope).</p></a>
-        <a class="card svc" href="#installs"><h4>Small Landscape Installs</h4><p>Simple bed refreshes + plants.</p></a>
+      <!-- Service blocks helper -->
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="mowing">
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">Lawn Mowing (Residential + Small Commercial)</h2>
+        <p class="text-gray-600">
+          A clean, consistent cut with a professional finish. Best results come from weekly or bi-weekly scheduling during peak season.
+        </p>
 
-        <a class="card svc" href="#gutters"><h4>Gutter Cleaning</h4><p>1-story vs 2-story + add-ons.</p></a>
-        <a class="card svc" href="#pressure"><h4>Pressure Washing</h4><p>Concrete/pavers + stain add-ons.</p></a>
-        <a class="card svc" href="#edging"><h4>Edging Install</h4><p>Linear-foot pricing + minimum.</p></a>
-        <a class="card svc" href="#rock"><h4>Decorative / River Rock Install</h4><p>Sq ft pricing + haul-away.</p></a>
-        <a class="card svc" href="#seeding"><h4>Patch Repair / Overseeding</h4><p>Prep + seed; watering matters.</p></a>
-        <a class="card svc" href="#epoxy"><h4>Epoxy Flooring</h4><p>Garage/basement decorative systems.</p></a>
+        <div class="mt-5 grid md:grid-cols-2 gap-5">
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-bold text-[#1a472a] mb-2">What’s Included</h3>
+            <ul class="text-gray-700 space-y-2">
+              <li>• Mowing all accessible turf areas in scope</li>
+              <li>• Blow off hard surfaces (as needed)</li>
+              <li>• Visual cleanup of work area</li>
+            </ul>
+          </div>
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-bold text-[#1a472a] mb-2">Typical Time Range</h3>
+            <p class="text-gray-700">X-Small to Medium: 20–60 min</p>
+            <p class="text-gray-700">Large to XL: 60–120+ min</p>
+            <div class="mt-3 text-sm text-gray-600">Time varies by trim/edges, obstacles, and overgrowth.</div>
+          </div>
+        </div>
+
+        <div class="mt-5 text-sm text-gray-600">
+          For starting minimums by size tier, see <a class="underline font-semibold text-[#1a472a]" href="./pricing.html#mowing">Pricing → Mowing</a>.
+        </div>
+      </section>
+
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="trim">
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">Trimming & Edging</h2>
+        <p class="text-gray-600">
+          This is the “professional” look—crisp edges, detailed line work, and cleaner borders.
+        </p>
+
+        <div class="mt-5 grid md:grid-cols-2 gap-5">
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-bold text-[#1a472a] mb-2">What’s Included</h3>
+            <ul class="text-gray-700 space-y-2">
+              <li>• Trimming around fences, poles, beds, and borders</li>
+              <li>• Edging along sidewalks/driveways (where applicable)</li>
+              <li>• Blow-off for clean finish</li>
+            </ul>
+          </div>
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-bold text-[#1a472a] mb-2">Typical Time Range</h3>
+            <p class="text-gray-700">Small yards: 20–45 min</p>
+            <p class="text-gray-700">Medium–XL: 45–120+ min</p>
+            <div class="mt-3 text-sm text-gray-600">Premium/Ultra tiers add time for polish + deeper border cleanup.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="cleanup">
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">Yard Cleanups (Spring/Fall + One-Time)</h2>
+        <p class="text-gray-600">
+          Full property cleanup: leaves, debris, and general mess removal to get you “reset” and looking clean again.
+        </p>
+
+        <div class="mt-5 grid md:grid-cols-2 gap-5">
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-bold text-[#1a472a] mb-2">What’s Included (Typical)</h3>
+            <ul class="text-gray-700 space-y-2">
+              <li>• Leaf/debris gathering + bagging (as scoped)</li>
+              <li>• Blow-off hard surfaces</li>
+              <li>• Light bed cleanup (if included)</li>
+            </ul>
+          </div>
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-bold text-[#1a472a] mb-2">What Changes the Price</h3>
+            <ul class="text-gray-700 space-y-2">
+              <li>• Volume of debris + number of loads</li>
+              <li>• Wet/heavy leaves</li>
+              <li>• Overgrowth level + access</li>
+              <li>• Haul-away and disposal fees</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="beds">
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">Beds / Weeds / Mulch</h2>
+        <p class="text-gray-600">
+          This section covers weed removal, bed cleanouts, and mulch installs (labor + finish tiers).
+        </p>
+
+        <div class="mt-5 grid md:grid-cols-2 gap-5">
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-bold text-[#1a472a] mb-2">Weed Removal / Bed Cleanout</h3>
+            <p class="text-gray-700">Pulling/cutting weeds, removing overgrowth, and resetting the bed so it’s ready for mulch or rock.</p>
+            <p class="text-sm text-gray-600 mt-3">Price drivers: bed size, root density, overgrowth, and haul-away volume.</p>
+          </div>
+
+          <div class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-5">
+            <h3 class="font-bold text-[#1a472a] mb-2">Mulch Installation (Labor)</h3>
+            <p class="text-gray-700">Spreading mulch evenly, shaping clean lines, and finishing for curb appeal.</p>
+            <p class="text-sm text-gray-600 mt-3">Materials (mulch + delivery) are separate unless included in your quote.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="wash">
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">Pressure Washing</h2>
+        <p class="text-gray-600">
+          Concrete/driveways, patios, pavers, steps, and moss/algae focus add-ons. Stains vary—expect add-ons for oil/rust.
+        </p>
+        <div class="mt-5 text-sm text-gray-600">
+          Starting minimums are listed on <a class="underline font-semibold text-[#1a472a]" href="./pricing.html#pressure">Pricing → Pressure Washing</a>.
+        </div>
+      </section>
+
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="gutters">
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">Gutter Cleaning</h2>
+        <p class="text-gray-600">
+          Clear gutters and downspout zones to prevent overflow and water damage. Guards/heavy debris can increase time.
+        </p>
+        <div class="mt-5 text-sm text-gray-600">
+          Starting minimums are listed on <a class="underline font-semibold text-[#1a472a]" href="./pricing.html#gutters">Pricing → Gutter Cleaning</a>.
+        </div>
+      </section>
+
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="edging">
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">Landscape Edging Install</h2>
+        <p class="text-gray-600">
+          Installed edging helps keep mulch/rock in place and gives beds a clean, finished border. Curves and corners increase labor.
+        </p>
+        <div class="mt-5 text-sm text-gray-600">
+          Starting minimums are listed on <a class="underline font-semibold text-[#1a472a]" href="./pricing.html#edging">Pricing → Edging Install</a>.
+        </div>
+      </section>
+
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="rock">
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">River Rock / Decorative Rock Install</h2>
+        <p class="text-gray-600">
+          Fabric + rock installs for low-maintenance beds. Costs vary by rock type, thickness, and haul-away of old material.
+        </p>
+        <div class="mt-5 text-sm text-gray-600">
+          Starting minimums are listed on <a class="underline font-semibold text-[#1a472a]" href="./pricing.html#rock">Pricing → Rock Install</a>.
+        </div>
+      </section>
+
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="seed">
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">Lawn Patch Repair / Overseeding</h2>
+        <p class="text-gray-600">
+          Fix thin or bare areas and improve turf density. Results depend heavily on timing and watering. We can do the work—client must follow the water plan.
+        </p>
+        <div class="mt-5 text-sm text-gray-600">
+          Starting minimums are listed on <a class="underline font-semibold text-[#1a472a]" href="./pricing.html#seeding">Pricing → Seeding</a>.
+        </div>
+      </section>
+
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="epoxy">
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">Epoxy Flooring</h2>
+        <p class="text-gray-600">
+          Garage/basement decorative epoxy systems. Prep is the foundation (clean, grind, repair, moisture checks). Premium systems cost more because failures are expensive.
+        </p>
+        <div class="mt-5 text-sm text-gray-600">
+          Starting rates are listed on <a class="underline font-semibold text-[#1a472a]" href="./pricing.html#epoxy">Pricing → Epoxy</a>.
+        </div>
+      </section>
+
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="commercial">
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">Commercial / HOA Services</h2>
+        <p class="text-gray-600">
+          Consistent grounds maintenance for HOAs, apartment complexes, small commercial lots, and property managers.
+          Most commercial work is quoted as a schedule bundle (mow + trim + edges + cleanup) for consistency.
+        </p>
+        <div class="mt-5 text-sm text-gray-600">
+          Use the Contract page to request a commercial quote and ask about COI.
+        </div>
+      </section>
+
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="luxury">
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">Luxury Builds (Special Requests)</h2>
+        <p class="text-gray-600">
+          Fire pits, pergolas, retaining walls, steps, and custom outdoor upgrades. Most luxury work requires measurements and a consult.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold" href="./luxury.html">View Luxury Builds</a>
+          <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./contract.html">Start a Luxury Request</a>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="bg-[#faf9f6] border border-gray-200 rounded-3xl p-7">
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">Ready to Start?</h2>
+        <p class="text-gray-700">
+          Fastest path: submit the Contract (secure) → then pay deposit → we confirm scheduling.
+        </p>
+        <div class="mt-5 flex flex-wrap gap-2">
+          <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold" href="./contract.html">Submit Contract</a>
+          <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./index.html#deposit">Pay Deposit</a>
+          <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./pricing.html">Pricing</a>
+        </div>
+        <div class="mt-3 text-sm text-gray-600">
+          Cash App: <b>$FSYardServicesLLC</b> • After paying, text: <b>Name + Address + Amount</b> to <b>(513) 549-2498</b>.
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#1a472a] text-white py-10">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-wrap justify-between items-center gap-4">
+        <div class="text-white/80 text-sm">
+          Fresh Start Yard Services LLC • (513) 549-2498 • freshstartyardservicesllc@gmail.com • Cash App: <b>$FSYardServicesLLC</b>
+        </div>
+        <div class="flex gap-4 text-sm">
+          <a class="text-white/80 hover:text-white" href="./pricing.html">Pricing</a>
+          <a class="text-white/80 hover:text-white" href="./luxury.html">Luxury</a>
+          <a class="text-white/80 hover:text-white" href="./contract.html">Contract</a>
+          <a class="text-white/80 hover:text-white" href="./terms.html">Terms</a>
+        </div>
       </div>
     </div>
-  </section>
+  </footer>
 
-  <!-- DETAILS -->
-  <section>
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <h3>Detailed Descriptions</h3>
-          <p>Use these descriptions on your site to justify pricing and set expectations clearly (reduces disputes).</p>
-        </div>
-      </div>
-
-      <div class="grid">
-
-        <!-- LAWN MOWING -->
-        <div class="card svc">
-          <span id="mowing" class="anchor"></span>
-          <h4>Lawn Mowing (Residential & Small Commercial)</h4>
-          <p>Standard mowing for a clean, maintained look—great for weekly or bi-weekly schedules.</p>
-          <div class="meta">
-            <span class="tag">Typical time: 30–90 min (residential)</span>
-            <span class="tag">Frequency: weekly / bi-weekly</span>
-            <span class="tag">Add-ons: bagging, trimming, edging</span>
-          </div>
-          <ul>
-            <li><b>Includes:</b> mowing the lawn area in scope + basic blow-off of hard surfaces.</li>
-            <li><b>Why pricing varies:</b> property size, obstacles, slope, grass height, and trim time.</li>
-            <li><b>Labor vs materials:</b> labor-only (materials not typically needed).</li>
-          </ul>
-          <div class="small">Tip: For a “finished” look, pair mowing with trimming & edging.</div>
-        </div>
-
-        <!-- TRIM + EDGE -->
-        <div class="card svc">
-          <span id="trimming" class="anchor"></span>
-          <h4>Trimming & Edging</h4>
-          <p>Sharper borders along sidewalks/driveways and detail trimming that makes the property look professionally maintained.</p>
-          <div class="meta">
-            <span class="tag">Typical time: 45–120 min</span>
-            <span class="tag">High-visibility results</span>
-            <span class="tag">Premium/Ultra = extra detail</span>
-          </div>
-          <ul>
-            <li><b>Includes:</b> trimming around edges/obstacles (as scoped) + edging where applicable.</li>
-            <li><b>Why pricing varies:</b> length of borders, corners, thick growth, and cleanup time.</li>
-            <li><b>Labor vs materials:</b> labor-only.</li>
-          </ul>
-        </div>
-
-        <!-- CLEANUPS -->
-        <div class="card svc">
-          <span id="cleanup" class="anchor"></span>
-          <h4>Yard Cleanups (Spring/Fall + One-Time)</h4>
-          <p>A full property reset: leaves, sticks, yard debris, and general mess removed so the yard looks clean again.</p>
-          <div class="meta">
-            <span class="tag">Typical time: 2–8 hours</span>
-            <span class="tag">Most variable service</span>
-            <span class="tag">Haul-away: scope-based</span>
-          </div>
-          <ul>
-            <li><b>Includes:</b> raking/blowing, pile-up, bagging, and general cleanup for the agreed scope.</li>
-            <li><b>Why pricing varies:</b> debris volume, overgrowth, wet leaves, access, and number of loads.</li>
-            <li><b>Labor vs materials:</b> labor + disposal/bags depending on volume.</li>
-          </ul>
-          <div class="small">Ultra tier is best when you want a “show-ready” yard with deeper detail.</div>
-        </div>
-
-        <!-- WEEDS -->
-        <div class="card svc">
-          <span id="weeds" class="anchor"></span>
-          <h4>Weed Removal & Bed Cleanouts</h4>
-          <p>Remove weeds and overgrowth in landscape beds so they’re ready for mulch, rock, or planting.</p>
-          <div class="meta">
-            <span class="tag">Typical time: 1–5 hours</span>
-            <span class="tag">Great before mulch/rock</span>
-            <span class="tag">Haul-away optional</span>
-          </div>
-          <ul>
-            <li><b>Includes:</b> pulling/cutting weeds and clearing beds (as scoped) + basic cleanup.</li>
-            <li><b>Why pricing varies:</b> overgrowth level, roots/vines, bed size, and debris disposal.</li>
-            <li><b>Labor vs materials:</b> labor-only unless disposal is added.</li>
-          </ul>
-        </div>
-
-        <!-- MULCH -->
-        <div class="card svc">
-          <span id="mulch" class="anchor"></span>
-          <h4>Mulch Installation</h4>
-          <p>Even mulch spread with clean edges for a refreshed bed appearance and improved moisture/weed control.</p>
-          <div class="meta">
-            <span class="tag">Typical time: 2–6 hours</span>
-            <span class="tag">Labor + bed prep as scoped</span>
-            <span class="tag">Materials vary</span>
-          </div>
-          <ul>
-            <li><b>Includes:</b> spreading mulch evenly + cleanup of loose mulch in work areas.</li>
-            <li><b>Why pricing varies:</b> bed size, prep needed (weeds/old mulch), and material amount.</li>
-            <li><b>Labor vs materials:</b> we usually price mulch/materials separately (you only pay what the job requires).</li>
-          </ul>
-        </div>
-
-        <!-- SHRUBS -->
-        <div class="card svc">
-          <span id="shrubs" class="anchor"></span>
-          <h4>Shrub Trimming & Pruning</h4>
-          <p>Clean shaping for healthier-looking shrubs and better curb appeal. Great for seasonal refreshes.</p>
-          <div class="meta">
-            <span class="tag">Typical time: 1–4 hours</span>
-            <span class="tag">Depends on count/size</span>
-            <span class="tag">Haul-away optional</span>
-          </div>
-          <ul>
-            <li><b>Includes:</b> trimming/pruning for the shrubs in scope + cleanup.</li>
-            <li><b>Why pricing varies:</b> shrub height/density, hedge length, and debris volume.</li>
-            <li><b>Labor vs materials:</b> labor-only unless disposal is added.</li>
-          </ul>
-        </div>
-
-        <!-- LEAVES -->
-        <div class="card svc">
-          <span id="leaves" class="anchor"></span>
-          <h4>Leaf Cleanup & Haul-Away</h4>
-          <p>Blow, bag, and remove leaves so the yard stays neat throughout leaf season.</p>
-          <div class="meta">
-            <span class="tag">Typical time: 2–6 hours</span>
-            <span class="tag">Volume-based</span>
-            <span class="tag">Wet leaves = more labor</span>
-          </div>
-          <ul>
-            <li><b>Includes:</b> leaf collection and cleanup for the agreed areas.</li>
-            <li><b>Why pricing varies:</b> volume, wet/heavy leaves, access, and number of loads.</li>
-            <li><b>Labor vs materials:</b> labor + bags/disposal depending on volume.</li>
-          </ul>
-        </div>
-
-        <!-- DEBRIS -->
-        <div class="card svc">
-          <span id="debris" class="anchor"></span>
-          <h4>Debris Removal (Yard Debris Only)</h4>
-          <p>Remove yard debris piles as a defined scope (sticks, branches, leaves, yard waste).</p>
-          <div class="meta">
-            <span class="tag">Typical time: 1–4 hours</span>
-            <span class="tag">Load-size based</span>
-            <span class="tag">Yard debris only</span>
-          </div>
-          <ul>
-            <li><b>Includes:</b> loading and disposal of yard debris in scope.</li>
-            <li><b>Why pricing varies:</b> pile size/weight, access, and disposal requirements.</li>
-            <li><b>Labor vs materials:</b> labor + disposal.</li>
-          </ul>
-        </div>
-
-        <!-- SMALL INSTALLS -->
-        <div class="card svc">
-          <span id="installs" class="anchor"></span>
-          <h4>Small Landscape Installs</h4>
-          <p>Simple upgrades like bed refreshes, plants, and small layout improvements for curb appeal.</p>
-          <div class="meta">
-            <span class="tag">Typical time: 3–10 hours</span>
-            <span class="tag">Scope-based</span>
-            <span class="tag">Materials vary</span>
-          </div>
-          <ul>
-            <li><b>Includes:</b> install labor + layout (as scoped).</li>
-            <li><b>Why pricing varies:</b> bed size, prep needs, and number/type of materials.</li>
-            <li><b>Labor vs materials:</b> materials usually separate unless included in your quote.</li>
-          </ul>
-        </div>
-
-        <!-- GUTTERS -->
-        <div class="card svc">
-          <span id="gutters" class="anchor"></span>
-          <h4>Gutter Cleaning</h4>
-          <p>Clear gutters and downspouts to prevent overflow, roofline staining, and drainage problems.</p>
-          <div class="meta">
-            <span class="tag">Typical time: 45–150 min</span>
-            <span class="tag">1-story vs 2-story</span>
-            <span class="tag">Downspout flush add-on</span>
-          </div>
-          <ul>
-            <li><b>Includes:</b> debris removed from gutters + basic cleanup in work areas.</li>
-            <li><b>Why pricing varies:</b> number of stories, roof pitch, gutter guards, debris volume, and access.</li>
-            <li><b>Labor vs materials:</b> labor-only (repairs quoted separately if requested).</li>
-          </ul>
-        </div>
-
-        <!-- PRESSURE -->
-        <div class="card svc">
-          <span id="pressure" class="anchor"></span>
-          <h4>Pressure Washing (Concrete / Pavers)</h4>
-          <p>Deep clean for driveways, walkways, patios, and pavers. Great for removing algae, dirt, and surface buildup.</p>
-          <div class="meta">
-            <span class="tag">Typical time: 1–4 hours</span>
-            <span class="tag">Sq ft drives price</span>
-            <span class="tag">Stain treatments add-on</span>
-          </div>
-          <ul>
-            <li><b>Includes:</b> surface wash + rinse + basic cleanup.</li>
-            <li><b>Why pricing varies:</b> square footage, algae/moss level, stains (oil/rust), water access, and surface type.</li>
-            <li><b>Labor vs materials:</b> labor + equipment; chemicals/spot treatments added only if needed.</li>
-          </ul>
-        </div>
-
-        <!-- EDGING -->
-        <div class="card svc">
-          <span id="edging" class="anchor"></span>
-          <h4>Landscape Edging Install (Plastic/Metal)</h4>
-          <p>Install edging to create clean bed lines and keep mulch or rock contained. Strong curb appeal upgrade.</p>
-          <div class="meta">
-            <span class="tag">Typical time: 2–6 hours</span>
-            <span class="tag">Priced by linear feet</span>
-            <span class="tag">Curves/corners increase labor</span>
-          </div>
-          <ul>
-            <li><b>Includes:</b> bed line layout + edging install for the scoped areas.</li>
-            <li><b>Why pricing varies:</b> linear footage, hard soil, roots, and number of curves/corners.</li>
-            <li><b>Labor vs materials:</b> edging material can be included or priced separately (we confirm in writing).</li>
-          </ul>
-          <div class="small">Best practice: bundle edging with bed redefine and mulch/rock for the best “before/after.”</div>
-        </div>
-
-        <!-- ROCK -->
-        <div class="card svc">
-          <span id="rock" class="anchor"></span>
-          <h4>River Rock / Decorative Rock Install</h4>
-          <p>Fabric + rock install for long-lasting, low-maintenance beds and clean lines.</p>
-          <div class="meta">
-            <span class="tag">Typical time: 4–12 hours</span>
-            <span class="tag">Sq ft-based</span>
-            <span class="tag">Haul-away add-on</span>
-          </div>
-          <ul>
-            <li><b>Includes:</b> prep as scoped + fabric + spreading rock evenly.</li>
-            <li><b>Why pricing varies:</b> square footage, depth, border complexity, access, and haul-away needs.</li>
-            <li><b>Labor vs materials:</b> rock cost varies a lot by type and delivery—materials are quoted clearly.</li>
-          </ul>
-        </div>
-
-        <!-- SEEDING -->
-        <div class="card svc">
-          <span id="seeding" class="anchor"></span>
-          <h4>Lawn Patch Repair / Overseeding</h4>
-          <p>Repair thin spots and improve turf density. Best results depend on watering and seasonal timing.</p>
-          <div class="meta">
-            <span class="tag">Typical time: 45–180 min</span>
-            <span class="tag">Watering required for results</span>
-            <span class="tag">Prep level varies</span>
-          </div>
-          <ul>
-            <li><b>Includes:</b> surface prep + seed + topdress (as scoped).</li>
-            <li><b>Why pricing varies:</b> patch size, soil condition, topsoil needs, and prep effort.</li>
-            <li><b>Labor vs materials:</b> seed/topsoil/straw may be included or itemized depending on the quote.</li>
-          </ul>
-          <div class="small">We’ll confirm expectations: if watering isn’t possible, results may be limited.</div>
-        </div>
-
-        <!-- EPOXY -->
-        <div class="card svc">
-          <span id="epoxy" class="anchor"></span>
-          <h4>Epoxy Flooring (Garage / Basement / Decorative)</h4>
-          <p>Professional epoxy coating systems where prep determines longevity and finish quality.</p>
-          <div class="meta">
-            <span class="tag">Typical time: 1–3 days</span>
-            <span class="tag">Prep is the job</span>
-            <span class="tag">Cure time matters</span>
-          </div>
-          <ul>
-            <li><b>Includes:</b> prep + coating system as quoted (solid/flake/metallic). We confirm cure windows and usage rules.</li>
-            <li><b>Why pricing varies:</b> grinding/prep needs, cracks, moisture issues, design complexity, and topcoat system.</li>
-            <li><b>Labor vs materials:</b> both are major—systems are priced per sq ft to match your finish selection.</li>
-          </ul>
-          <div class="small">Luxury designs (3D river floors) are custom-quoted due to complexity and materials.</div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container">
-    <div class="card">
-      <h4 style="margin:0 0 8px;">Ready to book?</h4>
-      <p>Start with a quote request or fill out the contract. Deposits reserve scheduling windows.</p>
-      <div class="actions" style="margin-top:12px;">
-        <a class="btn primary" href="./contract.html">Contract</a>
-        <a class="btn" href="./index.html#deposit">Pay Deposit</a>
-        <a class="btn" href="./index.html#contact">Request Quote</a>
-      </div>
-      <div class="small">Cash App deposits: <b>$FSYardServicesLLC</b> • Phone: <b>+1 (513) 549-2498</b></div>
-    </div>
-  </div>
-</footer>
-
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+    }
+  </script>
 </body>
 </html>

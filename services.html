@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Service Details | Fresh Start Yard Services LLC (Cincinnati, Dayton, Middletown)</title>
-  <meta name="description" content="Detailed service descriptions, typical time ranges, what’s included, and what affects pricing for Fresh Start Yard Services LLC. Serving Cincinnati, Dayton, and Middletown." />
+  <title>Service Details & Work Gallery | Fresh Start Yard Services LLC</title>
+  <meta name="description" content="Browse Fresh Start Yard Services LLC service details and work-photo galleries for lawn care, cleanups, mulch, pressure washing, commercial maintenance, and outdoor upgrades in Cincinnati, Dayton, and Middletown." />
   <meta name="theme-color" content="#1a472a" />
 
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
@@ -34,6 +34,70 @@
       background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a472a' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
     .anchor{scroll-margin-top:96px;}
+
+    /* Work-photo gallery */
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:1rem;
+    }
+    .project-photo{
+      overflow:hidden;
+      border:1px solid #e5e7eb;
+      border-radius:1rem;
+      background:#faf9f6;
+    }
+    .photo-visual{
+      position:relative;
+      aspect-ratio:16 / 10;
+      overflow:hidden;
+      background:linear-gradient(135deg, #eff6ef 0%, #faf9f6 55%, #e4efe4 100%);
+    }
+    .photo-visual img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:0;
+      transition:opacity .25s ease, transform .35s ease;
+      z-index:2;
+    }
+    .project-photo.has-photo .photo-visual img{opacity:1;}
+    .project-photo.has-photo:hover .photo-visual img{transform:scale(1.03);}
+    .photo-placeholder{
+      position:absolute;
+      inset:0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:1.25rem;
+      color:#1a472a;
+      z-index:1;
+    }
+    .photo-placeholder svg{width:2.75rem;height:2.75rem;margin-bottom:.7rem;}
+    .photo-label{
+      position:absolute;
+      top:.75rem;
+      left:.75rem;
+      z-index:3;
+      padding:.38rem .65rem;
+      background:rgba(26,71,42,.92);
+      color:#fff;
+      border-radius:999px;
+      font-size:.72rem;
+      font-weight:700;
+      letter-spacing:.03em;
+      text-transform:uppercase;
+    }
+    .project-photo figcaption{padding:.85rem 1rem .95rem;}
+    .project-photo figcaption strong{display:block;color:#1a472a;font-size:.95rem;}
+    .project-photo figcaption span{display:block;margin-top:.15rem;color:#6b7280;font-size:.8rem;line-height:1.3;}
+    @media (max-width: 640px){
+      .gallery-grid{grid-template-columns:1fr;}
+    }
   </style>
 </head>
 
@@ -82,6 +146,7 @@
         </a>
 
         <div class="hidden md:flex items-center gap-6">
+          <a href="./services.html" class="text-[#1a472a] font-semibold">Services</a>
           <a href="./pricing.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Pricing</a>
           <a href="./luxury.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Luxury Builds</a>
           <a href="./contract.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Contract</a>
@@ -98,6 +163,7 @@
 
       <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t mt-4">
         <div class="flex flex-col gap-3">
+          <a href="./services.html" class="text-[#1a472a] font-semibold py-2">Services</a>
           <a href="./pricing.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Pricing</a>
           <a href="./luxury.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Luxury Builds</a>
           <a href="./contract.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Contract</a>
@@ -115,10 +181,10 @@
         <span class="inline-block bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-semibold mb-4">
           SERVICE DETAILS
         </span>
-        <h1 class="font-display text-3xl md:text-4xl font-bold text-[#1a472a] mb-3">Service Details</h1>
+        <h1 class="font-display text-3xl md:text-4xl font-bold text-[#1a472a] mb-3">Service Details & Work Gallery</h1>
 
         <p class="text-gray-600">
-          This page explains what’s included, typical time ranges, and what affects pricing for Fresh Start Yard Services LLC.
+          See what each service includes, what affects pricing, and before-and-after project photos from Fresh Start Yard Services LLC.
           For starting minimums and tiers, see the Pricing page.
         </p>
 
@@ -169,6 +235,24 @@
         </div>
       </section>
 
+      <!-- Work gallery -->
+      <section class="bg-[#faf9f6] rounded-3xl border border-gray-200 p-7">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+          <div>
+            <span class="inline-block bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-semibold mb-3">REAL WORK. REAL RESULTS.</span>
+            <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">Project Photos for Every Service</h2>
+            <p class="text-gray-700 max-w-3xl">
+              Each service below has a dedicated before-and-after gallery. As Fresh Start completes more work, this page becomes a clear portfolio of the quality clients can expect.
+            </p>
+          </div>
+          <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold whitespace-nowrap" href="./contract.html">Request a Quote</a>
+        </div>
+        <div class="mt-5 bg-white border border-gray-200 rounded-2xl p-4 text-sm text-gray-600">
+          <strong class="text-[#1a472a]">Photo note:</strong> The green project-photo panels below automatically display each service image as it is added to the website.
+          We use actual Fresh Start work photos so customers can see the service standard before they book.
+        </div>
+      </section>
+
       <!-- Service blocks helper -->
       <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="mowing">
         <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">Lawn Mowing (Residential + Small Commercial)</h2>
@@ -196,6 +280,56 @@
         <div class="mt-5 text-sm text-gray-600">
           For starting minimums by size tier, see <a class="underline font-semibold text-[#1a472a]" href="./pricing.html#mowing">Pricing → Mowing</a>.
         </div>
+
+        <!-- Lawn Mowing work-photo gallery. Upload image files to: images/services/mowing-before.jpg and images/services/mowing-after.jpg -->
+        <div class="mt-6 border-t border-gray-100 pt-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <p class="text-xs tracking-[0.18em] font-bold text-[#4a7c59] uppercase">Work Gallery</p>
+              <h3 class="font-display text-xl font-bold text-[#1a472a]">Lawn Mowing Projects</h3>
+            </div>
+            <span class="bg-[#1a472a]/10 text-[#1a472a] px-3 py-1.5 rounded-full text-xs font-bold">Before &amp; After</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Fresh cut and a clean, consistent finish.</p>
+          <div class="gallery-grid">
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/mowing-before.jpg" alt="Lawn Mowing project before Fresh Start Yard Services LLC began work" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Before-service photo coming soon</span>
+                </div>
+                <span class="photo-label">Before</span>
+              </div>
+              <figcaption>
+                <strong>Before / In Progress</strong>
+                <span>Show the turf condition before service.</span>
+              </figcaption>
+            </figure>
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/mowing-after.jpg" alt="Completed Lawn Mowing project by Fresh Start Yard Services LLC" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Finished-project photo coming soon</span>
+                </div>
+                <span class="photo-label">Finished</span>
+              </div>
+              <figcaption>
+                <strong>Finished Project</strong>
+                <span>Show the completed cut, blow-off, and curb appeal.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="trim">
@@ -218,6 +352,56 @@
             <p class="text-gray-700">Small yards: 20–45 min</p>
             <p class="text-gray-700">Medium–XL: 45–120+ min</p>
             <div class="mt-3 text-sm text-gray-600">Premium/Ultra tiers add time for polish + deeper border cleanup.</div>
+          </div>
+        </div>
+
+        <!-- Trimming & Edging work-photo gallery. Upload image files to: images/services/trim-before.jpg and images/services/trim-after.jpg -->
+        <div class="mt-6 border-t border-gray-100 pt-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <p class="text-xs tracking-[0.18em] font-bold text-[#4a7c59] uppercase">Work Gallery</p>
+              <h3 class="font-display text-xl font-bold text-[#1a472a]">Trimming & Edging Projects</h3>
+            </div>
+            <span class="bg-[#1a472a]/10 text-[#1a472a] px-3 py-1.5 rounded-full text-xs font-bold">Before &amp; After</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Crisp borders and detailed line work.</p>
+          <div class="gallery-grid">
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/trim-before.jpg" alt="Trimming & Edging project before Fresh Start Yard Services LLC began work" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Before-service photo coming soon</span>
+                </div>
+                <span class="photo-label">Before</span>
+              </div>
+              <figcaption>
+                <strong>Before / In Progress</strong>
+                <span>Show uneven edges, tall growth, or problem areas.</span>
+              </figcaption>
+            </figure>
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/trim-after.jpg" alt="Completed Trimming & Edging project by Fresh Start Yard Services LLC" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Finished-project photo coming soon</span>
+                </div>
+                <span class="photo-label">Finished</span>
+              </div>
+              <figcaption>
+                <strong>Finished Project</strong>
+                <span>Show finished edges, trimmed borders, and clean hard surfaces.</span>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -247,6 +431,56 @@
             </ul>
           </div>
         </div>
+
+        <!-- Yard Cleanup work-photo gallery. Upload image files to: images/services/cleanup-before.jpg and images/services/cleanup-after.jpg -->
+        <div class="mt-6 border-t border-gray-100 pt-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <p class="text-xs tracking-[0.18em] font-bold text-[#4a7c59] uppercase">Work Gallery</p>
+              <h3 class="font-display text-xl font-bold text-[#1a472a]">Yard Cleanup Projects</h3>
+            </div>
+            <span class="bg-[#1a472a]/10 text-[#1a472a] px-3 py-1.5 rounded-full text-xs font-bold">Before &amp; After</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Reset an overgrown or cluttered property.</p>
+          <div class="gallery-grid">
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/cleanup-before.jpg" alt="Yard Cleanup project before Fresh Start Yard Services LLC began work" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Before-service photo coming soon</span>
+                </div>
+                <span class="photo-label">Before</span>
+              </div>
+              <figcaption>
+                <strong>Before / In Progress</strong>
+                <span>Show leaves, debris, or the property condition at arrival.</span>
+              </figcaption>
+            </figure>
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/cleanup-after.jpg" alt="Completed Yard Cleanup project by Fresh Start Yard Services LLC" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Finished-project photo coming soon</span>
+                </div>
+                <span class="photo-label">Finished</span>
+              </div>
+              <figcaption>
+                <strong>Finished Project</strong>
+                <span>Show bagged debris removal and the finished property reset.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="beds">
@@ -268,6 +502,56 @@
             <p class="text-sm text-gray-600 mt-3">Materials (mulch + delivery) are separate unless included in your quote.</p>
           </div>
         </div>
+
+        <!-- Beds, Weeds & Mulch work-photo gallery. Upload image files to: images/services/beds-before.jpg and images/services/beds-after.jpg -->
+        <div class="mt-6 border-t border-gray-100 pt-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <p class="text-xs tracking-[0.18em] font-bold text-[#4a7c59] uppercase">Work Gallery</p>
+              <h3 class="font-display text-xl font-bold text-[#1a472a]">Beds, Weeds & Mulch Projects</h3>
+            </div>
+            <span class="bg-[#1a472a]/10 text-[#1a472a] px-3 py-1.5 rounded-full text-xs font-bold">Before &amp; After</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Clean beds that improve curb appeal.</p>
+          <div class="gallery-grid">
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/beds-before.jpg" alt="Beds, Weeds & Mulch project before Fresh Start Yard Services LLC began work" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Before-service photo coming soon</span>
+                </div>
+                <span class="photo-label">Before</span>
+              </div>
+              <figcaption>
+                <strong>Before / In Progress</strong>
+                <span>Show weeds, bare beds, or existing material before work.</span>
+              </figcaption>
+            </figure>
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/beds-after.jpg" alt="Completed Beds, Weeds & Mulch project by Fresh Start Yard Services LLC" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Finished-project photo coming soon</span>
+                </div>
+                <span class="photo-label">Finished</span>
+              </div>
+              <figcaption>
+                <strong>Finished Project</strong>
+                <span>Show clean bed lines, mulch coverage, or the finished landscape bed.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="wash">
@@ -277,6 +561,56 @@
         </p>
         <div class="mt-5 text-sm text-gray-600">
           Starting minimums are listed on <a class="underline font-semibold text-[#1a472a]" href="./pricing.html#pressure">Pricing → Pressure Washing</a>.
+        </div>
+
+        <!-- Pressure Washing work-photo gallery. Upload image files to: images/services/wash-before.jpg and images/services/wash-after.jpg -->
+        <div class="mt-6 border-t border-gray-100 pt-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <p class="text-xs tracking-[0.18em] font-bold text-[#4a7c59] uppercase">Work Gallery</p>
+              <h3 class="font-display text-xl font-bold text-[#1a472a]">Pressure Washing Projects</h3>
+            </div>
+            <span class="bg-[#1a472a]/10 text-[#1a472a] px-3 py-1.5 rounded-full text-xs font-bold">Before &amp; After</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Restore the look of exterior hard surfaces.</p>
+          <div class="gallery-grid">
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/wash-before.jpg" alt="Pressure Washing project before Fresh Start Yard Services LLC began work" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Before-service photo coming soon</span>
+                </div>
+                <span class="photo-label">Before</span>
+              </div>
+              <figcaption>
+                <strong>Before / In Progress</strong>
+                <span>Show algae, dirt, mildew, or staining before cleaning.</span>
+              </figcaption>
+            </figure>
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/wash-after.jpg" alt="Completed Pressure Washing project by Fresh Start Yard Services LLC" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Finished-project photo coming soon</span>
+                </div>
+                <span class="photo-label">Finished</span>
+              </div>
+              <figcaption>
+                <strong>Finished Project</strong>
+                <span>Show the cleaned driveway, patio, steps, or pavers.</span>
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -288,6 +622,56 @@
         <div class="mt-5 text-sm text-gray-600">
           Starting minimums are listed on <a class="underline font-semibold text-[#1a472a]" href="./pricing.html#gutters">Pricing → Gutter Cleaning</a>.
         </div>
+
+        <!-- Gutter Cleaning work-photo gallery. Upload image files to: images/services/gutters-before.jpg and images/services/gutters-after.jpg -->
+        <div class="mt-6 border-t border-gray-100 pt-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <p class="text-xs tracking-[0.18em] font-bold text-[#4a7c59] uppercase">Work Gallery</p>
+              <h3 class="font-display text-xl font-bold text-[#1a472a]">Gutter Cleaning Projects</h3>
+            </div>
+            <span class="bg-[#1a472a]/10 text-[#1a472a] px-3 py-1.5 rounded-full text-xs font-bold">Before &amp; After</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Clear debris to help water flow correctly.</p>
+          <div class="gallery-grid">
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/gutters-before.jpg" alt="Gutter Cleaning project before Fresh Start Yard Services LLC began work" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Before-service photo coming soon</span>
+                </div>
+                <span class="photo-label">Before</span>
+              </div>
+              <figcaption>
+                <strong>Before / In Progress</strong>
+                <span>Show debris buildup or the area before service when safe to photograph.</span>
+              </figcaption>
+            </figure>
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/gutters-after.jpg" alt="Completed Gutter Cleaning project by Fresh Start Yard Services LLC" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Finished-project photo coming soon</span>
+                </div>
+                <span class="photo-label">Finished</span>
+              </div>
+              <figcaption>
+                <strong>Finished Project</strong>
+                <span>Show cleared gutter channels and cleaned work area.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="edging">
@@ -297,6 +681,56 @@
         </p>
         <div class="mt-5 text-sm text-gray-600">
           Starting minimums are listed on <a class="underline font-semibold text-[#1a472a]" href="./pricing.html#edging">Pricing → Edging Install</a>.
+        </div>
+
+        <!-- Landscape Edging Install work-photo gallery. Upload image files to: images/services/edging-before.jpg and images/services/edging-after.jpg -->
+        <div class="mt-6 border-t border-gray-100 pt-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <p class="text-xs tracking-[0.18em] font-bold text-[#4a7c59] uppercase">Work Gallery</p>
+              <h3 class="font-display text-xl font-bold text-[#1a472a]">Landscape Edging Install Projects</h3>
+            </div>
+            <span class="bg-[#1a472a]/10 text-[#1a472a] px-3 py-1.5 rounded-full text-xs font-bold">Before &amp; After</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Create durable, clean bed borders.</p>
+          <div class="gallery-grid">
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/edging-before.jpg" alt="Landscape Edging Install project before Fresh Start Yard Services LLC began work" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Before-service photo coming soon</span>
+                </div>
+                <span class="photo-label">Before</span>
+              </div>
+              <figcaption>
+                <strong>Before / In Progress</strong>
+                <span>Show the bed line or loose material before edging is installed.</span>
+              </figcaption>
+            </figure>
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/edging-after.jpg" alt="Completed Landscape Edging Install project by Fresh Start Yard Services LLC" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Finished-project photo coming soon</span>
+                </div>
+                <span class="photo-label">Finished</span>
+              </div>
+              <figcaption>
+                <strong>Finished Project</strong>
+                <span>Show the completed edging line and finished bed border.</span>
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -308,6 +742,56 @@
         <div class="mt-5 text-sm text-gray-600">
           Starting minimums are listed on <a class="underline font-semibold text-[#1a472a]" href="./pricing.html#rock">Pricing → Rock Install</a>.
         </div>
+
+        <!-- Decorative Rock Install work-photo gallery. Upload image files to: images/services/rock-before.jpg and images/services/rock-after.jpg -->
+        <div class="mt-6 border-t border-gray-100 pt-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <p class="text-xs tracking-[0.18em] font-bold text-[#4a7c59] uppercase">Work Gallery</p>
+              <h3 class="font-display text-xl font-bold text-[#1a472a]">Decorative Rock Install Projects</h3>
+            </div>
+            <span class="bg-[#1a472a]/10 text-[#1a472a] px-3 py-1.5 rounded-full text-xs font-bold">Before &amp; After</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Low-maintenance beds with a polished finish.</p>
+          <div class="gallery-grid">
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/rock-before.jpg" alt="Decorative Rock Install project before Fresh Start Yard Services LLC began work" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Before-service photo coming soon</span>
+                </div>
+                <span class="photo-label">Before</span>
+              </div>
+              <figcaption>
+                <strong>Before / In Progress</strong>
+                <span>Show the bed, old mulch, or prep area before rock installation.</span>
+              </figcaption>
+            </figure>
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/rock-after.jpg" alt="Completed Decorative Rock Install project by Fresh Start Yard Services LLC" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Finished-project photo coming soon</span>
+                </div>
+                <span class="photo-label">Finished</span>
+              </div>
+              <figcaption>
+                <strong>Finished Project</strong>
+                <span>Show finished fabric, rock coverage, and clean borders.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="seed">
@@ -318,6 +802,56 @@
         <div class="mt-5 text-sm text-gray-600">
           Starting minimums are listed on <a class="underline font-semibold text-[#1a472a]" href="./pricing.html#seeding">Pricing → Seeding</a>.
         </div>
+
+        <!-- Patch Repair & Overseeding work-photo gallery. Upload image files to: images/services/seed-before.jpg and images/services/seed-after.jpg -->
+        <div class="mt-6 border-t border-gray-100 pt-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <p class="text-xs tracking-[0.18em] font-bold text-[#4a7c59] uppercase">Work Gallery</p>
+              <h3 class="font-display text-xl font-bold text-[#1a472a]">Patch Repair & Overseeding Projects</h3>
+            </div>
+            <span class="bg-[#1a472a]/10 text-[#1a472a] px-3 py-1.5 rounded-full text-xs font-bold">Before &amp; After</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Improve thin and bare lawn areas.</p>
+          <div class="gallery-grid">
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/seed-before.jpg" alt="Patch Repair & Overseeding project before Fresh Start Yard Services LLC began work" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Before-service photo coming soon</span>
+                </div>
+                <span class="photo-label">Before</span>
+              </div>
+              <figcaption>
+                <strong>Before / In Progress</strong>
+                <span>Show bare spots, thin turf, or damaged lawn areas.</span>
+              </figcaption>
+            </figure>
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/seed-after.jpg" alt="Completed Patch Repair & Overseeding project by Fresh Start Yard Services LLC" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Finished-project photo coming soon</span>
+                </div>
+                <span class="photo-label">Finished</span>
+              </div>
+              <figcaption>
+                <strong>Finished Project</strong>
+                <span>Show prepared seed area or later-progress results after growth.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="epoxy">
@@ -327,6 +861,56 @@
         </p>
         <div class="mt-5 text-sm text-gray-600">
           Starting rates are listed on <a class="underline font-semibold text-[#1a472a]" href="./pricing.html#epoxy">Pricing → Epoxy</a>.
+        </div>
+
+        <!-- Epoxy Flooring work-photo gallery. Upload image files to: images/services/epoxy-before.jpg and images/services/epoxy-after.jpg -->
+        <div class="mt-6 border-t border-gray-100 pt-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <p class="text-xs tracking-[0.18em] font-bold text-[#4a7c59] uppercase">Work Gallery</p>
+              <h3 class="font-display text-xl font-bold text-[#1a472a]">Epoxy Flooring Projects</h3>
+            </div>
+            <span class="bg-[#1a472a]/10 text-[#1a472a] px-3 py-1.5 rounded-full text-xs font-bold">Before &amp; After</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">A durable, finished garage or basement floor.</p>
+          <div class="gallery-grid">
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/epoxy-before.jpg" alt="Epoxy Flooring project before Fresh Start Yard Services LLC began work" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Before-service photo coming soon</span>
+                </div>
+                <span class="photo-label">Before</span>
+              </div>
+              <figcaption>
+                <strong>Before / In Progress</strong>
+                <span>Show concrete condition, cracks, stains, or prep stage.</span>
+              </figcaption>
+            </figure>
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/epoxy-after.jpg" alt="Completed Epoxy Flooring project by Fresh Start Yard Services LLC" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Finished-project photo coming soon</span>
+                </div>
+                <span class="photo-label">Finished</span>
+              </div>
+              <figcaption>
+                <strong>Finished Project</strong>
+                <span>Show the completed coating system and finished floor.</span>
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -339,6 +923,56 @@
         <div class="mt-5 text-sm text-gray-600">
           Use the Contract page to request a commercial quote and ask about COI.
         </div>
+
+        <!-- Commercial & HOA Service work-photo gallery. Upload image files to: images/services/commercial-before.jpg and images/services/commercial-after.jpg -->
+        <div class="mt-6 border-t border-gray-100 pt-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <p class="text-xs tracking-[0.18em] font-bold text-[#4a7c59] uppercase">Work Gallery</p>
+              <h3 class="font-display text-xl font-bold text-[#1a472a]">Commercial & HOA Service Projects</h3>
+            </div>
+            <span class="bg-[#1a472a]/10 text-[#1a472a] px-3 py-1.5 rounded-full text-xs font-bold">Before &amp; After</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Reliable grounds maintenance for managed properties.</p>
+          <div class="gallery-grid">
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/commercial-before.jpg" alt="Commercial & HOA Service project before Fresh Start Yard Services LLC began work" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Before-service photo coming soon</span>
+                </div>
+                <span class="photo-label">Before</span>
+              </div>
+              <figcaption>
+                <strong>Before / In Progress</strong>
+                <span>Show the site condition before recurring or one-time service.</span>
+              </figcaption>
+            </figure>
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/commercial-after.jpg" alt="Completed Commercial & HOA Service project by Fresh Start Yard Services LLC" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Finished-project photo coming soon</span>
+                </div>
+                <span class="photo-label">Finished</span>
+              </div>
+              <figcaption>
+                <strong>Finished Project</strong>
+                <span>Show the maintained grounds, clean walks, and finished appearance.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="luxury">
@@ -349,6 +983,56 @@
         <div class="mt-6 flex flex-wrap gap-2">
           <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold" href="./luxury.html">View Luxury Builds</a>
           <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./contract.html">Start a Luxury Request</a>
+        </div>
+
+        <!-- Luxury Builds work-photo gallery. Upload image files to: images/services/luxury-before.jpg and images/services/luxury-after.jpg -->
+        <div class="mt-6 border-t border-gray-100 pt-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <p class="text-xs tracking-[0.18em] font-bold text-[#4a7c59] uppercase">Work Gallery</p>
+              <h3 class="font-display text-xl font-bold text-[#1a472a]">Luxury Builds Projects</h3>
+            </div>
+            <span class="bg-[#1a472a]/10 text-[#1a472a] px-3 py-1.5 rounded-full text-xs font-bold">Before &amp; After</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Custom outdoor upgrades built around the property.</p>
+          <div class="gallery-grid">
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/luxury-before.jpg" alt="Luxury Builds project before Fresh Start Yard Services LLC began work" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Before-service photo coming soon</span>
+                </div>
+                <span class="photo-label">Before</span>
+              </div>
+              <figcaption>
+                <strong>Before / In Progress</strong>
+                <span>Show the space before construction or upgrade work begins.</span>
+              </figcaption>
+            </figure>
+            <figure class="project-photo">
+              <div class="photo-visual">
+                <img src="./images/services/luxury-after.jpg" alt="Completed Luxury Builds project by Fresh Start Yard Services LLC" loading="lazy">
+                <div class="photo-placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+                  <strong>Fresh Start Project Photo</strong>
+                  <span class="text-sm mt-1 text-gray-600">Finished-project photo coming soon</span>
+                </div>
+                <span class="photo-label">Finished</span>
+              </div>
+              <figcaption>
+                <strong>Finished Project</strong>
+                <span>Show the completed custom feature and finished outdoor space.</span>
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -379,6 +1063,7 @@
           Fresh Start Yard Services LLC • (513) 549-2498 • freshstartyardservicesllc@gmail.com • Cash App: <b>$FSYardServicesLLC</b>
         </div>
         <div class="flex gap-4 text-sm">
+          <a class="text-white/80 hover:text-white" href="./services.html">Services</a>
           <a class="text-white/80 hover:text-white" href="./pricing.html">Pricing</a>
           <a class="text-white/80 hover:text-white" href="./luxury.html">Luxury</a>
           <a class="text-white/80 hover:text-white" href="./contract.html">Contract</a>
@@ -398,6 +1083,20 @@
         link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
       });
     }
+
+    // Show real project photos as soon as matching image files are added.
+    document.querySelectorAll('.project-photo img').forEach((img) => {
+      const card = img.closest('.project-photo');
+      const showPhoto = () => card.classList.add('has-photo');
+      const showPlaceholder = () => card.classList.remove('has-photo');
+
+      img.addEventListener('load', showPhoto);
+      img.addEventListener('error', showPlaceholder);
+
+      if (img.complete) {
+        img.naturalWidth > 0 ? showPhoto() : showPlaceholder();
+      }
+    });
   </script>
 </body>
 </html>

@@ -3,15 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Fresh Start Yard Services LLC | Landscaping & Yard Services (Cincinnati, Dayton, Middletown)</title>
-  <meta name="description" content="Fresh Start Yard Services LLC provides reliable lawn mowing, cleanups, trimming/edging, mulch, weed removal, pressure washing, and more in Cincinnati, Dayton, Middletown, and Northern KY. Free estimates." />
-  <meta name="theme-color" content="#1a472a" />
+  <meta name="description" content="Fresh Start Yard Services LLC provides reliable lawn mowing, cleanups, trimming and edging, mulch, weed removal, pressure washing, and more in Cincinnati, Dayton, Middletown, and Northern KY. Free estimates.">
+  <meta name="theme-color" content="#1a472a">
 
-  <!-- Tailwind CDN (works on GitHub Pages) -->
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -27,621 +23,203 @@
     html { scroll-behavior: smooth; }
     .font-display { font-family: 'Playfair Display', serif; }
     .font-body { font-family: 'Source Sans 3', sans-serif; }
-    .gradient-hero {
-      background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-sage) 100%);
-    }
-    .text-gradient {
-      background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-sage) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .service-card {
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 25px 50px -12px rgba(26, 71, 42, 0.15);
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-sage) 100%);
-      transition: all 0.3s ease;
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 40px -10px rgba(26, 71, 42, 0.5);
-    }
-    .trust-badge {
-      animation: pulse-soft 3s ease-in-out infinite;
-    }
-    @keyframes pulse-soft {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.85; }
-    }
-    .pattern-bg {
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a472a' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
-    .leaf-icon { animation: sway 4s ease-in-out infinite; }
-    @keyframes sway {
-      0%, 100% { transform: rotate(-3deg); }
-      50% { transform: rotate(3deg); }
-    }
+    .gradient-hero { background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-sage) 100%); }
+    .text-gradient { background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-sage) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .btn-primary { background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-sage) 100%); transition: all .25s ease; }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 40px -10px rgba(26,71,42,.5); }
+    .pattern-bg { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a472a' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .anchor { scroll-margin-top: 100px; }
+    .service-card { transition: transform .25s ease, box-shadow .25s ease; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 18px 36px -18px rgba(26,71,42,.32); }
   </style>
 </head>
 
-<body class="h-full font-body text-gray-800 bg-white overflow-auto">
-  <div class="w-full h-full">
+<body class="h-full font-body text-gray-800 bg-white">
+  <div id="top"></div>
 
-    <!-- Top Bar -->
-    <div class="bg-[#1a472a] text-white py-2 px-4">
-      <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center text-sm gap-3">
-        <div class="flex items-center gap-6 flex-wrap">
-          <span class="flex items-center gap-2">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            Cincinnati • Dayton • Middletown • Northern KY
-          </span>
-
-          <span class="hidden sm:flex items-center gap-2">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            Mon–Sat: 7AM – 7PM
-          </span>
-        </div>
-
-        <a href="tel:+15135492498" class="flex items-center gap-2 font-semibold hover:text-[#8fbc8f] transition-colors">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-          </svg>
-          <span>(513) 549-2498</span>
-        </a>
+  <!-- Top contact bar -->
+  <div class="bg-[#1a472a] text-white py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center text-sm gap-3">
+      <div class="flex items-center gap-5 flex-wrap">
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Cincinnati • Dayton • Middletown • Northern KY
+        </span>
+        <span class="hidden sm:flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Mon–Sat: 7AM – 7PM
+        </span>
       </div>
+      <a href="tel:+15135492498" class="font-semibold hover:text-[#8fbc8f] transition-colors">(513) 549-2498</a>
     </div>
-
-    <!-- Navigation -->
-    <nav class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50">
-      <div class="max-w-7xl mx-auto px-4 py-4">
-        <div class="flex justify-between items-center">
-          <a href="./index.html#top" class="flex items-center gap-3">
-            <!-- Logo image (your repo has logo.png) -->
-            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden border border-gray-200 shadow-sm">
-              <img src="./logo.png" alt="Fresh Start Yard Services LLC logo" class="w-full h-full object-contain p-1" />
-            </div>
-            <div>
-              <span class="font-display text-xl text-[#1a472a] font-bold block leading-tight">Fresh Start</span>
-              <span class="text-xs text-[#4a7c59] font-medium tracking-wide">YARD SERVICES LLC</span>
-            </div>
-          </a>
-
-          <div class="hidden md:flex items-center gap-7">
-            <a href="./services.html" class="text-gray-700 hover:text-[#1a472a] font-medium transition-colors">Services</a>
-            <a href="./pricing.html" class="text-gray-700 hover:text-[#1a472a] font-medium transition-colors">Pricing</a>
-            <a href="./luxury.html" class="text-gray-700 hover:text-[#1a472a] font-medium transition-colors">Luxury Builds</a>
-            <a href="./contract.html" class="text-gray-700 hover:text-[#1a472a] font-medium transition-colors">Contract</a>
-            <a href="./terms.html" class="text-gray-700 hover:text-[#1a472a] font-medium transition-colors">Terms</a>
-            <a href="./index.html#contact" class="btn-primary text-white px-6 py-3 rounded-full font-semibold">Request Quote</a>
-          </div>
-
-          <button id="mobile-menu-btn" class="md:hidden p-2 text-[#1a472a]" aria-label="Open menu">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t mt-4">
-          <div class="flex flex-col gap-3">
-            <a href="./services.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Services</a>
-            <a href="./pricing.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Pricing</a>
-            <a href="./luxury.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Luxury Builds</a>
-            <a href="./contract.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Contract</a>
-            <a href="./terms.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Terms</a>
-            <a href="./index.html#deposit" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Pay Deposit</a>
-            <a href="./index.html#contact" class="btn-primary text-white px-6 py-3 rounded-full font-semibold text-center mt-2">Request Quote</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Hero -->
-    <section id="top" class="relative overflow-hidden">
-      <div class="absolute inset-0 gradient-hero"></div>
-      <div class="relative max-w-7xl mx-auto px-4 py-16 lg:py-24">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="text-white">
-            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6 trust-badge">
-              <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-              </svg>
-              Reliable yard care • Clean results • Fast turnarounds
-            </div>
-
-            <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Landscaping & Yard Cleanup You Can Count On.
-            </h1>
-
-            <p class="text-xl text-white/90 mb-8 leading-relaxed max-w-xl">
-              Fresh Start Yard Services LLC helps homeowners and commercial properties keep the outside looking sharp.
-              Clear communication, consistent workmanship, and respect for your property—every time.
-            </p>
-
-            <div class="flex flex-wrap gap-4">
-              <a href="./contract.html" class="bg-white text-[#1a472a] px-7 py-4 rounded-full font-bold text-lg hover:bg-[#faf9f6] transition-all hover:shadow-xl">
-                Review & Sign Contract
-              </a>
-
-              <a href="./pricing.html" class="flex items-center gap-3 border-2 border-white/50 text-white px-7 py-4 rounded-full font-semibold hover:bg-white/10 transition-all">
-                Pricing & Service Menu
-              </a>
-
-              <a href="./luxury.html" class="flex items-center gap-3 border-2 border-white/50 text-white px-7 py-4 rounded-full font-semibold hover:bg-white/10 transition-all">
-                Luxury Builds
-              </a>
-
-              <a href="#contact" class="flex items-center gap-3 border-2 border-white/50 text-white px-7 py-4 rounded-full font-semibold hover:bg-white/10 transition-all">
-                Request a Quote
-              </a>
-
-              <a href="#deposit" class="flex items-center gap-3 border-2 border-white/50 text-white px-7 py-4 rounded-full font-semibold hover:bg-white/10 transition-all">
-                Pay Deposit
-              </a>
-
-              <a href="tel:+15135492498" class="flex items-center gap-3 border-2 border-white/50 text-white px-7 py-4 rounded-full font-semibold hover:bg-white/10 transition-all">
-                Call Now (513) 549-2498
-              </a>
-            </div>
-
-            <!-- Trust chips -->
-            <div class="flex flex-wrap gap-3 mt-10">
-              <span class="bg-white/15 px-4 py-2 rounded-full text-sm">Fast scheduling</span>
-              <span class="bg-white/15 px-4 py-2 rounded-full text-sm">Clear scope & pricing</span>
-              <span class="bg-white/15 px-4 py-2 rounded-full text-sm">Cleanup after every job</span>
-              <span class="bg-white/15 px-4 py-2 rounded-full text-sm">Cincinnati • Dayton • Middletown • NKY</span>
-            </div>
-          </div>
-
-          <!-- Right card -->
-          <div class="hidden lg:block">
-            <div class="bg-white rounded-3xl p-6 shadow-2xl">
-              <div class="rounded-2xl p-6 bg-gradient-to-br from-[#8fbc8f]/25 to-[#4a7c59]/20">
-                <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-3">Quick Actions</h3>
-                <div class="grid gap-3">
-                  <a href="./contract.html" class="btn-primary text-white px-6 py-3 rounded-xl font-semibold text-center">Contract (Sign Securely)</a>
-                  <a href="./pricing.html" class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-semibold text-center border border-gray-200">Pricing & Service Menu</a>
-                  <a href="./luxury.html" class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-semibold text-center border border-gray-200">Luxury Builds</a>
-                  <a href="#deposit" class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-semibold text-center border border-gray-200">Pay Deposit</a>
-                </div>
-
-                <div class="mt-5 text-sm text-gray-700">
-                  <div class="font-semibold text-[#1a472a]">Deposit Cash App</div>
-                  <div class="text-lg font-bold">$FSYardServicesLLC</div>
-                  <div class="text-xs text-gray-600 mt-1">
-                    After paying, text: <b>Name + Address + Amount</b> to <b>(513) 549-2498</b>.
-                  </div>
-                </div>
-
-                <div class="mt-5 text-sm text-gray-700">
-                  <div class="font-semibold text-[#1a472a]">Email</div>
-                  <a class="text-[#1a472a] font-bold hover:underline" href="mailto:freshstartyardservicesllc@gmail.com">freshstartyardservicesllc@gmail.com</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Wave divider -->
-      <div class="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 120" fill="none" class="w-full">
-          <path d="M0,96L48,85.3C96,75,192,53,288,58.7C384,64,480,96,576,101.3C672,107,768,85,864,74.7C960,64,1056,64,1152,69.3C1248,75,1344,85,1392,90.7L1440,96L1440,120L0,120Z" fill="white" />
-        </svg>
-      </div>
-    </section>
-
-    <!-- Trust Badges -->
-    <section class="py-12 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-16">
-          <div class="flex items-center gap-3 text-gray-600">
-            <div class="w-14 h-14 bg-[#faf9f6] rounded-full flex items-center justify-center">
-              <svg class="w-7 h-7 text-[#1a472a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-            </div>
-            <div>
-              <div class="font-bold text-[#1a472a]">Professional Service</div>
-              <div class="text-sm">Clear scope & cleanup</div>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-3 text-gray-600">
-            <div class="w-14 h-14 bg-[#faf9f6] rounded-full flex items-center justify-center">
-              <svg class="w-7 h-7 text-[#1a472a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zM6 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-            </div>
-            <div>
-              <div class="font-bold text-[#1a472a]">Residential + Commercial</div>
-              <div class="text-sm">Homes, HOAs, properties</div>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-3 text-gray-600">
-            <div class="w-14 h-14 bg-[#faf9f6] rounded-full flex items-center justify-center">
-              <svg class="w-7 h-7 text-[#1a472a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div>
-              <div class="font-bold text-[#1a472a]">Fast Response</div>
-              <div class="text-sm">Same-week options</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Preview (links to services.html + pricing.html) -->
-    <section class="py-20 pattern-bg">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="inline-block bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-semibold mb-4">OUR SERVICES</span>
-          <h2 class="font-display text-4xl md:text-5xl font-bold text-[#1a472a] mb-6">Service Menu</h2>
-          <p class="text-lg text-gray-600">
-            Starting prices and tiers are on the Pricing page. Use the Contract to request service and lock scheduling with a deposit.
-          </p>
-          <div class="flex flex-wrap justify-center gap-3 mt-6">
-            <a href="./services.html" class="btn-primary text-white px-6 py-3 rounded-full font-semibold">View Services</a>
-            <a href="./pricing.html" class="bg-white text-[#1a472a] px-6 py-3 rounded-full font-semibold border border-gray-200">Pricing & Sizes</a>
-            <a href="./luxury.html" class="bg-white text-[#1a472a] px-6 py-3 rounded-full font-semibold border border-gray-200">Luxury Builds</a>
-          </div>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Keep your actual service list -->
-          <div class="service-card bg-white rounded-3xl overflow-hidden shadow-lg">
-            <div class="p-8">
-              <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-2">Lawn Mowing</h3>
-              <p class="text-gray-600 mb-5">Residential & small commercial mowing with clean edges and consistent scheduling.</p>
-              <a href="./pricing.html" class="text-[#1a472a] font-semibold hover:underline">See pricing →</a>
-            </div>
-          </div>
-
-          <div class="service-card bg-white rounded-3xl overflow-hidden shadow-lg">
-            <div class="p-8">
-              <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-2">Trimming & Edging</h3>
-              <p class="text-gray-600 mb-5">Crisp curb lines and detail work that makes the yard look professionally finished.</p>
-              <a href="./pricing.html" class="text-[#1a472a] font-semibold hover:underline">See pricing →</a>
-            </div>
-          </div>
-
-          <div class="service-card bg-white rounded-3xl overflow-hidden shadow-lg">
-            <div class="p-8">
-              <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-2">Yard Cleanups</h3>
-              <p class="text-gray-600 mb-5">Spring/Fall cleanups, overgrowth reset, debris clearing and haul-away as scoped.</p>
-              <a href="./pricing.html" class="text-[#1a472a] font-semibold hover:underline">See pricing →</a>
-            </div>
-          </div>
-
-          <div class="service-card bg-white rounded-3xl overflow-hidden shadow-lg">
-            <div class="p-8">
-              <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-2">Mulch & Bed Work</h3>
-              <p class="text-gray-600 mb-5">Mulch installs, bed cleanouts, weed removal, edging installs, and refresh bundles.</p>
-              <a href="./pricing.html" class="text-[#1a472a] font-semibold hover:underline">See pricing →</a>
-            </div>
-          </div>
-
-          <div class="service-card bg-white rounded-3xl overflow-hidden shadow-lg">
-            <div class="p-8">
-              <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-2">Pressure Washing</h3>
-              <p class="text-gray-600 mb-5">Concrete/driveways, patios/pavers, moss/algae treatment and spot add-ons.</p>
-              <a href="./pricing.html" class="text-[#1a472a] font-semibold hover:underline">See pricing →</a>
-            </div>
-          </div>
-
-          <div class="service-card bg-white rounded-3xl overflow-hidden shadow-lg">
-            <div class="p-8">
-              <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-2">Luxury Builds</h3>
-              <p class="text-gray-600 mb-5">Fire pits, pergolas, retaining walls, steps, and custom outdoor upgrades.</p>
-              <a href="./luxury.html" class="text-[#1a472a] font-semibold hover:underline">View luxury →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Deposit -->
-    <section id="deposit" class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="grid lg:grid-cols-2 gap-10 items-start">
-          <div>
-            <span class="inline-block bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-semibold mb-4">DEPOSITS</span>
-            <h2 class="font-display text-4xl md:text-5xl font-bold text-[#1a472a] mb-4">Pay Your Deposit</h2>
-            <p class="text-lg text-gray-600 mb-6">
-              Deposits help reserve your service window once your scope is submitted.
-              After paying, text <b>Name + Address + Amount</b> to <b>(513) 549-2498</b>.
-            </p>
-
-            <div class="bg-[#faf9f6] rounded-3xl p-8">
-              <div class="text-sm text-gray-600">Cash App</div>
-              <div class="text-3xl font-bold text-[#1a472a]">$FSYardServicesLLC</div>
-
-              <div class="flex flex-wrap gap-3 mt-6">
-                <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold" target="_blank" rel="noopener" href="https://cash.app/$FSYardServicesLLC/50">Pay $50</a>
-                <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold" target="_blank" rel="noopener" href="https://cash.app/$FSYardServicesLLC/100">Pay $100</a>
-                <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold" target="_blank" rel="noopener" href="https://cash.app/$FSYardServicesLLC/150">Pay $150</a>
-                <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" target="_blank" rel="noopener" href="https://cash.app/$FSYardServicesLLC">Custom Amount</a>
-              </div>
-
-              <div class="text-xs text-gray-600 mt-4">
-                Tip: Submit the contract first, then pay deposit to reserve scheduling.
-              </div>
-
-              <div class="flex flex-wrap gap-3 mt-6">
-                <a href="./contract.html" class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-semibold border border-gray-200">Go to Contract</a>
-                <a href="./terms.html" class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-semibold border border-gray-200">View Terms</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-[#faf9f6] rounded-3xl p-8 lg:p-10">
-            <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-4">What happens after deposit?</h3>
-            <ul class="space-y-3 text-gray-700">
-              <li>• We confirm scope + access details.</li>
-              <li>• We schedule your service window based on availability + weather.</li>
-              <li>• We perform the job and clean up after service.</li>
-              <li>• Remaining balance is due at completion unless otherwise agreed.</li>
-            </ul>
-            <div class="mt-6">
-              <a href="tel:+15135492498" class="btn-primary text-white px-6 py-3 rounded-xl font-bold inline-block">Call (513) 549-2498</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact / Quote (Formspree) -->
-    <section id="contact" class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="grid lg:grid-cols-2 gap-16">
-          <div>
-            <span class="inline-block bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-semibold mb-4">GET IN TOUCH</span>
-            <h2 class="font-display text-4xl md:text-5xl font-bold text-[#1a472a] mb-6">Request a Quote</h2>
-            <p class="text-lg text-gray-600 mb-8">We typically respond within business hours. The more detail you provide, the faster we can estimate.</p>
-
-            <div class="space-y-6 mb-8">
-              <div class="flex items-center gap-4">
-                <div class="w-14 h-14 bg-[#1a472a] rounded-2xl flex items-center justify-center">
-                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="text-sm text-gray-500">Call Us</div>
-                  <a href="tel:+15135492498" class="text-xl font-bold text-[#1a472a] hover:text-[#4a7c59]">(513) 549-2498</a>
-                </div>
-              </div>
-
-              <div class="flex items-center gap-4">
-                <div class="w-14 h-14 bg-[#1a472a] rounded-2xl flex items-center justify-center">
-                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="text-sm text-gray-500">Email Us</div>
-                  <a href="mailto:freshstartyardservicesllc@gmail.com" class="text-xl font-bold text-[#1a472a] hover:text-[#4a7c59]">freshstartyardservicesllc@gmail.com</a>
-                </div>
-              </div>
-
-              <div class="flex items-center gap-4">
-                <div class="w-14 h-14 bg-[#1a472a] rounded-2xl flex items-center justify-center">
-                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="text-sm text-gray-500">Service Areas</div>
-                  <div class="text-xl font-bold text-[#1a472a]">Cincinnati • Dayton • Middletown • Northern KY</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex flex-wrap gap-3">
-              <a href="./contract.html" class="btn-primary text-white px-6 py-3 rounded-full font-semibold">Contract</a>
-              <a href="./pricing.html" class="bg-white text-[#1a472a] px-6 py-3 rounded-full font-semibold border border-gray-200">Pricing</a>
-              <a href="./terms.html" class="bg-white text-[#1a472a] px-6 py-3 rounded-full font-semibold border border-gray-200">Terms</a>
-            </div>
-          </div>
-
-          <div class="bg-[#faf9f6] rounded-3xl p-8 lg:p-10">
-            <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-6">Request Your Quote</h3>
-
-            <!-- Formspree -->
-            <form id="quote-form" class="space-y-5" action="https://formspree.io/f/xreazwjy" method="POST">
-              <input type="hidden" name="_subject" value="New Quote Request - Fresh Start Yard Services LLC" />
-              <input type="hidden" name="source" value="Website Quote Form (index.html)" />
-
-              <div class="grid sm:grid-cols-2 gap-5">
-                <div>
-                  <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
-                  <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#1a472a] focus:ring-2 focus:ring-[#1a472a]/20 transition-all outline-none">
-                </div>
-                <div>
-                  <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
-                  <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#1a472a] focus:ring-2 focus:ring-[#1a472a]/20 transition-all outline-none">
-                </div>
-              </div>
-
-              <div>
-                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
-                <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#1a472a] focus:ring-2 focus:ring-[#1a472a]/20 transition-all outline-none">
-              </div>
-
-              <div>
-                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone *</label>
-                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#1a472a] focus:ring-2 focus:ring-[#1a472a]/20 transition-all outline-none">
-              </div>
-
-              <div>
-                <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service Needed</label>
-                <select id="service" name="service" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#1a472a] focus:ring-2 focus:ring-[#1a472a]/20 transition-all outline-none bg-white">
-                  <option value="">Select a service...</option>
-                  <option>Lawn mowing</option>
-                  <option>Trimming & edging</option>
-                  <option>Mulch installation / bed refresh</option>
-                  <option>Weed removal / bed cleanout</option>
-                  <option>Yard cleanup</option>
-                  <option>Shrub trimming / pruning</option>
-                  <option>Leaf cleanup / haul-away</option>
-                  <option>Debris removal (yard debris)</option>
-                  <option>Landscape edging install</option>
-                  <option>River rock / decorative rock install</option>
-                  <option>Gutter cleaning</option>
-                  <option>Pressure washing</option>
-                  <option>Lawn patch repair</option>
-                  <option>Overseeding</option>
-                  <option>Luxury build / special request</option>
-                  <option>Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Tell Us About Your Project</label>
-                <textarea id="message" name="message" rows="4"
-                  class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#1a472a] focus:ring-2 focus:ring-[#1a472a]/20 transition-all outline-none resize-none"
-                  placeholder="Address/City, property size, overgrowth/debris, timeline, and photos available..."></textarea>
-              </div>
-
-              <button type="submit" id="submit-btn" class="w-full btn-primary text-white py-4 rounded-xl font-bold text-lg">
-                Get My Free Quote
-              </button>
-
-              <p class="text-center text-sm text-gray-500">We respect your privacy. No spam, ever.</p>
-            </form>
-
-            <div id="success-message" class="hidden text-center py-8">
-              <div class="w-16 h-16 bg-[#1a472a] rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <h4 class="font-display text-2xl font-bold text-[#1a472a] mb-2">Thank You!</h4>
-              <p class="text-gray-600">We received your request and will follow up ASAP.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-[#1a472a] text-white py-14">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="grid md:grid-cols-4 gap-10 mb-10">
-          <div class="md:col-span-2">
-            <div class="flex items-center gap-3 mb-5">
-              <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden">
-                <img src="./logo.png" alt="Fresh Start logo" class="w-full h-full object-contain p-1"/>
-              </div>
-              <div>
-                <span class="font-display text-xl font-bold block leading-tight">Fresh Start</span>
-                <span class="text-xs text-white/70 font-medium tracking-wide">YARD SERVICES LLC</span>
-              </div>
-            </div>
-            <p class="text-white/80 mb-5 max-w-md">
-              Reliable yard care, clean results, fast turnarounds. Serving Cincinnati, Dayton, Middletown, and Northern KY.
-            </p>
-            <div class="text-white/80 text-sm">
-              Phone: <a class="underline hover:text-white" href="tel:+15135492498">(513) 549-2498</a><br/>
-              Email: <a class="underline hover:text-white" href="mailto:freshstartyardservicesllc@gmail.com">freshstartyardservicesllc@gmail.com</a><br/>
-              Deposit: <b>$FSYardServicesLLC</b>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="font-bold text-lg mb-5">Pages</h4>
-            <ul class="space-y-3">
-              <li><a href="./services.html" class="text-white/80 hover:text-white transition-colors">Services</a></li>
-              <li><a href="./pricing.html" class="text-white/80 hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="./luxury.html" class="text-white/80 hover:text-white transition-colors">Luxury Builds</a></li>
-              <li><a href="./contract.html" class="text-white/80 hover:text-white transition-colors">Contract</a></li>
-              <li><a href="./terms.html" class="text-white/80 hover:text-white transition-colors">Terms</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="font-bold text-lg mb-5">Deposits</h4>
-            <p class="text-white/80 text-sm">
-              Cash App: <b>$FSYardServicesLLC</b><br/>
-              After paying, text: <b>Name + Address + Amount</b> to <b>(513) 549-2498</b>.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <a class="bg-white text-[#1a472a] px-4 py-2 rounded-lg font-bold" target="_blank" rel="noopener" href="https://cash.app/$FSYardServicesLLC/50">$50</a>
-              <a class="bg-white text-[#1a472a] px-4 py-2 rounded-lg font-bold" target="_blank" rel="noopener" href="https://cash.app/$FSYardServicesLLC/100">$100</a>
-              <a class="bg-white text-[#1a472a] px-4 py-2 rounded-lg font-bold" target="_blank" rel="noopener" href="https://cash.app/$FSYardServicesLLC/150">$150</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="border-t border-white/20 pt-6 flex flex-wrap justify-between items-center gap-4">
-          <p class="text-white/60 text-sm">© 2026 Fresh Start Yard Services LLC. All rights reserved.</p>
-          <p class="text-white/60 text-sm">Professional Service • Clear Scope • Reliable Scheduling</p>
-        </div>
-      </div>
-    </footer>
-
   </div>
 
+  <!-- Navigation: About Us is already included here -->
+  <nav class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <div class="flex justify-between items-center gap-4">
+        <a href="#top" class="flex items-center gap-3 shrink-0" aria-label="Fresh Start Yard Services home">
+          <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden border border-gray-200 shadow-sm">
+            <img src="./logo.png" alt="Fresh Start Yard Services LLC logo" class="w-full h-full object-contain p-1">
+          </div>
+          <div>
+            <span class="font-display text-xl text-[#1a472a] font-bold block leading-tight">Fresh Start</span>
+            <span class="text-xs text-[#4a7c59] font-medium tracking-wide">YARD SERVICES LLC</span>
+          </div>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-4 xl:gap-5 text-sm xl:text-base">
+          <a href="./services.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Services</a>
+          <a href="./pricing.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Pricing</a>
+          <a href="./luxury.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Luxury Builds</a>
+          <a href="./about.html" class="text-gray-700 hover:text-[#1a472a] font-medium">About Us</a>
+          <a href="./contract.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Contract</a>
+          <a href="./terms.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Terms</a>
+          <a href="#contact" class="btn-primary text-white px-5 py-2.5 rounded-full font-semibold">Request Quote</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-[#1a472a]" aria-label="Open menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden lg:hidden pt-4 pb-2 border-t mt-4">
+        <div class="flex flex-col gap-1">
+          <a href="./services.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Services</a>
+          <a href="./pricing.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Pricing</a>
+          <a href="./luxury.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Luxury Builds</a>
+          <a href="./about.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">About Us</a>
+          <a href="./contract.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Contract</a>
+          <a href="./terms.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Terms</a>
+          <a href="#deposit" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Pay Deposit</a>
+          <a href="#contact" class="btn-primary text-white px-6 py-3 rounded-full font-semibold text-center mt-2">Request Quote</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="gradient-hero text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 py-16 md:py-24">
+      <div class="max-w-4xl">
+        <span class="inline-flex items-center rounded-full bg-white/15 border border-white/25 px-4 py-2 text-sm font-semibold">Reliable yard care • Clean results • Fast turnarounds</span>
+        <h1 class="font-display text-4xl md:text-6xl font-bold leading-tight mt-6">Landscaping & Yard Cleanup You Can Count On.</h1>
+        <p class="text-lg md:text-xl text-white/90 mt-6 max-w-3xl">Fresh Start Yard Services LLC helps homeowners and commercial properties keep the outside looking sharp. Clear communication, consistent workmanship, and respect for your property—every time.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="./contract.html" class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold hover:bg-[#faf9f6] transition">Review & Sign Contract</a>
+          <a href="./pricing.html" class="border border-white/40 text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition">Pricing & Service Menu</a>
+          <a href="./luxury.html" class="border border-white/40 text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition">Luxury Builds</a>
+          <a href="./about.html" class="border border-white/40 text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition">About Us</a>
+        </div>
+        <div class="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/90">
+          <span>✓ Fast scheduling</span><span>✓ Clear scope & pricing</span><span>✓ Cleanup after every job</span><span>✓ Cincinnati • Dayton • Middletown • NKY</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="pattern-bg py-12">
+      <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-4 gap-5">
+        <a href="./contract.html" class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm service-card">
+          <div class="w-11 h-11 rounded-2xl bg-[#1a472a]/10 grid place-items-center text-[#1a472a]"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 4v16m8-8H4"/></svg></div>
+          <h2 class="font-display text-2xl font-bold text-[#1a472a] mt-4">Contract</h2><p class="mt-2 text-gray-600">Review the scope and submit a secure service request.</p>
+        </a>
+        <a href="./pricing.html" class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm service-card">
+          <div class="w-11 h-11 rounded-2xl bg-[#1a472a]/10 grid place-items-center text-[#1a472a]"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8c-2 0-3.5.9-3.5 2.2S10 12.4 12 12.4s3.5.9 3.5 2.2S14 16.8 12 16.8m0-8.8V6m0 12v-2"/></svg></div>
+          <h2 class="font-display text-2xl font-bold text-[#1a472a] mt-4">Pricing</h2><p class="mt-2 text-gray-600">See starting prices, service tiers, and property size guidance.</p>
+        </a>
+        <a href="./about.html" class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm service-card">
+          <div class="w-11 h-11 rounded-2xl bg-[#1a472a]/10 grid place-items-center text-[#1a472a]"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zm13 10v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <h2 class="font-display text-2xl font-bold text-[#1a472a] mt-4">About Us</h2><p class="mt-2 text-gray-600">Meet Fresh Start, learn our standards, and see employee photo spots.</p>
+        </a>
+        <a href="#deposit" class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm service-card">
+          <div class="w-11 h-11 rounded-2xl bg-[#1a472a]/10 grid place-items-center text-[#1a472a]"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <h2 class="font-display text-2xl font-bold text-[#1a472a] mt-4">Pay Deposit</h2><p class="mt-2 text-gray-600">Reserve your confirmed service window after your scope is submitted.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white anchor" id="services">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <div class="max-w-3xl"><span class="text-sm font-bold tracking-wide text-[#4a7c59]">OUR SERVICES</span><h2 class="font-display text-4xl font-bold text-[#1a472a] mt-2">Service Menu</h2><p class="text-gray-600 text-lg mt-3">Starting prices and tiers are on the Pricing page. Use the Contract to request service and reserve scheduling with a deposit.</p></div>
+          <div class="flex flex-wrap gap-3"><a href="./services.html" class="btn-primary text-white px-5 py-3 rounded-xl font-bold">View Services</a><a href="./pricing.html" class="border border-gray-200 text-[#1a472a] px-5 py-3 rounded-xl font-bold">Pricing & Sizes</a></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-5 mt-9">
+          <article class="service-card bg-[#faf9f6] border border-gray-200 rounded-3xl p-7"><h3 class="font-display text-2xl font-bold text-[#1a472a]">Lawn Mowing</h3><p class="text-gray-700 mt-3">Residential and small-commercial mowing with clean edges and consistent scheduling.</p><a href="./pricing.html#mowing" class="inline-block mt-5 font-bold text-[#1a472a] underline">See pricing →</a></article>
+          <article class="service-card bg-[#faf9f6] border border-gray-200 rounded-3xl p-7"><h3 class="font-display text-2xl font-bold text-[#1a472a]">Trimming & Edging</h3><p class="text-gray-700 mt-3">Crisp curb lines and detail work that gives the property a professionally finished look.</p><a href="./pricing.html#trim" class="inline-block mt-5 font-bold text-[#1a472a] underline">See pricing →</a></article>
+          <article class="service-card bg-[#faf9f6] border border-gray-200 rounded-3xl p-7"><h3 class="font-display text-2xl font-bold text-[#1a472a]">Yard Cleanups</h3><p class="text-gray-700 mt-3">Spring and fall cleanups, overgrowth resets, debris clearing, and haul-away as scoped.</p><a href="./pricing.html#cleanup" class="inline-block mt-5 font-bold text-[#1a472a] underline">See pricing →</a></article>
+          <article class="service-card bg-[#faf9f6] border border-gray-200 rounded-3xl p-7"><h3 class="font-display text-2xl font-bold text-[#1a472a]">Mulch & Bed Work</h3><p class="text-gray-700 mt-3">Mulch installs, bed cleanouts, weed removal, edging installs, and curb-appeal refreshes.</p><a href="./pricing.html#mulch" class="inline-block mt-5 font-bold text-[#1a472a] underline">See pricing →</a></article>
+          <article class="service-card bg-[#faf9f6] border border-gray-200 rounded-3xl p-7"><h3 class="font-display text-2xl font-bold text-[#1a472a]">Pressure Washing</h3><p class="text-gray-700 mt-3">Concrete, driveways, patios, pavers, moss and algae treatment, and spot add-ons.</p><a href="./pricing.html#pressure" class="inline-block mt-5 font-bold text-[#1a472a] underline">See pricing →</a></article>
+          <article class="service-card bg-[#faf9f6] border border-gray-200 rounded-3xl p-7"><h3 class="font-display text-2xl font-bold text-[#1a472a]">Luxury Builds</h3><p class="text-gray-700 mt-3">Fire pits, pergolas, retaining walls, steps, and custom outdoor upgrades.</p><a href="./luxury.html" class="inline-block mt-5 font-bold text-[#1a472a] underline">View luxury →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-[#faf9f6] border-y border-gray-100 anchor" id="deposit">
+      <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-9 items-start">
+        <div>
+          <span class="text-sm font-bold tracking-wide text-[#4a7c59]">DEPOSITS</span><h2 class="font-display text-4xl font-bold text-[#1a472a] mt-2">Pay Your Deposit</h2>
+          <p class="text-gray-700 text-lg mt-4">Deposits help reserve your service window once your scope is submitted. After paying, text your name, address, and amount to <a class="font-bold text-[#1a472a] underline" href="tel:+15135492498">(513) 549-2498</a>.</p>
+          <div class="mt-7 bg-white border border-gray-200 rounded-3xl p-6"><span class="text-sm font-bold text-[#4a7c59]">CASH APP</span><div class="font-display text-3xl text-[#1a472a] font-bold mt-1">$FSYardServicesLLC</div><div class="mt-5 flex flex-wrap gap-3"><a href="https://cash.app/$FSYardServicesLLC/50" class="btn-primary text-white px-5 py-3 rounded-xl font-bold">Pay $50</a><a href="https://cash.app/$FSYardServicesLLC/100" class="border border-gray-200 text-[#1a472a] px-5 py-3 rounded-xl font-bold">Pay $100</a><a href="https://cash.app/$FSYardServicesLLC/150" class="border border-gray-200 text-[#1a472a] px-5 py-3 rounded-xl font-bold">Pay $150</a><a href="https://cash.app/$FSYardServicesLLC" class="border border-gray-200 text-[#1a472a] px-5 py-3 rounded-xl font-bold">Custom Amount</a></div></div>
+          <p class="mt-5 text-sm text-gray-600">Tip: submit the contract first, then pay the deposit to reserve scheduling.</p>
+          <div class="mt-5 flex flex-wrap gap-3"><a href="./contract.html" class="btn-primary text-white px-5 py-3 rounded-xl font-bold">Go to Contract</a><a href="./terms.html" class="border border-gray-200 text-[#1a472a] px-5 py-3 rounded-xl font-bold">View Terms</a></div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-3xl p-7 shadow-sm"><h3 class="font-display text-3xl font-bold text-[#1a472a]">What happens after deposit?</h3><ol class="mt-6 space-y-4 text-gray-700"><li class="flex gap-3"><b class="text-[#1a472a]">1.</b><span>We confirm the scope, access details, and the balance due.</span></li><li class="flex gap-3"><b class="text-[#1a472a]">2.</b><span>We schedule your service window based on availability and weather.</span></li><li class="flex gap-3"><b class="text-[#1a472a]">3.</b><span>We perform the job and clean up after service.</span></li><li class="flex gap-3"><b class="text-[#1a472a]">4.</b><span>The remaining balance is due at completion unless otherwise agreed.</span></li></ol><a href="tel:+15135492498" class="inline-block mt-8 text-[#1a472a] font-bold underline">Call (513) 549-2498</a></div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white anchor" id="contact">
+      <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10">
+        <div>
+          <span class="text-sm font-bold tracking-wide text-[#4a7c59]">GET IN TOUCH</span><h2 class="font-display text-4xl font-bold text-[#1a472a] mt-2">Request a Quote</h2><p class="text-gray-700 text-lg mt-4">We typically respond during business hours. The more detail you provide, the faster we can estimate.</p>
+          <div class="mt-8 space-y-5"><div class="bg-[#faf9f6] rounded-2xl p-5 border border-gray-200"><b class="block text-[#1a472a]">Call Us</b><a class="text-gray-700 hover:text-[#1a472a]" href="tel:+15135492498">(513) 549-2498</a></div><div class="bg-[#faf9f6] rounded-2xl p-5 border border-gray-200"><b class="block text-[#1a472a]">Email Us</b><a class="text-gray-700 hover:text-[#1a472a]" href="mailto:freshstartyardservicesllc@gmail.com">freshstartyardservicesllc@gmail.com</a></div><div class="bg-[#faf9f6] rounded-2xl p-5 border border-gray-200"><b class="block text-[#1a472a]">Service Areas</b><span class="text-gray-700">Cincinnati • Dayton • Middletown • Northern KY</span></div></div>
+          <div class="mt-7 flex flex-wrap gap-3"><a href="./contract.html" class="btn-primary text-white px-5 py-3 rounded-xl font-bold">Contract</a><a href="./pricing.html" class="border border-gray-200 text-[#1a472a] px-5 py-3 rounded-xl font-bold">Pricing</a><a href="./about.html" class="border border-gray-200 text-[#1a472a] px-5 py-3 rounded-xl font-bold">About Us</a></div>
+        </div>
+
+        <div class="bg-[#faf9f6] border border-gray-200 rounded-3xl p-7 shadow-sm"><h3 class="font-display text-3xl font-bold text-[#1a472a]">Request Your Quote</h3><form id="quote-form" class="mt-6 grid sm:grid-cols-2 gap-4"><label class="block"><span class="text-sm font-semibold text-gray-700">First Name *</span><input required name="firstName" type="text" class="mt-1 w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7c59]"></label><label class="block"><span class="text-sm font-semibold text-gray-700">Last Name *</span><input required name="lastName" type="text" class="mt-1 w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7c59]"></label><label class="block sm:col-span-2"><span class="text-sm font-semibold text-gray-700">Email *</span><input required name="email" type="email" class="mt-1 w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7c59]"></label><label class="block sm:col-span-2"><span class="text-sm font-semibold text-gray-700">Phone *</span><input required name="phone" type="tel" class="mt-1 w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7c59]"></label><label class="block sm:col-span-2"><span class="text-sm font-semibold text-gray-700">Service Needed</span><select name="service" class="mt-1 w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7c59]"><option>Select a service...</option><option>Lawn mowing</option><option>Trimming & edging</option><option>Mulch installation / bed refresh</option><option>Weed removal / bed cleanout</option><option>Yard cleanup</option><option>Shrub trimming / pruning</option><option>Leaf cleanup / haul-away</option><option>Debris removal</option><option>Landscape edging install</option><option>River rock / decorative rock install</option><option>Gutter cleaning</option><option>Pressure washing</option><option>Lawn patch repair / overseeding</option><option>Luxury build / special request</option><option>Other</option></select></label><label class="block sm:col-span-2"><span class="text-sm font-semibold text-gray-700">Tell Us About Your Project</span><textarea name="details" rows="5" class="mt-1 w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7c59]" placeholder="Address, property size, service needed, timing, and anything we should know..."></textarea></label><div class="sm:col-span-2"><button class="btn-primary text-white px-6 py-3 rounded-xl font-bold" type="submit">Get My Free Quote</button><p class="text-sm text-gray-500 mt-3">Submitting opens your email app with your request filled in. You can also call or use the Contract page.</p></div></form><div id="thank-you" class="hidden mt-6 rounded-2xl border border-[#4a7c59]/30 bg-white p-5"><h4 class="font-bold text-[#1a472a]">Thank You!</h4><p class="text-gray-700 mt-1">Your email app should now be open with your request. Send the message and we will follow up as soon as possible.</p></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#1a472a] text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+      <div><div class="flex items-center gap-3"><img src="./logo.png" alt="Fresh Start Yard Services LLC logo" class="w-12 h-12 rounded-full bg-white p-1"><div><div class="font-display text-xl font-bold">Fresh Start</div><div class="text-xs text-white/70 tracking-wide">YARD SERVICES LLC</div></div></div><p class="text-white/80 mt-4 max-w-lg">Reliable yard care, clean results, and fast turnarounds. Serving Cincinnati, Dayton, Middletown, and Northern KY.</p><p class="text-white/80 text-sm mt-4">Phone: (513) 549-2498<br>Email: freshstartyardservicesllc@gmail.com<br>Deposit: <b>$FSYardServicesLLC</b></p></div>
+      <div class="grid sm:grid-cols-2 gap-7"><div><h3 class="font-bold text-lg">Pages</h3><ul class="mt-3 space-y-2 text-white/80"><li><a href="./services.html" class="hover:text-white">Services</a></li><li><a href="./pricing.html" class="hover:text-white">Pricing</a></li><li><a href="./luxury.html" class="hover:text-white">Luxury Builds</a></li><li><a href="./about.html" class="hover:text-white">About Us</a></li><li><a href="./contract.html" class="hover:text-white">Contract</a></li><li><a href="./terms.html" class="hover:text-white">Terms</a></li></ul></div><div><h3 class="font-bold text-lg">Deposits</h3><p class="text-white/80 text-sm mt-3">Cash App: <b>$FSYardServicesLLC</b><br>After paying, text your name, address, and amount to (513) 549-2498.</p><div class="mt-4 flex gap-3 text-sm"><a href="https://cash.app/$FSYardServicesLLC/50" class="underline hover:text-white/80">$50</a><a href="https://cash.app/$FSYardServicesLLC/100" class="underline hover:text-white/80">$100</a><a href="https://cash.app/$FSYardServicesLLC/150" class="underline hover:text-white/80">$150</a></div></div></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 mt-9 pt-6 border-t border-white/15 flex flex-wrap justify-between gap-3 text-sm text-white/60"><span>© 2026 Fresh Start Yard Services LLC. All rights reserved.</span><span>Professional Service • Clear Scope • Reliable Scheduling</span></div>
+  </footer>
+
   <script>
-    // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenuBtn && mobileMenu){
-      mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-      mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', String(!isOpen));
       });
+      mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      }));
     }
 
-    // Quote form success UI (Formspree submit)
-    const quoteForm = document.getElementById('quote-form');
-    const submitBtn = document.getElementById('submit-btn');
-    const successMessage = document.getElementById('success-message');
-
-    if (quoteForm){
-      quoteForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-
-        try{
-          const res = await fetch(quoteForm.action, {
-            method: "POST",
-            body: new FormData(quoteForm),
-            headers: { "Accept": "application/json" }
-          });
-
-          if(res.ok){
-            quoteForm.classList.add('hidden');
-            successMessage.classList.remove('hidden');
-          } else {
-            alert("Submission failed. Please call (513) 549-2498 or email freshstartyardservicesllc@gmail.com.");
-            submitBtn.textContent = 'Get My Free Quote';
-            submitBtn.disabled = false;
-          }
-        } catch(err){
-          alert("Submission failed. Please call (513) 549-2498 or email freshstartyardservicesllc@gmail.com.");
-          submitBtn.textContent = 'Get My Free Quote';
-          submitBtn.disabled = false;
-        }
-      });
-    }
+    document.getElementById('quote-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const subject = encodeURIComponent('Fresh Start Yard Services Quote Request');
+      const body = encodeURIComponent(
+        'Name: ' + data.get('firstName') + ' ' + data.get('lastName') + '\n' +
+        'Email: ' + data.get('email') + '\n' +
+        'Phone: ' + data.get('phone') + '\n' +
+        'Service Needed: ' + data.get('service') + '\n\n' +
+        'Project Details:\n' + data.get('details')
+      );
+      document.getElementById('thank-you').classList.remove('hidden');
+      window.location.href = 'mailto:freshstartyardservicesllc@gmail.com?subject=' + subject + '&body=' + body;
+    });
   </script>
 </body>
 </html>

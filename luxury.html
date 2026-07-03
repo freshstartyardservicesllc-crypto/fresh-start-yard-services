@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="en" class="h-full">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Luxury Builds | Fresh Start Yard Services LLC</title>
-  <meta name="description" content="Luxury landscape builds and special requests: fire pits, pergolas, retaining walls, steps, and custom outdoor upgrades."/>
-  <meta name="theme-color" content="#1a472a"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Luxury Builds & Project Gallery | Fresh Start Yard Services LLC</title>
+  <meta name="description" content="Explore luxury outdoor-build options and project-photo galleries from Fresh Start Yard Services LLC, serving Cincinnati, Dayton, and Middletown." />
+  <meta name="theme-color" content="#1a472a" />
 
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,9 +19,9 @@
       --color-sage:#4a7c59;
       --color-cream:#faf9f6;
     }
-    html { scroll-behavior:smooth; }
-    .font-display{ font-family:'Playfair Display', serif; }
-    .font-body{ font-family:'Source Sans 3', sans-serif; }
+    html{scroll-behavior:smooth}
+    .font-display{font-family:'Playfair Display', serif;}
+    .font-body{font-family:'Source Sans 3', sans-serif;}
     .btn-primary{
       background:linear-gradient(135deg, var(--color-forest) 0%, var(--color-sage) 100%);
       transition:all .25s ease;
@@ -32,10 +33,75 @@
     .pattern-bg{
       background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a472a' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
+    .anchor{scroll-margin-top:96px;}
+
+    /* Project photo gallery: photos automatically appear once matching files are uploaded. */
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:1rem;
+    }
+    .project-photo{
+      overflow:hidden;
+      border:1px solid #e5e7eb;
+      border-radius:1rem;
+      background:#faf9f6;
+      box-shadow:0 8px 24px -20px rgba(17,24,39,.35);
+    }
+    .photo-visual{
+      position:relative;
+      aspect-ratio:16 / 10;
+      overflow:hidden;
+      background:linear-gradient(135deg,#eef7ef 0%,#faf9f6 55%,#e0eee1 100%);
+    }
+    .photo-visual img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:0;
+      transition:opacity .25s ease,transform .35s ease;
+      z-index:2;
+    }
+    .project-photo.has-photo .photo-visual img{opacity:1;}
+    .project-photo.has-photo:hover .photo-visual img{transform:scale(1.035);}
+    .photo-placeholder{
+      position:absolute;
+      inset:0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:1.25rem;
+      color:#1a472a;
+      z-index:1;
+    }
+    .photo-placeholder svg{width:2.75rem;height:2.75rem;margin-bottom:.65rem;}
+    .photo-label{
+      position:absolute;
+      top:.75rem;
+      left:.75rem;
+      z-index:3;
+      padding:.38rem .65rem;
+      background:rgba(26,71,42,.92);
+      color:#fff;
+      border-radius:999px;
+      font-size:.72rem;
+      font-weight:700;
+      letter-spacing:.03em;
+      text-transform:uppercase;
+    }
+    .project-photo figcaption{padding:.85rem 1rem .95rem;}
+    .project-photo figcaption strong{display:block;color:#1a472a;font-size:.95rem;}
+    .project-photo figcaption span{display:block;margin-top:.15rem;color:#6b7280;font-size:.8rem;line-height:1.35;}
+    @media(max-width:640px){.gallery-grid{grid-template-columns:1fr;}}
   </style>
 </head>
 
 <body class="h-full font-body text-gray-800 bg-white">
+
   <!-- Top Bar -->
   <div class="bg-[#1a472a] text-white py-2 px-4">
     <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center text-sm gap-3">
@@ -63,7 +129,7 @@
     </div>
   </div>
 
-  <!-- Nav -->
+  <!-- Navigation -->
   <nav class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50">
     <div class="max-w-7xl mx-auto px-4 py-4">
       <div class="flex justify-between items-center">
@@ -78,7 +144,9 @@
         </a>
 
         <div class="hidden md:flex items-center gap-6">
+          <a href="./services.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Services</a>
           <a href="./pricing.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Pricing</a>
+          <a href="./luxury.html" class="text-[#1a472a] font-semibold">Luxury Builds</a>
           <a href="./contract.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Contract</a>
           <a href="./terms.html" class="text-gray-700 hover:text-[#1a472a] font-medium">Terms</a>
           <a href="./index.html#contact" class="btn-primary text-white px-6 py-3 rounded-full font-semibold">Request Quote</a>
@@ -93,7 +161,9 @@
 
       <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t mt-4">
         <div class="flex flex-col gap-3">
+          <a href="./services.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Services</a>
           <a href="./pricing.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Pricing</a>
+          <a href="./luxury.html" class="text-[#1a472a] font-semibold py-2">Luxury Builds</a>
           <a href="./contract.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Contract</a>
           <a href="./terms.html" class="text-gray-700 hover:text-[#1a472a] font-medium py-2">Terms</a>
           <a href="./index.html#contact" class="btn-primary text-white px-6 py-3 rounded-full font-semibold text-center mt-2">Request Quote</a>
@@ -102,140 +172,165 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Page Header -->
   <section class="pattern-bg py-12">
     <div class="max-w-5xl mx-auto px-4">
       <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7">
-        <span class="inline-block bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-semibold mb-4">
-          LUXURY BUILDS & SPECIAL REQUESTS
-        </span>
-        <h1 class="font-display text-3xl md:text-4xl font-bold text-[#1a472a] mb-3">Luxury Builds (Special Requests)</h1>
-
-        <p class="text-gray-600">
-          These are custom upgrades that typically require an on-site consultation.
-          Pricing depends on material selection, measurements, grading, and build complexity.
+        <span class="inline-block bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-semibold mb-4">LUXURY BUILDS & SPECIAL REQUESTS</span>
+        <h1 class="font-display text-3xl md:text-4xl font-bold text-[#1a472a] mb-3">Luxury Builds & Project Gallery</h1>
+        <p class="text-gray-600 max-w-3xl">
+          Custom outdoor upgrades that turn underused yard space into something built for relaxing, entertaining, and lasting curb appeal. Each project includes clear planning, a site-specific quote, and photo examples of the kind of transformation we can create.
         </p>
 
-        <div class="mt-4 rounded-2xl bg-[#faf9f6] border border-gray-200 p-4">
-          <div class="text-sm text-gray-700">
-            Submit a quote request or contract with <b>“Luxury Build”</b> selected and we’ll schedule a consult.
-          </div>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold" href="./contract.html">Start a Luxury Request</a>
-            <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./pricing.html">View Service Menu</a>
-            <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./index.html#contact">Request a Quote</a>
-          </div>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold" href="./contract.html">Start a Luxury Request</a>
+          <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./services.html">View Service Gallery</a>
+          <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./index.html#contact">Request a Quote</a>
+        </div>
+
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#fire-pits">Fire Pits</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#pergolas">Pergolas</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#retaining-walls">Retaining Walls</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#hardscape-steps">Hardscape Steps</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#paver-projects">Paver Projects</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#drainage">Drainage & Grade Fixes</a>
+          <a class="bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 hover:shadow-sm transition" href="#custom-builds">Custom / Ultra Requests</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Cards -->
-  <section class="py-10 bg-white">
-    <div class="max-w-5xl mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-6">
-        <!-- Fire Pits -->
-        <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-6">
-          <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-2">Fire Pits (Built-In)</h3>
-          <p class="text-gray-600">
-            Custom fire pits with proper base prep, level work, stone/brick options, and seating layout.
-          </p>
-          <div class="mt-4 bg-[#faf9f6] border border-gray-200 rounded-2xl p-4">
-            <div class="text-sm text-gray-700">Minimum starting labor:</div>
-            <div class="text-xl font-bold text-[#1a472a]">$650+</div>
-            <div class="text-xs text-gray-600">(materials vary)</div>
-          </div>
-        </div>
+  <main class="py-10 bg-white">
+    <div class="max-w-5xl mx-auto px-4 space-y-8">
 
-        <!-- Pergolas -->
-        <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-6">
-          <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-2">Pergolas</h3>
-          <p class="text-gray-600">
-            Wood or metal pergolas, anchored correctly, with layout planning and finish options.
-          </p>
-          <div class="mt-4 bg-[#faf9f6] border border-gray-200 rounded-2xl p-4">
-            <div class="text-sm text-gray-700">Minimum starting labor:</div>
-            <div class="text-xl font-bold text-[#1a472a]">$1,500+</div>
-            <div class="text-xs text-gray-600">(materials vary)</div>
+      <!-- Fire pits -->
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="fire-pits">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <p class="text-sm font-bold tracking-wider text-[#4a7c59] uppercase">Outdoor Living</p>
+            <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mt-1">Fire Pits (Built-In)</h2>
           </div>
+          <span class="bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-bold">Starting labor: $650+</span>
         </div>
+        <p class="mt-3 text-gray-600">Custom fire pits with proper base prep, level work, stone or brick options, and a layout that makes the seating area feel intentional.</p>
+        <div class="gallery-grid mt-6">
+          <figure class="project-photo">
+            <div class="photo-visual"><img src="./images/luxury/fire-pit-before.jpg" alt="Fire pit project site before construction" loading="lazy"><div class="photo-placeholder"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><strong>Add Project Photo</strong><span class="text-sm mt-1 text-gray-600">Before / site-prep photo</span></div><span class="photo-label">Before</span></div>
+            <figcaption><strong>Before / Site Prep</strong><span>Show the yard area, excavation, or base-prep stage.</span></figcaption>
+          </figure>
+          <figure class="project-photo">
+            <div class="photo-visual"><img src="./images/luxury/fire-pit-after.jpg" alt="Completed built-in fire pit project" loading="lazy"><div class="photo-placeholder"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><strong>Add Project Photo</strong><span class="text-sm mt-1 text-gray-600">Finished fire-pit photo</span></div><span class="photo-label">Finished</span></div>
+            <figcaption><strong>Finished Fire Pit</strong><span>Show the stonework, seating zone, and complete outdoor atmosphere.</span></figcaption>
+          </figure>
+        </div>
+        <p class="mt-4 text-sm text-gray-600">Materials vary by stone, block, burner style, base requirements, and seating layout.</p>
+      </section>
 
-        <!-- Retaining Walls -->
-        <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-6">
-          <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-2">Retaining Walls</h3>
-          <p class="text-gray-600">
-            Block/stone retaining walls, properly compacted base, drainage, and stepped design if needed.
-          </p>
-          <div class="mt-4 bg-[#faf9f6] border border-gray-200 rounded-2xl p-4">
-            <div class="text-sm text-gray-700">Minimum starting labor:</div>
-            <div class="text-xl font-bold text-[#1a472a]">$2,000+</div>
-            <div class="text-xs text-gray-600">(site + materials vary)</div>
-          </div>
+      <!-- Pergolas -->
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="pergolas">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div><p class="text-sm font-bold tracking-wider text-[#4a7c59] uppercase">Outdoor Living</p><h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mt-1">Pergolas</h2></div>
+          <span class="bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-bold">Starting labor: $1,500+</span>
         </div>
+        <p class="mt-3 text-gray-600">Wood or metal pergolas, anchored correctly, with layout planning and finish options that fit the patio, deck, or backyard space.</p>
+        <div class="gallery-grid mt-6">
+          <figure class="project-photo"><div class="photo-visual"><img src="./images/luxury/pergola-before.jpg" alt="Pergola project site before installation" loading="lazy"><div class="photo-placeholder"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><strong>Add Project Photo</strong><span class="text-sm mt-1 text-gray-600">Before / layout photo</span></div><span class="photo-label">Before</span></div><figcaption><strong>Before / Layout</strong><span>Show the patio, deck, or yard space before the structure is installed.</span></figcaption></figure>
+          <figure class="project-photo"><div class="photo-visual"><img src="./images/luxury/pergola-after.jpg" alt="Completed pergola installation" loading="lazy"><div class="photo-placeholder"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><strong>Add Project Photo</strong><span class="text-sm mt-1 text-gray-600">Finished pergola photo</span></div><span class="photo-label">Finished</span></div><figcaption><strong>Finished Pergola</strong><span>Show the finished structure, hardware, lighting, or styled seating area.</span></figcaption></figure>
+        </div>
+        <p class="mt-4 text-sm text-gray-600">Materials vary by size, footing or anchor requirements, lumber or metal type, and finish selection.</p>
+      </section>
 
-        <!-- Steps -->
-        <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-6">
-          <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-2">In-Ground Steps / Hardscape Steps</h3>
-          <p class="text-gray-600">
-            Steps set into slope/grade for safe access with clean edges and stable base prep.
-          </p>
-          <div class="mt-4 bg-[#faf9f6] border border-gray-200 rounded-2xl p-4">
-            <div class="text-sm text-gray-700">Minimum starting labor:</div>
-            <div class="text-xl font-bold text-[#1a472a]">$900+</div>
-          </div>
+      <!-- Retaining walls -->
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="retaining-walls">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div><p class="text-sm font-bold tracking-wider text-[#4a7c59] uppercase">Structure & Grade</p><h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mt-1">Retaining Walls</h2></div>
+          <span class="bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-bold">Starting labor: $2,000+</span>
         </div>
+        <p class="mt-3 text-gray-600">Block or stone retaining walls with compacted base preparation, drainage consideration, and a stepped design when the terrain requires it.</p>
+        <div class="gallery-grid mt-6">
+          <figure class="project-photo"><div class="photo-visual"><img src="./images/luxury/retaining-wall-before.jpg" alt="Slope or yard before retaining wall construction" loading="lazy"><div class="photo-placeholder"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><strong>Add Project Photo</strong><span class="text-sm mt-1 text-gray-600">Slope / excavation photo</span></div><span class="photo-label">Before</span></div><figcaption><strong>Before / Site Condition</strong><span>Show the grade issue, erosion area, or excavated wall line.</span></figcaption></figure>
+          <figure class="project-photo"><div class="photo-visual"><img src="./images/luxury/retaining-wall-after.jpg" alt="Completed retaining wall installation" loading="lazy"><div class="photo-placeholder"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><strong>Add Project Photo</strong><span class="text-sm mt-1 text-gray-600">Finished wall photo</span></div><span class="photo-label">Finished</span></div><figcaption><strong>Finished Retaining Wall</strong><span>Show block or stone detail, drainage finish, and the new usable space.</span></figcaption></figure>
+        </div>
+        <p class="mt-4 text-sm text-gray-600">Site conditions and materials vary. Larger walls may require engineering, permits, or specialized drainage planning.</p>
+      </section>
 
-        <!-- Paver Projects -->
-        <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-6">
-          <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-2">Paver Projects</h3>
-          <p class="text-gray-600">
-            Walkways, small patios, edging borders, and repairs with proper base and sand bedding.
-          </p>
-          <div class="mt-4 bg-[#faf9f6] border border-gray-200 rounded-2xl p-4">
-            <div class="text-sm text-gray-700">Minimum starting labor:</div>
-            <div class="text-xl font-bold text-[#1a472a]">$1,200+</div>
-          </div>
+      <!-- Steps -->
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="hardscape-steps">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div><p class="text-sm font-bold tracking-wider text-[#4a7c59] uppercase">Access & Safety</p><h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mt-1">In-Ground Steps / Hardscape Steps</h2></div>
+          <span class="bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-bold">Starting labor: $900+</span>
         </div>
+        <p class="mt-3 text-gray-600">Steps set into slope or grade for safer access, clean edges, and stable base preparation from one yard level to another.</p>
+        <div class="gallery-grid mt-6">
+          <figure class="project-photo"><div class="photo-visual"><img src="./images/luxury/hardscape-steps-before.jpg" alt="Slope before hardscape step installation" loading="lazy"><div class="photo-placeholder"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><strong>Add Project Photo</strong><span class="text-sm mt-1 text-gray-600">Before / slope photo</span></div><span class="photo-label">Before</span></div><figcaption><strong>Before / Access Issue</strong><span>Show the slope, worn path, or area needing safer access.</span></figcaption></figure>
+          <figure class="project-photo"><div class="photo-visual"><img src="./images/luxury/hardscape-steps-after.jpg" alt="Completed hardscape step installation" loading="lazy"><div class="photo-placeholder"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><strong>Add Project Photo</strong><span class="text-sm mt-1 text-gray-600">Finished steps photo</span></div><span class="photo-label">Finished</span></div><figcaption><strong>Finished Hardscape Steps</strong><span>Show the walk path, step alignment, and finished grade transition.</span></figcaption></figure>
+        </div>
+      </section>
 
-        <!-- Drainage -->
-        <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-6">
-          <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-2">Drainage & Grade Fixes (Basic)</h3>
-          <p class="text-gray-600">
-            Redirect water flow, add basic slope corrections, and improve standing water zones.
-          </p>
-          <div class="mt-4 bg-[#faf9f6] border border-gray-200 rounded-2xl p-4">
-            <div class="text-sm text-gray-700">Minimum starting labor:</div>
-            <div class="text-xl font-bold text-[#1a472a]">$450+</div>
-          </div>
+      <!-- Pavers -->
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="paver-projects">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div><p class="text-sm font-bold tracking-wider text-[#4a7c59] uppercase">Outdoor Surfaces</p><h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mt-1">Paver Projects</h2></div>
+          <span class="bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-bold">Starting labor: $1,200+</span>
         </div>
+        <p class="mt-3 text-gray-600">Walkways, small patios, edging borders, and repairs with proper base, leveling, and sand bedding for a clean finished surface.</p>
+        <div class="gallery-grid mt-6">
+          <figure class="project-photo"><div class="photo-visual"><img src="./images/luxury/paver-project-before.jpg" alt="Paver project area before installation" loading="lazy"><div class="photo-placeholder"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><strong>Add Project Photo</strong><span class="text-sm mt-1 text-gray-600">Before / base prep photo</span></div><span class="photo-label">Before</span></div><figcaption><strong>Before / Base Prep</strong><span>Show the old surface, excavation, or leveled base stage.</span></figcaption></figure>
+          <figure class="project-photo"><div class="photo-visual"><img src="./images/luxury/paver-project-after.jpg" alt="Completed paver project" loading="lazy"><div class="photo-placeholder"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><strong>Add Project Photo</strong><span class="text-sm mt-1 text-gray-600">Finished paver photo</span></div><span class="photo-label">Finished</span></div><figcaption><strong>Finished Paver Project</strong><span>Show pattern work, edge detail, and the completed patio or walkway.</span></figcaption></figure>
+        </div>
+      </section>
 
-        <!-- Custom -->
-        <div class="md:col-span-2 bg-white rounded-3xl shadow-lg border border-gray-100 p-6">
-          <h3 class="font-display text-2xl font-bold text-[#1a472a] mb-2">Custom / Ultra Requests</h3>
-          <p class="text-gray-600">
-            Tell us what you want built. If it’s outdoors and yard-related, we’ll tell you what’s realistic, what it needs, and how pricing works.
-          </p>
-          <div class="mt-4 bg-[#faf9f6] border border-gray-200 rounded-2xl p-4 text-sm text-gray-700">
-            Submit details on the contract page or request a quote with photos.
-          </div>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold" href="./contract.html">Start a Luxury Request</a>
-            <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./index.html#contact">Request a Quote</a>
-          </div>
+      <!-- Drainage -->
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="drainage">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div><p class="text-sm font-bold tracking-wider text-[#4a7c59] uppercase">Water Management</p><h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mt-1">Drainage & Grade Fixes (Basic)</h2></div>
+          <span class="bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-bold">Starting labor: $450+</span>
         </div>
-      </div>
+        <p class="mt-3 text-gray-600">Redirect water flow, add basic slope corrections, and improve standing-water zones to make the property more usable and protect the landscape.</p>
+        <div class="gallery-grid mt-6">
+          <figure class="project-photo"><div class="photo-visual"><img src="./images/luxury/drainage-grade-before.jpg" alt="Standing water or poor grading before drainage work" loading="lazy"><div class="photo-placeholder"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><strong>Add Project Photo</strong><span class="text-sm mt-1 text-gray-600">Water / grade issue photo</span></div><span class="photo-label">Before</span></div><figcaption><strong>Before / Water Issue</strong><span>Show standing water, a washout area, or the grade problem being solved.</span></figcaption></figure>
+          <figure class="project-photo"><div class="photo-visual"><img src="./images/luxury/drainage-grade-after.jpg" alt="Completed drainage or grade correction" loading="lazy"><div class="photo-placeholder"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><strong>Add Project Photo</strong><span class="text-sm mt-1 text-gray-600">Completed grade-fix photo</span></div><span class="photo-label">Finished</span></div><figcaption><strong>Finished Drainage Solution</strong><span>Show the corrected slope, drainage route, or restored yard surface.</span></figcaption></figure>
+        </div>
+      </section>
+
+      <!-- Custom -->
+      <section class="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 anchor" id="custom-builds">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div><p class="text-sm font-bold tracking-wider text-[#4a7c59] uppercase">Special Projects</p><h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mt-1">Custom / Ultra Requests</h2></div>
+          <span class="bg-[#1a472a]/10 text-[#1a472a] px-4 py-2 rounded-full text-sm font-bold">Custom quote</span>
+        </div>
+        <p class="mt-3 text-gray-600">Have an outdoor idea that does not fit neatly into a menu? Send photos and details. We will tell you what is realistic, what the project needs, and how the pricing works.</p>
+        <div class="gallery-grid mt-6">
+          <figure class="project-photo"><div class="photo-visual"><img src="./images/luxury/custom-luxury-before.jpg" alt="Custom outdoor project area before construction" loading="lazy"><div class="photo-placeholder"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><strong>Add Project Photo</strong><span class="text-sm mt-1 text-gray-600">Before / concept photo</span></div><span class="photo-label">Before</span></div><figcaption><strong>Before / Project Concept</strong><span>Show the space before work begins or a clear vision of the project area.</span></figcaption></figure>
+          <figure class="project-photo"><div class="photo-visual"><img src="./images/luxury/custom-luxury-after.jpg" alt="Completed custom outdoor luxury project" loading="lazy"><div class="photo-placeholder"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7a2 2 0 012-2h2.586a1 1 0 00.707-.293l.414-.414A2 2 0 0110.121 3h3.758a2 2 0 011.414.586l.414.414A1 1 0 0016.414 5H19a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><strong>Add Project Photo</strong><span class="text-sm mt-1 text-gray-600">Finished custom-build photo</span></div><span class="photo-label">Finished</span></div><figcaption><strong>Finished Custom Build</strong><span>Show the full transformation and the kind of detail customers can expect.</span></figcaption></figure>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="bg-[#faf9f6] border border-gray-200 rounded-3xl p-7">
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-[#1a472a] mb-2">Ready to Plan Your Outdoor Upgrade?</h2>
+        <p class="text-gray-700">Send your address, a few photos of the space, and the result you want. We will review the scope and schedule an on-site consult when needed.</p>
+        <div class="mt-5 flex flex-wrap gap-2">
+          <a class="btn-primary text-white px-6 py-3 rounded-xl font-bold" href="./contract.html">Start a Luxury Request</a>
+          <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="./index.html#contact">Request a Quote</a>
+          <a class="bg-white text-[#1a472a] px-6 py-3 rounded-xl font-bold border border-gray-200" href="tel:+15135492498">Call (513) 549-2498</a>
+        </div>
+        <div class="mt-3 text-sm text-gray-600">Cash App: <b>$FSYardServicesLLC</b> • After paying, text: <b>Name + Address + Amount</b> to <b>(513) 549-2498</b>.</div>
+      </section>
+
     </div>
-  </section>
+  </main>
 
   <!-- Footer -->
   <footer class="bg-[#1a472a] text-white py-10">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-wrap justify-between items-center gap-4">
-        <div class="text-white/80 text-sm">
-          Fresh Start Yard Services LLC • (513) 549-2498 • freshstartyardservicesllc@gmail.com • Cash App: <b>$FSYardServicesLLC</b>
-        </div>
+        <div class="text-white/80 text-sm">Fresh Start Yard Services LLC • (513) 549-2498 • freshstartyardservicesllc@gmail.com • Cash App: <b>$FSYardServicesLLC</b></div>
         <div class="flex gap-4 text-sm">
+          <a class="text-white/80 hover:text-white" href="./services.html">Services</a>
           <a class="text-white/80 hover:text-white" href="./pricing.html">Pricing</a>
+          <a class="text-white/80 hover:text-white" href="./luxury.html">Luxury</a>
           <a class="text-white/80 hover:text-white" href="./contract.html">Contract</a>
           <a class="text-white/80 hover:text-white" href="./terms.html">Terms</a>
         </div>
@@ -244,15 +339,22 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     if (mobileMenuBtn && mobileMenu) {
       mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-      mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-      });
+      mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
     }
+
+    // Matching files automatically replace the placeholder cards with real job photos.
+    document.querySelectorAll('.project-photo img').forEach((img) => {
+      const card = img.closest('.project-photo');
+      const showPhoto = () => card.classList.add('has-photo');
+      const showPlaceholder = () => card.classList.remove('has-photo');
+      img.addEventListener('load', showPhoto);
+      img.addEventListener('error', showPlaceholder);
+      if (img.complete) img.naturalWidth > 0 ? showPhoto() : showPlaceholder();
+    });
   </script>
 </body>
 </html>
